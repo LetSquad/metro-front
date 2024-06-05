@@ -26,4 +26,5 @@ jobs:
       - name: Build
         run: |
           npm install
+          npm install -g cross-env
           npm run build
