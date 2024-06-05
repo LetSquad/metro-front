@@ -1,0 +1,47 @@
+.row-container {
+  align-items: center;
+  column-gap: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-fields-container,
+%array-row-fields-container {
+  align-items: self-start;
+  column-gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  width: 100%;
+
+  &-two {
+    div {
+      flex: 1 1 calc(50% - 7.5px)
+    }
+  }
+
+  &-three {
+    div {
+      flex: 1 1 calc(33% - 7.5px)
+    }
+  }
+
+  &-four {
+    div {
+      flex: 1 1 calc(23% - 7.5px)
+    }
+  }
+}
+
+.fields-array-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+.new-field-button {
+  font-size: 13px !important;
+  min-height: 20px !important;
+  padding: 5px!important;
+  width: 150px!important;
+}

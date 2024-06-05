@@ -1,0 +1,6 @@
+@use 'src/styles/baseParts.module' as *;
+
+.error {
+  @extend %flex-base-center-container;
+  margin: 30px;
+}

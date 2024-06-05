@@ -1,0 +1,16 @@
+@use 'src/styles/variables.module' as variables;
+@use 'sass:color' as color;
+
+:global {
+  .ui.rating .active.icon {
+    color: variables.$primary-button-main-color;
+  }
+
+  .ui.rating .icon.selected {
+    color: color.adjust(variables.$primary-button-main-color, $lightness: 15%) !important;
+  }
+
+  .ui.rating .icon.selected.active {
+    color: color.adjust(variables.$primary-button-main-color, $lightness: 15%) !important;
+  }
+}

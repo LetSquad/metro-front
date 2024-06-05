@@ -1,0 +1,139 @@
+@use 'src/styles/variables.module' as variables;
+
+
+.button,
+%primary-button {
+  align-items: center;
+  border: transparent !important;
+  border-radius: 7px !important;
+  box-shadow: none !important;
+  color: variables.$primary-button-text-color !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  font-family: inherit !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  justify-content: center;
+  line-height: 1.25 !important;
+  max-height: 56px;
+  min-height: 36px !important;
+  overflow: hidden;
+  padding: 0 32px !important;
+  position: relative;
+  text-align: center !important;
+  z-index: 0;
+
+  &-default {
+    background-color: variables.$primary-button-main-color !important;
+
+    &::before {
+      background: variables.$primary-button-additional-color;
+    }
+
+    &::after {
+      background: variables.$primary-button-additional-color;
+    }
+
+    &:focus {
+      outline: 5px double variables.$primary-button-main-color !important;
+    }
+  }
+
+  &-negative {
+    background-color: variables.$negative-button-main-color !important;
+
+    &::before {
+      background: variables.$negative-button-additional-color;
+    }
+
+    &::after {
+      background: variables.$negative-button-additional-color;
+    }
+
+    &:focus {
+      outline: 5px double variables.$negative-button-main-color !important;
+    }
+  }
+
+  &-positive {
+    background-color: variables.$positive-button-main-color !important;
+
+    &::before {
+      background: variables.$positive-button-additional-color;
+    }
+
+    &::after {
+      background: variables.$positive-button-additional-color;
+    }
+
+    &:focus {
+      outline: 5px double variables.$positive-button-main-color !important;
+    }
+  }
+
+  span {
+    display: block;
+    position: relative;
+    z-index: 10;
+  }
+
+  &::before {
+    border-radius: 50%;
+    content: "";
+    height: 0;
+    left: -10%;
+    padding-bottom: 120%;
+    position: absolute;
+    top: -110%;
+    transform: translate3d(0,68%,0) scale3d(0,0,0);
+    width: 120%;
+  }
+
+  &::after {
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translate3d(0,-100%,0);
+    transition: transform .4s cubic-bezier(.1,0,.3,1);
+    width: 100%;
+  }
+
+  &:hover {
+    span {
+      animation: MoveScaleUpInitial .3s forwards, MoveScaleUpEnd .3s .3s forwards;
+    }
+
+    &::before {
+      transform: translateZ(0) scaleX(1);
+      transition: transform .4s cubic-bezier(.1,0,.3,1);
+    }
+
+    &::after {
+      transform: translateZ(0);
+      transition-delay: .4s;
+      transition-duration: .05s;
+      transition-timing-function: linear;
+    }
+  }
+}
+
+@keyframes MoveScaleUpInitial {
+  100% {
+    opacity: 0;
+    transform: translate3d(0,-105%,0) scaleY(2);
+  }
+}
+
+@keyframes MoveScaleUpEnd {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,100%,0) scaleY(2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}

@@ -1,0 +1,69 @@
+@use 'src/styles/variables.module' as variables;
+
+.success-toast {
+  background-color: variables.$background-color;
+  border-radius: 7px;
+  display: flex;
+  max-width: 400px;
+  padding: 15px;
+
+  &-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &-text {
+    font-weight: bold;
+  }
+
+  &-button {
+    span {
+      font-size: 13px !important;
+    }
+
+    &-container {
+      column-gap: 10px;
+      display: flex;
+    }
+  }
+
+  &-enter {
+    animation: 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) forwards enter;
+
+  }
+
+  &-exit {
+    animation: 0.4s forwards cubic-bezier(0.06, 0.71, 0.55, 1) exit;
+  }
+}
+
+@keyframes exit {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, -1px) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 150%, -1px) scale(0.6);
+  }
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0.5;
+    transform: translate3d(0, 200%, 0) scale(0.6);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.toast-dismiss-icon {
+  align-self: flex-start;
+  color: variables.$negative-button-main-color !important;
+}

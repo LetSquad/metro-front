@@ -1,0 +1,22 @@
+@use 'src/styles/baseParts.module' as *;
+@use 'src/styles/variables.module' as variables;
+@use 'src/styles/mq' as *;
+
+.failed-container {
+  @extend %flex-base-center-container;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: bold;
+
+  @include mq($until: tablet) {
+    padding: 175px 25px;
+  }
+  @include mq($from: tablet) {
+    padding: 180px 0;
+  }
+
+  &-link {
+    color: variables.$link-color;
+    cursor: pointer;
+  }
+}
