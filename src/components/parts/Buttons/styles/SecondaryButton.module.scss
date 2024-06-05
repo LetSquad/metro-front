@@ -1,0 +1,33 @@
+@use 'src/styles/variables.module' as variables;
+
+.button,
+%secondary-button {
+  align-items: center;
+  background-color: variables.$secondary-button-main-color !important;
+  border: transparent !important;
+  border-radius: 7px !important;
+  box-shadow: none !important;
+  color: variables.$secondary-text-color !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  font-family: inherit !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  justify-content: center;
+  line-height: 1.25 !important;
+  max-height: 56px;
+  min-height: 36px !important;
+  overflow: hidden;
+  padding: 0 24px !important;
+  position: relative;
+  text-align: center !important;
+  z-index: 0;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+}

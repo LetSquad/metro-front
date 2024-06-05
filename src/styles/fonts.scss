@@ -1,0 +1,23 @@
+@font-face {
+  font-display: block;
+  font-family: MoscowSans;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/src/static/fonts/MoscowSans-Regular.woff2") format("woff2")
+}
+
+@font-face {
+  font-display: block;
+  font-family: MoscowSans;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/src/static/fonts/MoscowSans-Medium.woff2") format("woff2")
+}
+
+@font-face {
+  font-display: block;
+  font-family: MoscowSans;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/src/static/fonts/MoscowSans-Bold.woff2") format("woff2")
+}

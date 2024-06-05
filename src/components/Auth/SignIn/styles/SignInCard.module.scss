@@ -1,0 +1,9 @@
+@use '../../styles/AuthForm.module' as *;
+@use 'src/styles/variables.module' as variables;
+
+.sign-in,
+%sign-in {
+  @extend %auth-form-container;
+  height: 100%;
+  width: 100%;
+}

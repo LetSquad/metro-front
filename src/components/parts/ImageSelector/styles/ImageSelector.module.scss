@@ -1,0 +1,155 @@
+@use 'src/styles/mq' as *;
+@use 'src/styles/parts.module' as *;
+@use 'src/styles/variables.module' as variables;
+@use "sass:color";
+
+.modal {
+  display: flex !important;
+  flex-direction: column;
+  padding: 0 !important;
+
+  @include mq($until: mobile) {
+    height: 600px !important;
+    width: 350px !important;
+  }
+  @include mq($from: mobile) {
+    height: 400px !important;
+    width: 500px !important;
+  }
+
+  &-content {
+    background-color: variables.$background-color !important;
+    height: 100%;
+  }
+
+  &-action {
+    background-color: color.adjust(variables.$background-color, $lightness: 10%) !important;
+    column-gap: 15px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+  }
+}
+
+.dropzone,
+%dropzone {
+  align-items: center;
+  background-color: color.adjust(variables.$background-color, $lightness: 10%);
+  border-radius: 2px;
+  border-style: dashed;
+  border-width: 2px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  outline: none;
+  padding: 20px;
+  transition: border 0.24s ease-in-out;
+
+  &-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  &-title {
+    &-container {
+      text-align: center;
+
+      &-error {
+        @extend %dropzone-title-container;
+        color: #1d2228;
+        font-size: 18px;
+      }
+
+      &-default {
+        @extend %dropzone-title-container;
+        color: variables.$primary-text-color;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+      }
+    }
+
+    &-link {
+      @extend %inline-button;
+      font-size: 18px !important;
+      padding: 0 0 0 5px !important;
+    }
+  }
+
+  &-default {
+    @extend %dropzone;
+    border-color: rgb(200, 200, 200);
+  }
+
+  &-accept {
+    @extend %dropzone;
+    border-color: #05ba05;
+  }
+
+  &-reject {
+    @extend %dropzone;
+    border-color: #ac0606;
+  }
+}
+
+.icon,
+%file-selector-icon {
+  &-upload {
+    @extend %file-selector-icon;
+    color: variables.$primary-text-color !important;
+    font-size: 36px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+.error-image {
+  height: 250px;
+  width: 250px;
+}
+
+.avatar-editor {
+  margin-right: 20px;
+
+  &-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &-content-container {
+    display: flex;
+    @include mq($until: mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &-action-container {
+    align-self: center;
+    justify-self: flex-end;
+    padding: 20px;
+  }
+
+  &-range {
+    > input {
+      padding: 0 !important;
+    }
+
+    &-label {
+      padding: 10px 0 5px;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include mq($until: mobile) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

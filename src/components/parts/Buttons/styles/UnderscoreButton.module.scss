@@ -1,0 +1,16 @@
+@use 'src/styles/variables.module' as variables;
+
+.button {
+  background: none !important;
+  color: variables.$underscore-button-main-color !important;
+  text-decoration-line: underline !important;
+  z-index: 0;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+}

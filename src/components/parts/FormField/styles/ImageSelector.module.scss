@@ -1,0 +1,32 @@
+@use 'src/components/parts/Buttons/styles/SecondaryButton.module' as *;
+
+.input {
+  align-items: center;
+  column-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+
+  &-button {
+    @extend %secondary-button;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &-files-title {
+    line-break: anywhere;
+  }
+
+  input {
+    display: block;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    z-index: -1;
+  }
+}
