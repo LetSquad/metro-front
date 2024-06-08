@@ -5,11 +5,14 @@ const passengersUrl = `${baseUrl}/passengers`;
 const employeesUrl = `${baseUrl}/employees`;
 const authUrl = `${baseUrl}/auth`;
 const metro = `${baseUrl}/metro`;
+const websocket = `${externalUrl}/websocket`;
 
 const apiUrls = {
     orders: () => ordersUrl,
+    ordersCurrent: () => `${ordersUrl}/current`,
     ordersId: (orderId: string) => `${ordersUrl}/${orderId}`,
     ordersCalculation: () => `${ordersUrl}/calculation`,
+    ordersTimeList: () => `${ordersUrl}/time-list`,
     ordersDistribution: () => `${ordersUrl}/distribution`,
     passengers: () => passengersUrl,
     passengersId: (passengerId: string) => `${passengersUrl}/${passengerId}`,
@@ -22,7 +25,8 @@ const apiUrls = {
     employeesShifts: () => `${employeesUrl}/shifts`,
     metroStations: () => metro,
     signIn: () => authUrl,
-    refreshToken: () => `${authUrl}/refresh`
+    refreshToken: () => `${authUrl}/refresh`,
+    websocket: () => websocket
 };
 
 export default apiUrls;

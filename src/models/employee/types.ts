@@ -9,7 +9,8 @@ export interface EmployeeRank {
 
 export interface Employee {
     id: number;
-    employeeRole: EmployeeRole;
+    login: string;
+    [EmployeeFieldsName.EMPLOYEE_ROLE]: EmployeeRole;
     [EmployeeFieldsName.WORK_PHONE]: string;
     [EmployeeFieldsName.PERSONAL_PHONE]: string;
     [EmployeeFieldsName.FIRST_NAME]: string;
@@ -22,6 +23,12 @@ export interface Employee {
     rank: EmployeeRank;
 }
 
-export type EmployeeFormFields = Omit<Employee, "id" | "employeeRole" | "rank"> & { [RankFieldsName.RANK_CODE]: string };
+export interface EmployCurrent extends Employee {
+    login: string;
+}
+
+export type EmployeeFormFields = Omit<Employee, "id" | "rank"> & { [RankFieldsName.RANK_CODE]: string };
 
 export type EmployeeResponse = Employee;
+export type EmployeeCurrentResponse = EmployCurrent;
+export type EmployeesResponse = { employees: Employee[] };

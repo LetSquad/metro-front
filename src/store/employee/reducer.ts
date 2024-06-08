@@ -1,8 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios, { AxiosResponse } from "axios";
+import { AxiosResponse } from "axios";
 
+import axios from "@api/api";
 import apiUrls from "@api/apiUrls";
-import { Employee, EmployeeResponse } from "@models/employee/types";
+import { Employee, EmployeeCurrentResponse } from "@models/employee/types";
 
 interface EmployeeState {
     currentEmployee?: Employee;
@@ -18,8 +19,8 @@ const initialState: EmployeeState = {
     isUpdatingCurrentEmployee: false
 };
 
-export const getEmployeeRequest = createAsyncThunk("getEmployeeRequest", async () => {
-    const response: AxiosResponse<EmployeeResponse> = await axios.get<EmployeeResponse>(apiUrls.employeesProfile());
+export const getCurrentEmployeeRequest = createAsyncThunk("getCurrentEmployeeRequest", async () => {
+    const response: AxiosResponse<EmployeeCurrentResponse> = await axios.get<EmployeeCurrentResponse>(apiUrls.employeesProfile());
     return response.data;
 });
 
@@ -32,16 +33,16 @@ export const employeeSlice = createSlice({
         }
     },
     extraReducers: (builder) => {
-        builder.addCase(getEmployeeRequest.pending, (state) => {
+        builder.addCase(getCurrentEmployeeRequest.pending, (state) => {
             state.isCurrentEmployeeLoading = true;
             state.isCurrentEmployeeLoadingFailed = false;
             state.currentEmployee = undefined;
         });
-        builder.addCase(getEmployeeRequest.rejected, (state) => {
+        builder.addCase(getCurrentEmployeeRequest.rejected, (state) => {
             state.isCurrentEmployeeLoading = false;
             state.isCurrentEmployeeLoadingFailed = true;
         });
-        builder.addCase(getEmployeeRequest.fulfilled, (state, action) => {
+        builder.addCase(getCurrentEmployeeRequest.fulfilled, (state, action) => {
             state.isCurrentEmployeeLoading = false;
             state.currentEmployee = action.payload;
         });
