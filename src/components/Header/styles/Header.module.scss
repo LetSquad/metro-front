@@ -43,7 +43,7 @@
 
 .sidebar,
 %header-sidebar {
-  background: #0d71bb;
+  background: #fff;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@
     @extend %header-sidebar;
     opacity: 1;
     transition: opacity ease-out 0.4s, z-index ease-out 0.4s;
-    z-index: 1001;
+    z-index: 10000;
   }
 
   &-close {

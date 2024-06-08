@@ -27,7 +27,7 @@ export interface Order {
     startTime?: string | null;
     finishTime?: string | null;
     absenceTime?: string | null;
-    cancel_time?: string | null;
+    cancelTime?: string | null;
     orderStatus: OrderStatus;
     passenger: Passenger;
     baggage?: Baggage | null;

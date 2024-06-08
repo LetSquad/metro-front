@@ -81,7 +81,7 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
             startTime: null,
             finishTime: null,
             absenceTime: null,
-            cancel_time: null,
+            cancelTime: null,
             orderStatus: {
                 code: OrderStatusCodeEnum.ACCEPTED,
                 name: "Принята"
@@ -93,12 +93,13 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                 middleName: "Иванович",
                 sex: Sex.MALE,
                 comment: null,
-                hasPacemaker: false,
+                hasPacemaker: true,
                 category: {
                     code: PassengerCategoryCodeEnum.IK,
                     name: "Инвалид колясочник",
                     shortName: "ИК"
-                }
+                },
+                phones: []
             },
             baggage: {
                 type: "Чемодан",

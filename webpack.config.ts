@@ -24,7 +24,7 @@ const isProduction = process.env.NODE_ENV === "production";
 const withAnalyzer = process.env.WITH_ANALYZER;
 const mode = isProduction ? "production" : "development";
 
-module.exports = () => {
+const webpack_ = () => {
     const commonPlugins = [
         new HtmlWebpackPlugin({
             template: `${PATHS.public}/index.html`,
@@ -212,3 +212,4 @@ module.exports = () => {
 
     return isProduction ? config : { ...config, devServer: devOptions };
 };
+module.exports = webpack_;
