@@ -15,7 +15,18 @@
     "stylelint": "stylelint \"src/**/*.scss\"",
     "lint:fix": "npm run eslint:fix && npm run stylelint:fix",
     "eslint:fix": "eslint --ext .ts,.tsx src --color --fix",
-    "stylelint:fix": "stylelint \"src/**/*.scss\" --fix"
+    "stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
+    "husky": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint:fix",
+      "git add"
+    ],
+    "*.scss": [
+      "stylelint:fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "@reduxjs/toolkit": "2.2.5",
@@ -72,6 +83,7 @@
     "clean-webpack-plugin": "4.0.0",
     "css-loader": "7.1.1",
     "cssnano": "7.0.1",
+    "cross-env": "7.0.3",
     "eslint": "8.57.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "18.0.0",
@@ -86,7 +98,9 @@
     "eslint-plugin-unicorn": "53.0.0",
     "fork-ts-checker-webpack-plugin": "9.0.2",
     "html-webpack-plugin": "5.6.0",
+    "husky": "9.0.11",
     "glob": "10.3.15",
+    "lint-staged": "15.2.5",
     "mini-css-extract-plugin": "2.9.0",
     "postcss-loader": "8.1.1",
     "prettier": "3.2.5",
