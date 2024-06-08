@@ -6,6 +6,7 @@ export enum EmployeeRole {
 }
 
 export enum EmployeeFieldsName {
+    EMPLOYEE_ROLE = "employeeRole",
     FIRST_NAME = "firstName",
     MIDDLE_NAME = "middleName",
     LAST_NAME = "lastName",

@@ -30,6 +30,7 @@
   }
 
   &-visible {
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1) !important;
     top: 0 !important;
     transition: top 0.4s ease-out, background-color 0.4s ease-out;
   }
@@ -37,29 +38,6 @@
   &-hidden {
     top: -130px !important;
     transition: top 0.4s ease-out, background-color 0.4s ease-out;
-  }
-
-  &-profile {
-    margin: 0 !important;
-
-    &-link {
-      color: variables.$primary-text-color !important;
-      cursor: pointer;
-    }
-
-    &-link:hover {
-      color: variables.$primary-button-main-color !important;
-    }
-
-    &-menu {
-      background-color: variables.$background-color !important;
-      border-radius: 7px !important;
-    }
-
-    &-image {
-      height: 30px;
-      width: 30px;
-    }
   }
 }
 
@@ -87,18 +65,6 @@
     opacity: 0;
     transition: opacity ease-out 0.4s, z-index ease-out 0.4s;
     z-index: -100;
-  }
-
-  &-image {
-    cursor: pointer;
-    height: 120px;
-    margin: 15px auto;
-    transition: transform 0.1s linear;
-    width: 120px;
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 
   &-items-container {

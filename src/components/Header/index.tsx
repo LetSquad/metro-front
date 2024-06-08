@@ -10,7 +10,7 @@ import { TABLET_MAX_WIDTH } from "@coreUtils/constants";
 import { useLogout } from "@hooks/useLogout";
 import { useMenuOptions } from "@hooks/useMenuOptions";
 import { useToggle } from "@hooks/useToogle";
-import { getEmployeeRequest } from "@store/employee/reducer";
+import { getCurrentEmployeeRequest } from "@store/employee/reducer";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import { selectIsEmployeeNotAuth } from "@store/info/selectors";
 
@@ -44,7 +44,7 @@ export default function Header() {
 
     useEffect(() => {
         if (!isNotAuth) {
-            dispatch(getEmployeeRequest());
+            dispatch(getCurrentEmployeeRequest());
         }
     }, [dispatch, isNotAuth]);
 
