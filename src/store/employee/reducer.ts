@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { AxiosResponse } from "axios";
 
+import axios from "@api/api";
 import apiUrls from "@api/apiUrls";
 import { Employee, EmployeeCurrentResponse } from "@models/employee/types";
-import axios from "@api/api";
 
 interface EmployeeState {
     currentEmployee?: Employee;
