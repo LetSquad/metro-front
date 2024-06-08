@@ -30,7 +30,7 @@
   }
 
   &-visible {
-    box-shadow: 0 3px 15px rgba(0,0,0,0.1) !important;
+    box-shadow: variables.$primary-box-shadow !important;
     top: 0 !important;
     transition: top 0.4s ease-out, background-color 0.4s ease-out;
   }

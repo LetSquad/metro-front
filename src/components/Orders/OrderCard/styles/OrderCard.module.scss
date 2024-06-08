@@ -3,7 +3,7 @@
 
 .segment {
   background-color: variables.$background-color !important;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.1) !important;
+  box-shadow: variables.$primary-box-shadow !important;
 
   @include mq($until: mobile) {
     min-width: 350px;
@@ -92,7 +92,7 @@
 
 .link {
   color: variables.$primary-text-color;
-  width: 100%;
+  width: max-content;
 
   &:hover {
     color: variables.$primary-text-color;
