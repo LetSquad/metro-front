@@ -1,5 +1,7 @@
+import { Employee } from "@models/employee/types";
+import { ResponseWithEditLock } from "@models/http/types";
 import { Station, StationTransfer } from "@models/metro/types";
-import { OrderApplicationCodeEnum, OrdersFiltersFieldsName, OrderStatusCodeEnum } from "@models/order/enums";
+import { OrderApplicationCodeEnum, OrdersFiltersFieldsName, OrderStatusCodeEnum, TimeListActionType } from "@models/order/enums";
 import { Baggage, Passenger, PassengerCategory } from "@models/passenger/types";
 
 export interface OrderApplication {
@@ -37,6 +39,16 @@ export interface Order {
     finishStation: Station;
 }
 
+export interface OrdersTimeList {
+    employee: Employee;
+    actions: {
+        timeStart: string;
+        timeEnd: string;
+        order?: Order | null;
+        actionType: TimeListActionType;
+    }[];
+}
+
 export interface OrdersFiltersFormValues {
     [OrdersFiltersFieldsName.PASSENGER_FIRST_NAME]?: string;
     [OrdersFiltersFieldsName.PASSENGER_LAST_NAME]?: string;
@@ -50,5 +62,6 @@ export interface OrdersFiltersFormValues {
     [OrdersFiltersFieldsName.DATE_TO]?: string;
 }
 
-export type OrderResponse = Order;
+export type OrderResponse = ResponseWithEditLock<Order>;
 export type OrdersResponse = { orders: Order[] };
+export type OrdersTimeListResponse = { ordersTimeList: OrdersTimeList[] };

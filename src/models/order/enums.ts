@@ -31,3 +31,11 @@ export enum OrdersFiltersFieldsName {
     DATE_FROM = "dateFrom",
     DATE_TO = "dateTo"
 }
+
+export enum TimeListActionType {
+    TRANSFER = "TRANSFER",
+    BREAK = "BREAK",
+    DOWNTIME = "DOWNTIME",
+    ORDER = "ORDER",
+    NON_WORKING = "NON_WORKING"
+}

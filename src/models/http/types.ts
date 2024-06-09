@@ -1,8 +1,4 @@
-export interface BasePageResponse {
-    total: number;
-}
-
-export interface BasePageRequest {
-    pageNumber: number;
-    limit: number;
+export interface ResponseWithEditLock<T> {
+    isLockedForEdit: boolean;
+    data: T;
 }

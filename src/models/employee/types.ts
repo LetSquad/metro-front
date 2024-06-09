@@ -1,5 +1,6 @@
 import { Sex } from "@models/common/enums";
 import { EmployeeFieldsName, EmployeeRole, RankFieldsName } from "@models/employee/enums";
+import { ResponseWithEditLock } from "@models/http/types";
 
 export interface EmployeeRank {
     code: string;
@@ -29,6 +30,6 @@ export interface EmployCurrent extends Employee {
 
 export type EmployeeFormFields = Omit<Employee, "id" | "rank"> & { [RankFieldsName.RANK_CODE]: string };
 
-export type EmployeeResponse = Employee;
+export type EmployeeResponse = ResponseWithEditLock<Employee>;
 export type EmployeeCurrentResponse = EmployCurrent;
 export type EmployeesResponse = { employees: Employee[] };

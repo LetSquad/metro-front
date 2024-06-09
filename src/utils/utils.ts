@@ -6,6 +6,10 @@ export function getFullName(firstName?: string | null, middleName?: string | nul
     }${middleName || ""}`;
 }
 
+export function getShortName(lastName: string, firstName: string, middleName?: string | null): string {
+    return `${lastName} ${getFirstCapitalizeNameLetter(firstName)}${middleName ? " " : ""}${middleName ? `${getFirstCapitalizeNameLetter(middleName)}` : ""}`;
+}
+
 export function equalNumberWithStringOrNumber(arg1?: number, arg2?: string | number): boolean {
     if (arg2 === undefined || arg1 === undefined) {
         return false;
@@ -32,6 +36,10 @@ export function containsStringOrNumberInNumberArray(arg1: number[], arg2?: strin
 
 export function capitalizeFirstLetter([first, ...rest]: string) {
     return first.toUpperCase() + rest.join("");
+}
+
+export function getFirstCapitalizeNameLetter([first]: string) {
+    return `${first.toUpperCase()}.`;
 }
 
 export function isSameDate(firstDay: DateTime, secondDay: DateTime) {

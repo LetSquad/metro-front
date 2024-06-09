@@ -8,7 +8,6 @@ export interface WebSocketRequestData {
 
 export interface UpdateListWebSocketRequestData extends WebSocketRequestData {
     type:
-        | WebSocketDataTypeEnum.ORDERS_DISTRIBUTION_UPDATE
         | WebSocketDataTypeEnum.CURRENT_ORDER_LIST_UPDATE
         | WebSocketDataTypeEnum.ORDER_LIST_UPDATE
         | WebSocketDataTypeEnum.PASSENGER_LIST_UPDATE;
@@ -35,7 +34,6 @@ export interface EditOrderWebSocketRequestData extends WebSocketRequestData {
 
 export interface UpdateListWebSocketResponseData {
     type:
-        | WebSocketDataTypeEnum.ORDERS_DISTRIBUTION_UPDATE
         | WebSocketDataTypeEnum.CURRENT_ORDER_LIST_UPDATE
         | WebSocketDataTypeEnum.ORDER_LIST_UPDATE
         | WebSocketDataTypeEnum.PASSENGER_LIST_UPDATE;
