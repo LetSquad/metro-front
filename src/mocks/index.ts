@@ -196,8 +196,8 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                     startStation: {
                         id: 5,
                         line: {
-                            id: 3,
-                            name: "Кольцевая",
+                            id: 4,
+                            name: 5,
                             color: "#8D5B2D"
                         },
                         name: "Добрынинская"
