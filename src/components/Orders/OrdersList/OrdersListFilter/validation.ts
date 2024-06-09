@@ -4,7 +4,7 @@ import * as yup from "yup";
 import { PHONE_REG_EXP } from "@coreUtils/constants";
 import { OrdersFiltersFieldsName } from "@models/order/enums";
 
-const PHONE_INVALID_MESSAGE = "Введите корректный номер телефон";
+const PHONE_INVALID_MESSAGE = "Введите корректный номер телефона";
 
 const DATE_TO_LOWER_THEN_FROM_MESSAGE = `Дата "до" должна быть больше или равна дате "с"`;
 

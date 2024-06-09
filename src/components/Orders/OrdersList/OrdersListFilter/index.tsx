@@ -48,19 +48,19 @@ const fields: (fromDate?: string) => FormFieldProps[] = (fromDate) => [
         name: OrdersFiltersFieldsName.EMPLOYEE_FIRST_NAME,
         label: "Имя работника",
         type: FormFieldType.INPUT,
-        placeholder: "Введите имя работнка"
+        placeholder: "Введите имя работника"
     },
     {
         name: OrdersFiltersFieldsName.EMPLOYEE_LAST_NAME,
         label: "Фамилия работника",
         type: FormFieldType.INPUT,
-        placeholder: "Введите фамилию работнка"
+        placeholder: "Введите фамилию работника"
     },
     {
         name: OrdersFiltersFieldsName.EMPLOYEE_PHONE,
         label: "Телефон работника",
         type: FormFieldType.PHONE_NUMBER_INPUT,
-        placeholder: "Введите телефон работнка"
+        placeholder: "Введите телефон работника"
     },
     {
         name: OrdersFiltersFieldsName.ORDER_CATEGORIES,

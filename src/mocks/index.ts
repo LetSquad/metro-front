@@ -131,7 +131,7 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                         id: 0,
                         line: {
                             id: 2,
-                            name: "Замоскворецкая",
+                            name: 2,
                             color: "#2DBE2C"
                         },
                         name: "Аэропорт"
@@ -140,7 +140,7 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                         id: 3,
                         line: {
                             id: 2,
-                            name: "Замоскворецкая",
+                            name: 2,
                             color: "#2DBE2C"
                         },
                         name: "Белорусская"
@@ -153,7 +153,7 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                         id: 0,
                         line: {
                             id: 2,
-                            name: "Замоскворецкая",
+                            name: 2,
                             color: "#2DBE2C"
                         },
                         name: "Белорусская"
@@ -162,7 +162,7 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                         id: 4,
                         line: {
                             id: 4,
-                            name: "Кольцевая",
+                            name: 5,
                             color: "#8D5B2D"
                         },
                         name: "Белорусская"
@@ -174,8 +174,8 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                     startStation: {
                         id: 4,
                         line: {
-                            id: 3,
-                            name: "Кольцевая",
+                            id: 4,
+                            name: 5,
                             color: "#8D5B2D"
                         },
                         name: "Белорусская"
@@ -183,8 +183,8 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                     finishStation: {
                         id: 5,
                         line: {
-                            id: 3,
-                            name: "Кольцевая",
+                            id: 5,
+                            name: 5,
                             color: "#8D5B2D"
                         },
                         name: "Добрынинская"
@@ -206,7 +206,7 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                         id: 6,
                         line: {
                             id: 8,
-                            name: "Серпуховско-Тимирязевская",
+                            name: 9,
                             color: "#999999"
                         },
                         name: "Серпуховская"
@@ -219,7 +219,7 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                         id: 6,
                         line: {
                             id: 8,
-                            name: "Серпуховско-Тимирязевская",
+                            name: 9,
                             color: "#999999"
                         },
                         name: "Серпуховская"
@@ -228,7 +228,7 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                         id: 7,
                         line: {
                             id: 8,
-                            name: "Серпуховско-Тимирязевская",
+                            name: 9,
                             color: "#999999"
                         },
                         name: "Нагорная"
@@ -241,8 +241,8 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
             startStation: {
                 id: 0,
                 line: {
-                    id: 2,
-                    name: "Замоскворецкая",
+                    id: 1,
+                    name: 2,
                     color: "#2DBE2C"
                 },
                 name: "Аэропорт"
@@ -251,7 +251,7 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                 id: 7,
                 line: {
                     id: 8,
-                    name: "Серпуховско-Тимирязевская",
+                    name: 9,
                     color: "#999999"
                 },
                 name: "Нагорная"
@@ -310,8 +310,8 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                     startStation: {
                         id: 0,
                         line: {
-                            id: 2,
-                            name: "Замоскворецкая",
+                            id: 1,
+                            name: 2,
                             color: "#2DBE2C"
                         },
                         name: "Аэропорт"
@@ -319,8 +319,8 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                     finishStation: {
                         id: 3,
                         line: {
-                            id: 2,
-                            name: "Замоскворецкая",
+                            id: 1,
+                            name: 2,
                             color: "#2DBE2C"
                         },
                         name: "Белорусская"
@@ -332,8 +332,8 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                     startStation: {
                         id: 0,
                         line: {
-                            id: 2,
-                            name: "Замоскворецкая",
+                            id: 1,
+                            name: 2,
                             color: "#2DBE2C"
                         },
                         name: "Белорусская"
@@ -342,7 +342,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                         id: 4,
                         line: {
                             id: 4,
-                            name: "Кольцевая",
+                            name: 5,
                             color: "#8D5B2D"
                         },
                         name: "Белорусская"
@@ -354,8 +354,8 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                     startStation: {
                         id: 4,
                         line: {
-                            id: 3,
-                            name: "Кольцевая",
+                            id: 4,
+                            name: 5,
                             color: "#8D5B2D"
                         },
                         name: "Белорусская"
@@ -363,8 +363,8 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                     finishStation: {
                         id: 5,
                         line: {
-                            id: 3,
-                            name: "Кольцевая",
+                            id: 4,
+                            name: 5,
                             color: "#8D5B2D"
                         },
                         name: "Добрынинская"
@@ -376,8 +376,8 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                     startStation: {
                         id: 5,
                         line: {
-                            id: 3,
-                            name: "Кольцевая",
+                            id: 4,
+                            name: 5,
                             color: "#8D5B2D"
                         },
                         name: "Добрынинская"
@@ -386,7 +386,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                         id: 6,
                         line: {
                             id: 8,
-                            name: "Серпуховско-Тимирязевская",
+                            name: 9,
                             color: "#999999"
                         },
                         name: "Серпуховская"
@@ -399,7 +399,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                         id: 6,
                         line: {
                             id: 8,
-                            name: "Серпуховско-Тимирязевская",
+                            name: 9,
                             color: "#999999"
                         },
                         name: "Серпуховская"
@@ -408,7 +408,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                         id: 7,
                         line: {
                             id: 8,
-                            name: "Серпуховско-Тимирязевская",
+                            name: 9,
                             color: "#999999"
                         },
                         name: "Нагорная"
@@ -421,8 +421,8 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
             startStation: {
                 id: 0,
                 line: {
-                    id: 2,
-                    name: "Замоскворецкая",
+                    id: 1,
+                    name: 2,
                     color: "#2DBE2C"
                 },
                 name: "Аэропорт"
@@ -431,7 +431,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                 id: 7,
                 line: {
                     id: 8,
-                    name: "Серпуховско-Тимирязевская",
+                    name: 9,
                     color: "#999999"
                 },
                 name: "Нагорная"
@@ -467,10 +467,10 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                 middleName: "Генадьевна",
                 sex: Sex.FEMALE,
                 comment: "Воспитатель группы",
-                hasPacemaker: true,
+                hasPacemaker: false,
                 category: {
                     code: PassengerCategoryCodeEnum.OGD,
-                    name: "рганизованные группы детей",
+                    name: "Организованные группы детей",
                     shortName: "ОГД"
                 },
                 phones: []
@@ -482,7 +482,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                         id: 13,
                         line: {
                             id: 5,
-                            name: "Калужско-Рижская",
+                            name: 6,
                             color: "#ED9121"
                         },
                         name: "Бабушкинская"
@@ -491,7 +491,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                         id: 14,
                         line: {
                             id: 5,
-                            name: "Калужско-Рижская",
+                            name: 6,
                             color: "#ED9121"
                         },
                         name: "Третьяковская"
@@ -504,7 +504,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                         id: 14,
                         line: {
                             id: 5,
-                            name: "Калужско-Рижская",
+                            name: 6,
                             color: "#ED9121"
                         },
                         name: "Третьяковская"
@@ -513,7 +513,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                         id: 15,
                         line: {
                             id: 1,
-                            name: "Замоскворецкая",
+                            name: 2,
                             color: "#2DBE2C"
                         },
                         name: "Новокузнецкая"
@@ -526,7 +526,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                         id: 15,
                         line: {
                             id: 1,
-                            name: "Замоскворецкая",
+                            name: 2,
                             color: "#2DBE2C"
                         },
                         name: "Новокузнецкая"
@@ -535,7 +535,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                         id: 16,
                         line: {
                             id: 1,
-                            name: "Замоскворецкая",
+                            name: 2,
                             color: "#2DBE2C"
                         },
                         name: "Тверская"
@@ -549,7 +549,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                 id: 13,
                 line: {
                     id: 5,
-                    name: "Калужско-Рижская",
+                    name: 6,
                     color: "#ED9121"
                 },
                 name: "Бабушкинская"
@@ -558,7 +558,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                 id: 16,
                 line: {
                     id: 1,
-                    name: "Замоскворецкая",
+                    name: 2,
                     color: "#2DBE2C"
                 },
                 name: "Тверская"
