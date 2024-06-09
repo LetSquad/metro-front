@@ -20,11 +20,11 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "eslint:fix",
+      "eslint --fix",
       "git add"
     ],
     "*.scss": [
-      "stylelint:fix",
+      "stylelint --fix",
       "git add"
     ]
   },

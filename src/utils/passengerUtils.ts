@@ -1,4 +1,3 @@
-import { OrderStatusCodeEnum } from "@models/order/enums";
 import { PassengerCategoryCodeEnum } from "@models/passenger/enums";
 
 const ruRules = new Intl.PluralRules("ru-RU");
