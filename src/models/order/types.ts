@@ -1,5 +1,5 @@
 import { Station, StationTransfer } from "@models/metro/types";
-import { OrderApplicationCodeEnum, OrderStatusCodeEnum } from "@models/order/enums";
+import { OrderApplicationCodeEnum, OrdersFiltersFieldsName, OrderStatusCodeEnum } from "@models/order/enums";
 import { Baggage, Passenger, PassengerCategory } from "@models/passenger/types";
 
 export interface OrderApplication {
@@ -27,7 +27,7 @@ export interface Order {
     startTime?: string | null;
     finishTime?: string | null;
     absenceTime?: string | null;
-    cancel_time?: string | null;
+    cancelTime?: string | null;
     orderStatus: OrderStatus;
     passenger: Passenger;
     baggage?: Baggage | null;
@@ -35,6 +35,19 @@ export interface Order {
     passengerCategory?: PassengerCategory | null;
     startStation: Station;
     finishStation: Station;
+}
+
+export interface OrdersFiltersFormValues {
+    [OrdersFiltersFieldsName.PASSENGER_FIRST_NAME]?: string;
+    [OrdersFiltersFieldsName.PASSENGER_LAST_NAME]?: string;
+    [OrdersFiltersFieldsName.PASSENGER_PHONE]?: string;
+    [OrdersFiltersFieldsName.EMPLOYEE_FIRST_NAME]?: string;
+    [OrdersFiltersFieldsName.EMPLOYEE_LAST_NAME]?: string;
+    [OrdersFiltersFieldsName.EMPLOYEE_PHONE]?: string;
+    [OrdersFiltersFieldsName.ORDER_CATEGORIES]?: string[];
+    [OrdersFiltersFieldsName.ORDER_STATUSES]?: string[];
+    [OrdersFiltersFieldsName.DATE_FROM]?: string;
+    [OrdersFiltersFieldsName.DATE_TO]?: string;
 }
 
 export type OrderResponse = Order;

@@ -1,6 +1,6 @@
 export interface MetroLine {
     id: number;
-    name: string;
+    name: number;
     color: string;
 }
 

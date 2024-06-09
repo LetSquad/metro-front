@@ -10,6 +10,10 @@
 
 .mobile-dropdown {
   height: 100% !important;
+  
+  &::before {
+    width: 0  !important;
+  }
 
   &:hover {
     background-color: transparent !important;
@@ -21,6 +25,6 @@
   }
 
   &-icon {
-    color: #fff;
+    color: variables.$primary-text-color;
   }
 }

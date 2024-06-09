@@ -18,3 +18,16 @@ export enum OrderStatusCodeEnum {
     PASSENGER_LATE = "PASSENGER_LATE",
     INSPECTOR_LATE = "INSPECTOR_LATE"
 }
+
+export enum OrdersFiltersFieldsName {
+    PASSENGER_FIRST_NAME = "passengerFirstName",
+    PASSENGER_LAST_NAME = "passengerLastName",
+    PASSENGER_PHONE = "passengerPhone",
+    EMPLOYEE_FIRST_NAME = "employeeFirstName",
+    EMPLOYEE_LAST_NAME = "employeeLastName",
+    EMPLOYEE_PHONE = "employeePhone",
+    ORDER_CATEGORIES = "orderCategories",
+    ORDER_STATUSES = "orderStatuses",
+    DATE_FROM = "dateFrom",
+    DATE_TO = "dateTo"
+}

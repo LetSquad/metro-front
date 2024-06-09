@@ -3,6 +3,7 @@
 .success-toast {
   background-color: variables.$background-color;
   border-radius: 7px;
+  box-shadow: variables.$primary-box-shadow;
   display: flex;
   max-width: 400px;
   padding: 15px;

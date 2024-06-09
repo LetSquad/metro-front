@@ -2,11 +2,14 @@ import { useCallback, useEffect, useState } from "react";
 
 import apiUrls from "@api/apiUrls";
 import { useToggle } from "@hooks/useToogle";
-import { WebSocketData } from "@models/websocket/types";
+import { WebSocketRequestActionEnum } from "@models/websocket/enums";
+import { WebSocketRequestData, WebSocketResponse } from "@models/websocket/types";
 
-export default function useWebsocket(
-    data: WebSocketData[],
-    onMessage: (eventData: any) => void,
+import { mockWebSocket } from "../../mocks/mockWebSocket";
+
+export default function useWebsocket<T extends WebSocketRequestData, K extends WebSocketResponse>(
+    data: T[],
+    onMessage: (eventData: K) => void,
     onError?: (errorEvent: Event) => void,
     autoStart: boolean = false
 ) {
@@ -25,13 +28,13 @@ export default function useWebsocket(
         }
 
         if (Date.now() - updatedAt > 5000) {
-            socket.send(JSON.stringify({ action: "ping" }));
+            socket.send(JSON.stringify({ action: WebSocketRequestActionEnum.PING }));
         }
     }, [socket, updatedAt]);
 
     const onOpenSocketHandler = useCallback(() => {
-        socket?.send(JSON.stringify({ action: "init" }));
-        socket?.send(JSON.stringify({ action: "want", data }));
+        socket?.send(JSON.stringify({ action: WebSocketRequestActionEnum.INIT }));
+        socket?.send(JSON.stringify({ action: WebSocketRequestActionEnum.WANT, data }));
     }, [data, socket]);
 
     const onCloseSocketWithReconnectHandler = useCallback(
@@ -70,7 +73,9 @@ export default function useWebsocket(
     );
 
     const connectSocket = useCallback(() => {
-        if (!process.env.WITH_MOCK) {
+        if (process.env.WITH_MOCK) {
+            mockWebSocket(data, onMessage);
+        } else {
             const _socket = new WebSocket(apiUrls.websocket());
             setSocket(_socket);
             setUpdatedAt(Date.now());
@@ -79,7 +84,7 @@ export default function useWebsocket(
 
             _socket.addEventListener("message", (event) => {
                 setUpdatedAt(Date.now());
-                const eventData = JSON.parse(event.data);
+                const eventData = JSON.parse(event.data) as K;
                 onMessage(eventData);
             });
 
@@ -89,7 +94,7 @@ export default function useWebsocket(
 
             setIntervalId(setInterval(healthcheck, 1000));
         }
-    }, [healthcheck, onCloseSocketWithReconnectHandler, onErrorSocketHandler, onMessage, onOpenSocketHandler]);
+    }, [data, healthcheck, onCloseSocketWithReconnectHandler, onErrorSocketHandler, onMessage, onOpenSocketHandler]);
 
     const closeSocket = useCallback(() => {
         socket?.close(1000);

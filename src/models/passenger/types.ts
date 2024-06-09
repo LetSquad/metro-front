@@ -13,6 +13,11 @@ export interface PassengerCategory {
     shortName: string;
 }
 
+export interface PassengerPhone {
+    phone: string;
+    description?: string | null;
+}
+
 export interface Passenger {
     id: number;
     firstName: string;
@@ -22,4 +27,5 @@ export interface Passenger {
     comment?: string | null;
     hasPacemaker: boolean;
     category: PassengerCategory;
+    phones: PassengerPhone[];
 }

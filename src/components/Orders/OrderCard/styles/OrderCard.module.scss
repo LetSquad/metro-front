@@ -1,0 +1,106 @@
+@use '/src/styles/mq' as *;
+@use '/src/styles/variables.module' as variables;
+
+.segment {
+  background-color: variables.$background-color !important;
+  box-shadow: variables.$primary-box-shadow !important;
+
+  @include mq($until: mobile) {
+    min-width: 350px;
+    padding: 20px !important;
+  }
+
+  @include mq($from: mobile) {
+    height: 360px;
+    padding: 30px !important;
+    width: 580px;
+  }
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  width: 100%;
+
+  @include mq($until: mobile) {
+    column-gap: 30px;
+  }
+  @include mq($from: mobile) {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  @include mq($until: mobile) {
+    row-gap: 10px;
+  }
+}
+
+.first-block {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  justify-content: space-between;
+  line-height: 18px;
+  margin-bottom: 10px;
+
+  @include mq($until: mobile) {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &-time-container {
+    display: flex;
+    flex-direction: column;
+
+    @include mq($from: mobile) {
+      align-items: flex-end;
+    }
+  }
+}
+
+.passenger-main-info-block {
+  column-gap: 5px;
+  display: flex;
+
+  @include mq($until: mobile) {
+    flex-direction: column;
+  }
+
+  @include mq($from: mobile) {
+    flex-wrap: wrap;
+  }
+
+  &-name-container {
+    column-gap: 5px;
+    display: flex;
+
+    @include mq($until: mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &-name {
+    font-weight: bold;
+  }
+}
+
+.link {
+  color: variables.$primary-text-color;
+  width: max-content;
+
+  &:hover {
+    color: variables.$primary-text-color;
+    @include mq($until: mobile) {
+      transform: scale(1.015);
+    }
+    @include mq($from: mobile) {
+      transform: scale(1.03);
+    }
+  }
+}
