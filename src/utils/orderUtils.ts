@@ -1,4 +1,6 @@
-import { OrderStatusCodeEnum } from "@models/order/enums";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { faBusinessTime, faSquareXmark, faTrainSubway, faUtensils } from "@fortawesome/free-solid-svg-icons";
+import { OrderStatusCodeEnum, TimeListActionType } from "@models/order/enums";
 
 export function getOrderStatusNameByOrderStatusCodeEnum(orderStatusCode: OrderStatusCodeEnum) {
     switch (orderStatusCode) {
@@ -42,5 +44,45 @@ export function getOrderStatusNameByOrderStatusCodeEnum(orderStatusCode: OrderSt
             return "Инспектор опаздывает";
         }
         // skip default
+    }
+}
+
+export function getOrderTimeListActionByOrderTimeListActionEnum(orderTimeListAction: TimeListActionType) {
+    switch (orderTimeListAction) {
+        case TimeListActionType.TRANSFER: {
+            return "В пути";
+        }
+        case TimeListActionType.BREAK: {
+            return "Перерыв";
+        }
+        case TimeListActionType.DOWNTIME: {
+            return "Простой";
+        }
+        case TimeListActionType.ORDER: {
+            return "На заявке";
+        }
+        default: {
+            return "";
+        }
+    }
+}
+
+export function getOrderTimeListActionIconByOrderTimeListActionEnum(orderTimeListAction: TimeListActionType): IconProp | undefined {
+    switch (orderTimeListAction) {
+        case TimeListActionType.TRANSFER: {
+            return faTrainSubway;
+        }
+        case TimeListActionType.BREAK: {
+            return faUtensils;
+        }
+        case TimeListActionType.DOWNTIME: {
+            return faSquareXmark;
+        }
+        case TimeListActionType.ORDER: {
+            return faBusinessTime;
+        }
+        default: {
+            return undefined;
+        }
     }
 }

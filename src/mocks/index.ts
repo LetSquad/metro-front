@@ -7,8 +7,8 @@ import { SignInResponse } from "@models/auth/types";
 import { Sex } from "@models/common/enums";
 import { EmployeeRole } from "@models/employee/enums";
 import { EmployeeCurrentResponse } from "@models/employee/types";
-import { OrderApplicationCodeEnum, OrderStatusCodeEnum } from "@models/order/enums";
-import { OrdersResponse } from "@models/order/types";
+import { OrderApplicationCodeEnum, OrderStatusCodeEnum, TimeListActionType } from "@models/order/enums";
+import { OrdersResponse, OrdersTimeListResponse } from "@models/order/types";
 import { PassengerCategoryCodeEnum } from "@models/passenger/enums";
 
 const mock = new MockAdapter(mockAxios, { delayResponse: 1000, onNoMatch: "passthrough" });
@@ -563,6 +563,424 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                 },
                 name: "Тверская"
             }
+        }
+    ]
+});
+
+mock.onGet(apiUrls.ordersTimeList()).reply<OrdersTimeListResponse>(200, {
+    ordersTimeList: [
+        {
+            employee: {
+                id: 0,
+                login: "+7 (999) 999-99-91",
+                employeeRole: EmployeeRole.EXECUTOR,
+                workPhone: "+7 (999) 999-99-91",
+                personalPhone: "+7 (999) 999-99-19",
+                firstName: "Иван",
+                lastName: "Иванов",
+                middleName: "Иванович",
+                sex: Sex.MALE,
+                shift: "08:00 - 20:00",
+                employeeNumber: 123_456,
+                lightDuties: false,
+                rank: {
+                    code: "INSPECTOR",
+                    name: "Инспектор",
+                    shortName: "ЦИ"
+                }
+            },
+            actions: [
+                {
+                    timeStart: "2024-06-08T02:00:00Z",
+                    timeEnd: "2024-06-08T04:30:00Z",
+                    actionType: TimeListActionType.NON_WORKING
+                },
+                {
+                    timeStart: "2024-06-08T04:30:00Z",
+                    timeEnd: "2024-06-08T05:00:00Z",
+                    actionType: TimeListActionType.TRANSFER
+                },
+                {
+                    timeStart: "2024-06-08T05:00:00Z",
+                    timeEnd: "2024-06-08T06:30:00Z",
+                    order: {
+                        id: 2,
+                        startDescription: "Встретить у 1 выхода станции Ховрино",
+                        finishDescription: "Отвезти к 4 выходу станции Алма-Атинская",
+                        orderApplication: {
+                            code: OrderApplicationCodeEnum.PHONE,
+                            name: "Телефон"
+                        },
+                        duration: 4500,
+                        passengerCount: 1,
+                        maleEmployeeCount: 0,
+                        femaleEmployeeCount: 1,
+                        additionalInfo: null,
+                        createdTime: "2024-06-07T13:30:00Z",
+                        orderTime: "2024-06-08T05:15:00Z",
+                        startTime: null,
+                        finishTime: null,
+                        absenceTime: null,
+                        cancelTime: null,
+                        orderStatus: {
+                            code: OrderStatusCodeEnum.ACCEPTED,
+                            name: "Принята"
+                        },
+                        passenger: {
+                            id: 123,
+                            firstName: "Михаил",
+                            lastName: "Свирдлов",
+                            middleName: "Семенович",
+                            sex: Sex.MALE,
+                            comment: null,
+                            hasPacemaker: false,
+                            category: {
+                                code: PassengerCategoryCodeEnum.IZT,
+                                name: "Инвалид по зрению",
+                                shortName: "ИЗТ"
+                            },
+                            phones: []
+                        },
+                        baggage: null,
+                        transfers: [],
+                        passengerCategory: null,
+                        startStation: {
+                            id: 21,
+                            line: {
+                                id: 1,
+                                name: 2,
+                                color: "#2DBE2C"
+                            },
+                            name: "Ховрино"
+                        },
+                        finishStation: {
+                            id: 21,
+                            line: {
+                                id: 1,
+                                name: 2,
+                                color: "#2DBE2C"
+                            },
+                            name: "Алма-Атинская"
+                        }
+                    },
+                    actionType: TimeListActionType.ORDER
+                },
+                {
+                    timeStart: "2024-06-08T06:30:00Z",
+                    timeEnd: "2024-06-08T07:00:00Z",
+                    actionType: TimeListActionType.TRANSFER
+                },
+                {
+                    timeStart: "2024-06-08T07:00:00Z",
+                    timeEnd: "2024-06-08T09:00:00Z",
+                    actionType: TimeListActionType.DOWNTIME
+                },
+                {
+                    timeStart: "2024-06-08T09:00:00Z",
+                    timeEnd: "2024-06-08T09:15:00Z",
+                    actionType: TimeListActionType.TRANSFER
+                },
+                {
+                    timeStart: "2024-06-08T09:15:00Z",
+                    timeEnd: "2024-06-08T10:00:00Z",
+                    order: {
+                        id: 3,
+                        startDescription: "Встретить у 1 выхода станции Ховрино",
+                        finishDescription: "Отвезти к 4 выходу станции Алма-Атинская",
+                        orderApplication: {
+                            code: OrderApplicationCodeEnum.PHONE,
+                            name: "Телефон"
+                        },
+                        duration: 4500,
+                        passengerCount: 1,
+                        maleEmployeeCount: 0,
+                        femaleEmployeeCount: 1,
+                        additionalInfo: null,
+                        createdTime: "2024-06-07T13:30:00Z",
+                        orderTime: "2024-06-08T05:15:00Z",
+                        startTime: null,
+                        finishTime: null,
+                        absenceTime: null,
+                        cancelTime: null,
+                        orderStatus: {
+                            code: OrderStatusCodeEnum.ACCEPTED,
+                            name: "Принята"
+                        },
+                        passenger: {
+                            id: 123,
+                            firstName: "Михаил",
+                            lastName: "Свирдлов",
+                            middleName: "Семенович",
+                            sex: Sex.MALE,
+                            comment: null,
+                            hasPacemaker: false,
+                            category: {
+                                code: PassengerCategoryCodeEnum.IZT,
+                                name: "Инвалид по зрению",
+                                shortName: "ИЗТ"
+                            },
+                            phones: []
+                        },
+                        baggage: null,
+                        transfers: [],
+                        passengerCategory: null,
+                        startStation: {
+                            id: 21,
+                            line: {
+                                id: 1,
+                                name: 2,
+                                color: "#2DBE2C"
+                            },
+                            name: "Ховрино"
+                        },
+                        finishStation: {
+                            id: 21,
+                            line: {
+                                id: 1,
+                                name: 2,
+                                color: "#2DBE2C"
+                            },
+                            name: "Алма-Атинская"
+                        }
+                    },
+                    actionType: TimeListActionType.ORDER
+                },
+                {
+                    timeStart: "2024-06-08T10:00:00Z",
+                    timeEnd: "2024-06-08T10:15:00Z",
+                    actionType: TimeListActionType.TRANSFER
+                },
+                {
+                    timeStart: "2024-06-08T10:15:00Z",
+                    timeEnd: "2024-06-08T11:00:00Z",
+                    actionType: TimeListActionType.BREAK
+                },
+                {
+                    timeStart: "2024-06-08T11:00:00Z",
+                    timeEnd: "2024-06-08T11:30:00Z",
+                    actionType: TimeListActionType.TRANSFER
+                },
+                {
+                    timeStart: "2024-06-08T11:30:00Z",
+                    timeEnd: "2024-06-08T13:00:00Z",
+                    order: {
+                        id: 4,
+                        startDescription: "Встретить у 1 выхода станции Ховрино",
+                        finishDescription: "Отвезти к 4 выходу станции Алма-Атинская",
+                        orderApplication: {
+                            code: OrderApplicationCodeEnum.PHONE,
+                            name: "Телефон"
+                        },
+                        duration: 4500,
+                        passengerCount: 1,
+                        maleEmployeeCount: 0,
+                        femaleEmployeeCount: 1,
+                        additionalInfo: null,
+                        createdTime: "2024-06-07T13:30:00Z",
+                        orderTime: "2024-06-08T05:15:00Z",
+                        startTime: null,
+                        finishTime: null,
+                        absenceTime: null,
+                        cancelTime: null,
+                        orderStatus: {
+                            code: OrderStatusCodeEnum.ACCEPTED,
+                            name: "Принята"
+                        },
+                        passenger: {
+                            id: 123,
+                            firstName: "Михаил",
+                            lastName: "Свирдлов",
+                            middleName: "Семенович",
+                            sex: Sex.MALE,
+                            comment: null,
+                            hasPacemaker: false,
+                            category: {
+                                code: PassengerCategoryCodeEnum.IZT,
+                                name: "Инвалид по зрению",
+                                shortName: "ИЗТ"
+                            },
+                            phones: []
+                        },
+                        baggage: null,
+                        transfers: [],
+                        passengerCategory: null,
+                        startStation: {
+                            id: 21,
+                            line: {
+                                id: 1,
+                                name: 2,
+                                color: "#2DBE2C"
+                            },
+                            name: "Ховрино"
+                        },
+                        finishStation: {
+                            id: 21,
+                            line: {
+                                id: 1,
+                                name: 2,
+                                color: "#2DBE2C"
+                            },
+                            name: "Алма-Атинская"
+                        }
+                    },
+                    actionType: TimeListActionType.ORDER
+                },
+                {
+                    timeStart: "2024-06-08T13:00:00Z",
+                    timeEnd: "2024-06-08T13:30:00Z",
+                    actionType: TimeListActionType.TRANSFER
+                },
+                {
+                    timeStart: "2024-06-08T13:30:00Z",
+                    timeEnd: "2024-06-08T14:00:00Z",
+                    actionType: TimeListActionType.DOWNTIME
+                },
+                {
+                    timeStart: "2024-06-08T14:00:00Z",
+                    timeEnd: "2024-06-08T14:30:00Z",
+                    actionType: TimeListActionType.TRANSFER
+                },
+                {
+                    timeStart: "2024-06-08T14:30:00Z",
+                    timeEnd: "2024-06-08T16:00:00Z",
+                    order: {
+                        id: 5,
+                        startDescription: "Встретить у 1 выхода станции Ховрино",
+                        finishDescription: "Отвезти к 4 выходу станции Алма-Атинская",
+                        orderApplication: {
+                            code: OrderApplicationCodeEnum.PHONE,
+                            name: "Телефон"
+                        },
+                        duration: 4500,
+                        passengerCount: 1,
+                        maleEmployeeCount: 0,
+                        femaleEmployeeCount: 1,
+                        additionalInfo: null,
+                        createdTime: "2024-06-07T13:30:00Z",
+                        orderTime: "2024-06-08T05:15:00Z",
+                        startTime: null,
+                        finishTime: null,
+                        absenceTime: null,
+                        cancelTime: null,
+                        orderStatus: {
+                            code: OrderStatusCodeEnum.ACCEPTED,
+                            name: "Принята"
+                        },
+                        passenger: {
+                            id: 123,
+                            firstName: "Михаил",
+                            lastName: "Свирдлов",
+                            middleName: "Семенович",
+                            sex: Sex.MALE,
+                            comment: null,
+                            hasPacemaker: false,
+                            category: {
+                                code: PassengerCategoryCodeEnum.IZT,
+                                name: "Инвалид по зрению",
+                                shortName: "ИЗТ"
+                            },
+                            phones: []
+                        },
+                        baggage: null,
+                        transfers: [],
+                        passengerCategory: null,
+                        startStation: {
+                            id: 21,
+                            line: {
+                                id: 1,
+                                name: 2,
+                                color: "#2DBE2C"
+                            },
+                            name: "Ховрино"
+                        },
+                        finishStation: {
+                            id: 21,
+                            line: {
+                                id: 1,
+                                name: 2,
+                                color: "#2DBE2C"
+                            },
+                            name: "Алма-Атинская"
+                        }
+                    },
+                    actionType: TimeListActionType.ORDER
+                },
+                {
+                    timeStart: "2024-06-08T16:00:00Z",
+                    timeEnd: "2024-06-08T16:15:00Z",
+                    actionType: TimeListActionType.DOWNTIME
+                },
+                {
+                    timeStart: "2024-06-08T16:15:00Z",
+                    timeEnd: "2024-06-08T17:00:00Z",
+                    order: {
+                        id: 6,
+                        startDescription: "Встретить у 1 выхода станции Ховрино",
+                        finishDescription: "Отвезти к 4 выходу станции Алма-Атинская",
+                        orderApplication: {
+                            code: OrderApplicationCodeEnum.PHONE,
+                            name: "Телефон"
+                        },
+                        duration: 4500,
+                        passengerCount: 1,
+                        maleEmployeeCount: 0,
+                        femaleEmployeeCount: 1,
+                        additionalInfo: null,
+                        createdTime: "2024-06-07T13:30:00Z",
+                        orderTime: "2024-06-08T05:15:00Z",
+                        startTime: null,
+                        finishTime: null,
+                        absenceTime: null,
+                        cancelTime: null,
+                        orderStatus: {
+                            code: OrderStatusCodeEnum.ACCEPTED,
+                            name: "Принята"
+                        },
+                        passenger: {
+                            id: 123,
+                            firstName: "Михаил",
+                            lastName: "Свирдлов",
+                            middleName: "Семенович",
+                            sex: Sex.MALE,
+                            comment: null,
+                            hasPacemaker: false,
+                            category: {
+                                code: PassengerCategoryCodeEnum.IZT,
+                                name: "Инвалид по зрению",
+                                shortName: "ИЗТ"
+                            },
+                            phones: []
+                        },
+                        baggage: null,
+                        transfers: [],
+                        passengerCategory: null,
+                        startStation: {
+                            id: 21,
+                            line: {
+                                id: 1,
+                                name: 2,
+                                color: "#2DBE2C"
+                            },
+                            name: "Ховрино"
+                        },
+                        finishStation: {
+                            id: 21,
+                            line: {
+                                id: 1,
+                                name: 2,
+                                color: "#2DBE2C"
+                            },
+                            name: "Алма-Атинская"
+                        }
+                    },
+                    actionType: TimeListActionType.ORDER
+                },
+                {
+                    timeStart: "2024-06-08T17:00:00Z",
+                    timeEnd: "2024-06-08T23:00:00Z",
+                    actionType: TimeListActionType.NON_WORKING
+                }
+            ]
         }
     ]
 });
