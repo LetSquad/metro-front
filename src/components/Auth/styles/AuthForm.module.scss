@@ -46,6 +46,7 @@
   &-form {
     @extend %flex-center-container;
     flex-direction: column;
+    height: 100%;
     padding-top: 0 !important;
     width: 100%;
 

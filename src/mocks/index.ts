@@ -81,7 +81,8 @@ mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
 });
 
 mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
-    orders: [
+    total: 1,
+    list: [
         {
             id: 0,
             startDescription: "Встретить в фойе метро в центре станции Аэропорт",
@@ -261,7 +262,8 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
 });
 
 mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
-    orders: [
+    total: 2,
+    list: [
         {
             id: 0,
             startDescription: "Встретить в фойе метро в центре станции Аэропорт",
@@ -568,7 +570,8 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
 });
 
 mock.onGet(apiUrls.ordersTimeList()).reply<OrdersTimeListResponse>(200, {
-    ordersTimeList: [
+    total: 10,
+    list: [
         {
             employee: {
                 id: 0,

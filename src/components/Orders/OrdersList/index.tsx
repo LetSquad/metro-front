@@ -33,7 +33,7 @@ export const initialValues: OrdersFiltersFormValues = {
     [OrdersFiltersFieldsName.ORDER_CATEGORIES]: undefined,
     [OrdersFiltersFieldsName.ORDER_STATUSES]: undefined,
     [OrdersFiltersFieldsName.DATE_FROM]: DateTime.now().toISO(),
-    [OrdersFiltersFieldsName.DATE_TO]: undefined
+    [OrdersFiltersFieldsName.DATE_TO]: DateTime.now().plus({ day: 1 }).toISO()
 };
 
 export default function OrdersList() {
@@ -84,8 +84,8 @@ export default function OrdersList() {
             return <LoadingErrorBlock isLoadingErrorObjectText="информации о заявках" reload={reloadOrders} />;
         }
 
-        return <div className={styles.ordersContainer}>{data?.orders.map((order) => <OrderCard key={order.id} order={order} />)}</div>;
-    }, [data?.orders, isOrdersLoading, isOrdersLoadingFailed, reloadOrders]);
+        return <div className={styles.ordersContainer}>{data?.list.map((order) => <OrderCard key={order.id} order={order} />)}</div>;
+    }, [data?.list, isOrdersLoading, isOrdersLoadingFailed, reloadOrders]);
 
     const formik = useFormik<OrdersFiltersFormValues>({
         onSubmit: onFiltersSubmit,

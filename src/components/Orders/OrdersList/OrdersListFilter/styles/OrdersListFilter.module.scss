@@ -4,6 +4,9 @@
 .segment {
   background-color: variables.$background-color !important;
   box-shadow: variables.$primary-box-shadow !important;
+  max-height: 600px;
+  overflow-x: hidden;
+  overflow-y: auto;
   padding: 20px !important;
   width: 400px;
 }

@@ -1,5 +1,5 @@
 import { Sex } from "@models/common/enums";
-import { ResponseWithEditLock } from "@models/http/types";
+import { BasePageResponse, ResponseWithEditLock } from "@models/http/types";
 import { PassengerCategoryCodeEnum } from "@models/passenger/enums";
 
 export interface Baggage {
@@ -32,4 +32,4 @@ export interface Passenger {
 }
 
 export type PassengerResponse = ResponseWithEditLock<Passenger>;
-export type PassengersResponse = { passengers: Passenger[] };
+export type PassengersResponse = BasePageResponse<Passenger[]>;
