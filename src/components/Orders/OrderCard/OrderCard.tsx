@@ -39,7 +39,7 @@ export default function OrderCard({ order }: OrderCardProps) {
                                     {getFullName(order.passenger.firstName, order.passenger.middleName, order.passenger.lastName)}
                                 </span>
                             </div>
-                            <span>{`(${formatPassengersCount(order.passengerCount)}, категория ${order.passengerCategory?.shortName || order.passenger.category.shortName}${order.passenger.hasPacemaker && ", есть ЭКС"})`}</span>
+                            <span>{`(${formatPassengersCount(order.passengerCount)}, категория ${order.passengerCategory?.shortName || order.passenger.category.shortName}${order.passenger.hasPacemaker ? ", есть ЭКС" : ""})`}</span>
                         </div>
                         {order.passenger.comment && <span>{`Информация о пассажире: ${order.passenger.comment}`}</span>}
                         {order.baggage ? (
