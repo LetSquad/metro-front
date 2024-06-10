@@ -7,6 +7,7 @@ import { Segment } from "semantic-ui-react";
 import MetroLine from "@components/Metro/MetroLine";
 import { formatEmployeeCount } from "@coreUtils/employeeUtils";
 import { formatPassengersCount } from "@coreUtils/passengerUtils";
+import { formatMinutesCount } from "@coreUtils/timeUtils";
 import { getFullName } from "@coreUtils/utils";
 import { Sex } from "@models/common/enums";
 import { Order } from "@models/order/types";
@@ -28,7 +29,7 @@ export default function OrderCard({ order }: OrderCardProps) {
                             <span>{order.orderStatus.name}</span>
                             <div className={styles.firstBlockTimeContainer}>
                                 <span>{`Время встречи: ${DateTime.fromISO(order.orderTime).toFormat("dd.MM.yyyy T")}`}</span>
-                                <span>{`Ожидаемое время выполнения: ${order.duration / 60} минут`}</span>
+                                <span>{`Ожидаемое время выполнения: ${formatMinutesCount(order.duration / 60)}`}</span>
                             </div>
                         </div>
                         <div className={styles.passengerMainInfoBlock}>

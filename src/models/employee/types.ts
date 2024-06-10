@@ -1,6 +1,6 @@
 import { Sex } from "@models/common/enums";
 import { EmployeeFieldsName, EmployeeRole, RankFieldsName } from "@models/employee/enums";
-import { ResponseWithEditLock } from "@models/http/types";
+import { BasePageResponse, ResponseWithEditLock } from "@models/http/types";
 
 export interface EmployeeRank {
     code: string;
@@ -24,12 +24,13 @@ export interface Employee {
     rank: EmployeeRank;
 }
 
-export interface EmployCurrent extends Employee {
+export interface EmployeeCurrent extends Employee {
     login: string;
 }
 
 export type EmployeeFormFields = Omit<Employee, "id" | "rank"> & { [RankFieldsName.RANK_CODE]: string };
 
-export type EmployeeResponse = ResponseWithEditLock<Employee>;
-export type EmployeeCurrentResponse = EmployCurrent;
-export type EmployeesResponse = { employees: Employee[] };
+export type EmployeeResponse = Employee;
+export type EmployeeWithLockResponse = ResponseWithEditLock<Employee>;
+export type EmployeeCurrentResponse = EmployeeCurrent;
+export type EmployeesResponse = BasePageResponse<Employee>;

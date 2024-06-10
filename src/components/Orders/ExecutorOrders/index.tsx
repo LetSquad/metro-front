@@ -57,5 +57,5 @@ export default function ExecutorOrders() {
         return <LoadingErrorBlock isLoadingErrorObjectText="информации о заявках" reload={reloadOrders} />;
     }
 
-    return <div className={styles.container}>{data?.orders.map((order) => <OrderCard key={order.id} order={order} />)}</div>;
+    return <div className={styles.container}>{data?.list.map((order) => <OrderCard key={order.id} order={order} />)}</div>;
 }

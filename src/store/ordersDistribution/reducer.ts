@@ -58,11 +58,11 @@ export const ordersDistributionSlice = createSlice({
         });
         builder.addCase(getOrdersTimeListRequest.fulfilled, (state, action) => {
             state.isOrdersTimeListLoading = false;
-            state.ordersTimeList = action.payload.ordersTimeList;
+            state.ordersTimeList = action.payload.list;
         });
         builder.addCase(ordersDistributionRequest.fulfilled, (state, action) => {
             state.isOrdersDistributionLoading = false;
-            state.ordersTimeList = action.payload.ordersTimeList;
+            state.ordersTimeList = action.payload.list;
             toast.success("Заявки успешно распределены", { id: ORDER_DISTRIBUTION_TOAST_NAME });
         });
     }

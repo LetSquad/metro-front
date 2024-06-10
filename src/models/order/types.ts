@@ -1,5 +1,5 @@
 import { Employee } from "@models/employee/types";
-import { ResponseWithEditLock } from "@models/http/types";
+import { BasePageResponse, ResponseWithEditLock } from "@models/http/types";
 import { Station, StationTransfer } from "@models/metro/types";
 import { OrderApplicationCodeEnum, OrdersFiltersFieldsName, OrderStatusCodeEnum, TimeListActionType } from "@models/order/enums";
 import { Baggage, Passenger, PassengerCategory } from "@models/passenger/types";
@@ -62,6 +62,7 @@ export interface OrdersFiltersFormValues {
     [OrdersFiltersFieldsName.DATE_TO]?: string;
 }
 
-export type OrderResponse = ResponseWithEditLock<Order>;
-export type OrdersResponse = { orders: Order[] };
-export type OrdersTimeListResponse = { ordersTimeList: OrdersTimeList[] };
+export type OrderResponse = Order;
+export type OrderWithLockResponse = ResponseWithEditLock<Order>;
+export type OrdersResponse = BasePageResponse<Order>;
+export type OrdersTimeListResponse = BasePageResponse<OrdersTimeList>;
