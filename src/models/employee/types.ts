@@ -10,7 +10,6 @@ export interface EmployeeRank {
 
 export interface Employee {
     id: number;
-    login: string;
     [EmployeeFieldsName.EMPLOYEE_ROLE]: EmployeeRole;
     [EmployeeFieldsName.WORK_PHONE]: string;
     [EmployeeFieldsName.PERSONAL_PHONE]: string;

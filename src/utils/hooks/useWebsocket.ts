@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import apiUrls from "@api/apiUrls";
 import { useToggle } from "@hooks/useToogle";
@@ -7,16 +7,18 @@ import { WebSocketRequestData, WebSocketResponse } from "@models/websocket/types
 
 import { mockWebSocket } from "../../mocks/mockWebSocket";
 
-export default function useWebsocket<T extends WebSocketRequestData, K extends WebSocketResponse>(
+export default function useWebsocket<T extends WebSocketRequestData>(
     data: T[],
-    onMessage: (eventData: K) => void,
+    onMessage: (eventData: WebSocketResponse) => void,
     onError?: (errorEvent: Event) => void,
     autoStart: boolean = false
 ) {
     const [socket, setSocket] = useState<WebSocket>();
     const [updatedAt, setUpdatedAt] = useState(Date.now());
     const [intervalId, setIntervalId] = useState<NodeJS.Timeout>();
-    const [isReconect, , setReconnectTrue, setReconnectFalse] = useToggle();
+    const [isReconnect, , setReconnectTrue, setReconnectFalse] = useToggle();
+
+    const socketRef = useRef(socket);
 
     const healthcheck = useCallback(() => {
         if (!socket) {
@@ -30,7 +32,7 @@ export default function useWebsocket<T extends WebSocketRequestData, K extends W
         if (Date.now() - updatedAt > 5000) {
             socket.send(JSON.stringify({ action: WebSocketRequestActionEnum.PING }));
         }
-    }, [socket, updatedAt]);
+    }, [updatedAt, socket]);
 
     const onOpenSocketHandler = useCallback(() => {
         socket?.send(JSON.stringify({ action: WebSocketRequestActionEnum.INIT }));
@@ -84,21 +86,25 @@ export default function useWebsocket<T extends WebSocketRequestData, K extends W
 
             _socket.addEventListener("message", (event) => {
                 setUpdatedAt(Date.now());
-                const eventData = JSON.parse(event.data) as K;
+                const eventData = JSON.parse(event.data) as WebSocketResponse;
                 onMessage(eventData);
             });
 
-            _socket.addEventListener("close", (event) => onCloseSocketWithReconnectHandler(event));
+            _socket.addEventListener("close", onCloseSocketWithReconnectHandler);
 
             _socket.addEventListener("error", onErrorSocketHandler);
 
             setIntervalId(setInterval(healthcheck, 1000));
         }
-    }, [data, healthcheck, onCloseSocketWithReconnectHandler, onErrorSocketHandler, onMessage, onOpenSocketHandler]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data, healthcheck, onCloseSocketWithReconnectHandler, onErrorSocketHandler, onMessage, onOpenSocketHandler, socket]);
 
-    const closeSocket = useCallback(() => {
-        socket?.close(1000);
-    }, [socket]);
+    const closeSocket = useCallback(
+        (_socket?: WebSocket) => {
+            (_socket ?? socket)?.close(1000);
+        },
+        [socket]
+    );
 
     const reconnectSocket = useCallback(() => {
         if (socket) {
@@ -115,23 +121,27 @@ export default function useWebsocket<T extends WebSocketRequestData, K extends W
     }, [connectSocket, socket]);
 
     useEffect(() => {
+        socketRef.current = socket;
+    }, [socket]);
+
+    useEffect(() => {
         if (autoStart) {
             startSocket();
         }
 
         return () => {
-            closeSocket();
+            closeSocket(socketRef.current);
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
-        if (isReconect) {
+        if (isReconnect && socket) {
             startSocket();
             setReconnectFalse();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isReconect]);
+    }, [isReconnect, socket]);
 
     return { socket, startSocket, reconnectSocket, closeSocket };
 }

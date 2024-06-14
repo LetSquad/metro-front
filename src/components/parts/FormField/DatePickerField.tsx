@@ -60,6 +60,7 @@ export default function DatePickerField({
                 "field",
                 {
                     required,
+                    disabled,
                     error: isErrorDisplay
                 },
                 className

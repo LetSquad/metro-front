@@ -18,7 +18,8 @@ export default function PhoneInputField({
     country = "ru",
     preferredCountries = ["ru"],
     onlyCountries = ["ru"],
-    excludeCountries
+    excludeCountries,
+    disabled = false
 }: PhoneNumberInputFieldProps) {
     const [{ value }, { error, touched }, { setValue, setTouched }] = useField<string | undefined>(name);
 
@@ -31,6 +32,7 @@ export default function PhoneInputField({
             required={required}
             error={isErrorDisplay ? error : undefined}
             className={className}
+            disabled={disabled}
             input={
                 <PhoneInput
                     inputClass={styles.input}
@@ -39,15 +41,17 @@ export default function PhoneInputField({
                     onlyCountries={onlyCountries}
                     excludeCountries={excludeCountries}
                     value={value}
-                    onChange={(_value, _data, _event, formattedValue) => setValue(formattedValue)}
-                    onBlur={(event) => {
-                        setValue(event.target.value);
-                        setTouched(true);
+                    autoFormat
+                    onChange={(_value, _data, _event, formattedValue) => {
+                        console.log(_value, _data, _event, formattedValue);
+                        setValue(_value);
                     }}
+                    onBlur={() => setTouched(true)}
                     disableDropdown={onlyCountries?.length === 1}
                     localization={ru}
                     specialLabel={undefined}
                     placeholder={placeholder}
+                    disabled={disabled}
                 />
             }
         />

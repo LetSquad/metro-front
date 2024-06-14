@@ -22,8 +22,11 @@ export interface BaseFieldProps {
     defaultValue?: string;
 }
 
-export interface BaseInputFieldProps extends BaseFieldProps {
+export interface BaseFieldPropsWithDisabled extends BaseFieldProps {
     disabled?: boolean;
+}
+
+export interface BaseInputFieldProps extends BaseFieldPropsWithDisabled {
     onChange?: (value: string) => void;
     clearable?: boolean;
     inputLabel?: SemanticShorthandItem<LabelProps>;
@@ -50,7 +53,7 @@ export interface ImageSelectorFieldProps extends BaseFieldProps {
     multiple?: boolean;
 }
 
-export interface PhoneNumberInputFieldProps extends BaseFieldProps {
+export interface PhoneNumberInputFieldProps extends BaseFieldPropsWithDisabled {
     country?: string | number;
     onlyCountries?: string[];
     preferredCountries?: string[];
@@ -63,7 +66,7 @@ export interface DropdownOption {
     content?: string | React.JSX.Element;
 }
 
-export interface DropdownFieldProps extends BaseFieldProps {
+export interface DropdownFieldProps extends BaseFieldPropsWithDisabled {
     options: DropdownOption[];
     search?: boolean;
     allowAdditions?: boolean;
@@ -71,17 +74,16 @@ export interface DropdownFieldProps extends BaseFieldProps {
     multiple?: boolean;
 }
 
-export interface DatePickerFieldProps extends BaseFieldProps {
+export interface DatePickerFieldProps extends BaseFieldPropsWithDisabled {
     onChange?: (value?: string) => void;
     maxDate?: Date;
     minDate?: Date;
     dateFormat?: string;
     popperPlacement?: Placement;
-    disabled?: boolean;
     includeDates?: Date[];
 }
 
-export interface TimePickerFieldProps extends BaseFieldProps {
+export interface TimePickerFieldProps extends BaseFieldPropsWithDisabled {
     onChange?: (value?: string) => void;
     timeCaption?: string;
     timeFormat?: string;
@@ -89,11 +91,11 @@ export interface TimePickerFieldProps extends BaseFieldProps {
     minTime?: Date;
     timeIntervals?: number;
     popperPlacement?: Placement;
-    disabled?: boolean;
     includeTimes?: Date[];
+    filterTimes?: (date: Date) => boolean;
 }
 
-export type DateTimePickerFieldProps = BaseFieldProps &
+export type DateTimePickerFieldProps = BaseFieldPropsWithDisabled &
     DatePickerFieldProps &
     TimePickerFieldProps & {
         includeTimes?: Date[];
@@ -124,7 +126,7 @@ export interface FormFieldsRangeProps extends BaseFieldProps {
     to: FormFieldProps;
 }
 
-export interface RatingFieldProps extends BaseFieldProps {
+export interface RatingFieldProps extends BaseFieldPropsWithDisabled {
     clearable?: boolean;
     maxRating?: number;
     size?: "mini" | "tiny" | "small" | "large" | "huge" | "massive";
@@ -134,14 +136,14 @@ export type FormFieldProps =
     | (PhoneNumberInputFieldProps & { type: FormFieldType.PHONE_NUMBER_INPUT })
     | (PasswordInputFieldProps & { type: FormFieldType.PASSWORD_INPUT })
     | (InputFieldProps & { type: FormFieldType.INPUT })
-    | (BaseFieldProps & { type: FormFieldType.TEXTAREA })
+    | (BaseFieldPropsWithDisabled & { type: FormFieldType.TEXTAREA })
     | (DropdownFieldProps & { type: FormFieldType.DROPDOWN })
     | (DatePickerFieldProps & { type: FormFieldType.DATEPICKER })
     | (TimePickerFieldProps & { type: FormFieldType.TIMEPICKER })
     | (DateTimePickerFieldProps & { type: FormFieldType.DATE_TIMEPICKER })
     | (ImageEditorFieldProps & { type: FormFieldType.IMAGE_EDITOR })
     | (ButtonGroupFieldProps & { type: FormFieldType.BUTTON_GROUP })
-    | (BaseFieldProps & { type: FormFieldType.CHECKBOX })
+    | (BaseFieldPropsWithDisabled & { type: FormFieldType.CHECKBOX })
     | (ImageSelectorFieldProps & { type: FormFieldType.IMAGE_SELECTOR })
     | (FormFieldsRangeProps & { type: FormFieldType.FORM_FIELDS_RANGE })
     | (RatingFieldProps & { type: FormFieldType.RATING });

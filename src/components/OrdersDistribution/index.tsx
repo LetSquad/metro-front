@@ -7,8 +7,8 @@ import OrderDistributionHeader from "@components/OrdersDistribution/OrderDistrib
 import OrdersDistributionTable from "@components/OrdersDistribution/OrdersDistributionTable";
 import partsStyles from "@coreStyles/baseParts.module.scss";
 import useWebsocket from "@hooks/useWebsocket";
-import { WebSocketDataTypeEnum } from "@models/websocket/enums";
-import { UpdateListWebSocketRequestData, UpdateListWebSocketResponse } from "@models/websocket/types";
+import { WebSocketDataTypeEnum, WebSocketResponseActionEnum } from "@models/websocket/enums";
+import { UpdateListWebSocketRequestData, WebSocketResponse } from "@models/websocket/types";
 import ListChangedToast from "@parts/ListChangedToast";
 import LoadingErrorBlock from "@parts/LoadingErrorBlock/LoadingErrorBlock";
 import { selectCurrentEmployee } from "@store/employee/selectors";
@@ -32,14 +32,19 @@ export default function OrdersDistribution() {
         dispatch(getOrdersTimeListRequest());
     }, [dispatch]);
 
-    const onWebSocketMessage = useCallback(() => {
-        toast.custom((t: Toast) => <ListChangedToast onClick={getOrdersTimeList} toast={t} />, {
-            id: "update-orders-time-list-toast",
-            duration: 120_000
-        });
-    }, [getOrdersTimeList]);
+    const onWebSocketMessage = useCallback(
+        (eventData: WebSocketResponse) => {
+            if (eventData.action === WebSocketResponseActionEnum.UPDATE) {
+                toast.custom((t: Toast) => <ListChangedToast onClick={getOrdersTimeList} toast={t} />, {
+                    id: "update-orders-time-list-toast",
+                    duration: 120_000
+                });
+            }
+        },
+        [getOrdersTimeList]
+    );
 
-    const { startSocket } = useWebsocket<UpdateListWebSocketRequestData, UpdateListWebSocketResponse>(
+    const { startSocket } = useWebsocket<UpdateListWebSocketRequestData>(
         [{ type: WebSocketDataTypeEnum.ORDER_LIST_UPDATE, login: currentEmployee?.login as string }],
         onWebSocketMessage
     );
