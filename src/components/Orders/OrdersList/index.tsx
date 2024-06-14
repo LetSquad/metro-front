@@ -13,8 +13,8 @@ import partsStyles from "@coreStyles/baseParts.module.scss";
 import useWebsocket from "@hooks/useWebsocket";
 import { OrdersFiltersFieldsName } from "@models/order/enums";
 import { OrdersFiltersFormValues, OrdersResponse } from "@models/order/types";
-import { WebSocketDataTypeEnum } from "@models/websocket/enums";
-import { UpdateListWebSocketRequestData, UpdateListWebSocketResponse } from "@models/websocket/types";
+import { WebSocketDataTypeEnum, WebSocketResponseActionEnum } from "@models/websocket/enums";
+import { UpdateListWebSocketRequestData, WebSocketResponse } from "@models/websocket/types";
 import ListChangedToast from "@parts/ListChangedToast";
 import LoadingErrorBlock from "@parts/LoadingErrorBlock/LoadingErrorBlock";
 import { selectCurrentEmployee } from "@store/employee/selectors";
@@ -51,14 +51,19 @@ export default function OrdersList() {
         reloadOrders({ params: filterValues });
     }, [filterValues, reloadOrders]);
 
-    const onWebSocketMessage = useCallback(() => {
-        toast.custom((t: Toast) => <ListChangedToast onClick={getOrders} toast={t} />, {
-            id: "update-orders-list-toast",
-            duration: 120_000
-        });
-    }, [getOrders]);
+    const onWebSocketMessage = useCallback(
+        (eventData: WebSocketResponse) => {
+            if (eventData.action === WebSocketResponseActionEnum.UPDATE) {
+                toast.custom((t: Toast) => <ListChangedToast onClick={getOrders} toast={t} />, {
+                    id: "update-orders-list-toast",
+                    duration: 120_000
+                });
+            }
+        },
+        [getOrders]
+    );
 
-    const { startSocket } = useWebsocket<UpdateListWebSocketRequestData, UpdateListWebSocketResponse>(
+    const { startSocket } = useWebsocket<UpdateListWebSocketRequestData>(
         [{ type: WebSocketDataTypeEnum.ORDER_LIST_UPDATE, login: currentEmployee?.login as string }],
         onWebSocketMessage
     );
@@ -84,8 +89,18 @@ export default function OrdersList() {
             return <LoadingErrorBlock isLoadingErrorObjectText="информации о заявках" reload={reloadOrders} />;
         }
 
-        return <div className={styles.ordersContainer}>{data?.list.map((order) => <OrderCard key={order.id} order={order} />)}</div>;
-    }, [data?.list, isOrdersLoading, isOrdersLoadingFailed, reloadOrders]);
+        if (!data || data.list.length === 0) {
+            return <div className={partsStyles.flexBaseCenterContainer}>По заданным критериям заявки не найдены</div>;
+        }
+
+        return (
+            <div className={styles.ordersContainer}>
+                {data.list.map((order) => (
+                    <OrderCard key={order.id} order={order} />
+                ))}
+            </div>
+        );
+    }, [data, isOrdersLoading, isOrdersLoadingFailed, reloadOrders]);
 
     const formik = useFormik<OrdersFiltersFormValues>({
         onSubmit: onFiltersSubmit,

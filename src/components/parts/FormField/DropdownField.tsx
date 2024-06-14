@@ -15,7 +15,8 @@ export default function DropdownField({
     search = false,
     allowAdditions = false,
     clearable = false,
-    multiple = false
+    multiple = false,
+    disabled = false
 }: DropdownFieldProps) {
     const [{ value: fieldValue }, { error, touched }, { setValue, setTouched }] = useField<string | undefined>({
         name,
@@ -41,6 +42,7 @@ export default function DropdownField({
 
     return (
         <Form.Dropdown
+            disabled={disabled}
             label={label}
             value={value}
             options={fullOptions}

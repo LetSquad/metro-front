@@ -25,12 +25,15 @@ export default function DateTimePickerField({
     required = false,
     maxDate,
     minDate,
+    minTime,
+    maxTime,
     dateFormat = "dd.MM.yyyy HH:mm",
     timeFormat = "HH:mm",
     timeCaption = "Время",
     timeIntervals = 15,
     includeTimes,
     includeDates,
+    filterTimes,
     onChange: additionalOnChange,
     popperPlacement,
     disabled = false
@@ -83,6 +86,7 @@ export default function DateTimePickerField({
                 "field",
                 {
                     required,
+                    disabled,
                     error: isErrorDisplay
                 },
                 className
@@ -102,6 +106,8 @@ export default function DateTimePickerField({
                 onChange={changeDateTimeValue}
                 maxDate={maxDate}
                 minDate={minDate}
+                minTime={minTime}
+                maxTime={maxTime}
                 showMonthDropdown
                 showYearDropdown
                 showTimeSelect
@@ -117,6 +123,7 @@ export default function DateTimePickerField({
                 onClickOutside={resetDateValue}
                 onBlur={setTouchedTrue}
                 popperPlacement={popperPlacement}
+                filterTime={filterTimes}
             />
             {isErrorDisplay && (
                 <Label pointing prompt>

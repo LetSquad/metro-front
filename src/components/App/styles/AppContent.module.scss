@@ -1,7 +1,7 @@
 @use 'src/styles/variables.module' as variables;
 
 .container {
-  height: 100%;
+  height: calc(100% - #{variables.$header-height});
   margin-top: variables.$header-height;
 }
 

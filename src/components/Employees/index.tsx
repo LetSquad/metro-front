@@ -1,3 +1,3 @@
 export default function Passengers() {
-    return <div>Пассажиры</div>;
+    return <div>Работники</div>;
 }

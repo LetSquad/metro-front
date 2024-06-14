@@ -37,7 +37,7 @@ export default function InputField({
     );
 
     return (
-        <Form.Field error={isErrorDisplay} required={required} className={className}>
+        <Form.Field error={isErrorDisplay} required={required} className={className} disabled={disabled}>
             {label && <label htmlFor={name}>{label}</label>}
             <Input
                 id={name}
