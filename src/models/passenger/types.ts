@@ -1,11 +1,11 @@
 import { Sex } from "@models/common/enums";
 import { BasePageResponse, ResponseWithEditLock } from "@models/http/types";
-import { PassengerCategoryCodeEnum } from "@models/passenger/enums";
+import { BaggageFieldsName, PassengerCategoryCodeEnum, PassengerFieldsName } from "@models/passenger/enums";
 
 export interface Baggage {
-    type: string;
-    weight: number;
-    isHelpNeeded: boolean;
+    [BaggageFieldsName.TYPE]: string;
+    [BaggageFieldsName.WEIGHT]: number;
+    [BaggageFieldsName.IS_HELP_NEEDED]: boolean;
 }
 
 export interface PassengerCategory {
@@ -21,15 +21,27 @@ export interface PassengerPhone {
 
 export interface Passenger {
     id: number;
-    firstName: string;
-    lastName: string;
-    middleName?: string | null;
-    sex: Sex;
-    comment?: string | null;
-    hasPacemaker: boolean;
-    category: PassengerCategory;
-    phones: PassengerPhone[];
+    [PassengerFieldsName.FIRST_NAME]: string;
+    [PassengerFieldsName.LAST_NAME]: string;
+    [PassengerFieldsName.MIDDLE_NAME]?: string | null;
+    [PassengerFieldsName.SEX]: Sex;
+    [PassengerFieldsName.COMMENT]?: string | null;
+    [PassengerFieldsName.HAS_PACEMAKER]: boolean;
+    [PassengerFieldsName.CATEGORY]: PassengerCategory;
+    [PassengerFieldsName.PHONES]: PassengerPhone[];
 }
 
-export type PassengerResponse = ResponseWithEditLock<Passenger>;
-export type PassengersResponse = BasePageResponse<Passenger[]>;
+export interface PassengerFormValue {
+    [PassengerFieldsName.FIRST_NAME]: string;
+    [PassengerFieldsName.LAST_NAME]: string;
+    [PassengerFieldsName.MIDDLE_NAME]?: string;
+    [PassengerFieldsName.SEX]: Sex;
+    [PassengerFieldsName.COMMENT]?: string;
+    [PassengerFieldsName.HAS_PACEMAKER]: boolean;
+    [PassengerFieldsName.CATEGORY]: PassengerCategoryCodeEnum;
+    [PassengerFieldsName.PHONES]: PassengerPhone[];
+}
+
+export type PassengerResponse = Passenger;
+export type PassengerWithLockResponse = ResponseWithEditLock<Passenger>;
+export type PassengersResponse = BasePageResponse<Passenger>;

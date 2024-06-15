@@ -16,3 +16,10 @@ export interface StationTransfer {
     duration: number;
     isCrosswalking: boolean;
 }
+
+export interface StationTransferFormValues {
+    startStation: number;
+    finishStation: number;
+    duration: number;
+    isCrosswalking: boolean;
+}

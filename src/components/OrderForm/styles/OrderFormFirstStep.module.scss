@@ -1,0 +1,45 @@
+@use '/src/styles/variables.module' as variables;
+
+.baggage {
+  &-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-label {
+    color: variables.$primary-text-color;
+    display: block;
+    font-size: .92857143em;
+    font-weight: 700;
+    margin: 0 0 .28571429rem;
+    text-transform: none;
+
+    &-disabled {
+      opacity: 0.45;
+    }
+  }
+
+  &-content {
+    column-gap: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+
+    > div {
+      width: 100%;
+    }
+
+    > div:first-child {
+      flex: 45%;
+    }
+
+    > div:nth-child(2) {
+      flex: 30%;
+    }
+
+    > div:last-child {
+      align-items: center;
+      display: flex;
+      flex: 25%;
+    }
+  }
+}

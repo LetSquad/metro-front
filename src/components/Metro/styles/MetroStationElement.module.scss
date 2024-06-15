@@ -1,0 +1,17 @@
+@use 'src/styles/parts.module' as *;
+
+.container {
+  align-items: center;
+  column-gap: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.line-logo {
+  height: 16px;
+  width: 16px;
+}
+
+.station {
+  @extend %base-item;
+}

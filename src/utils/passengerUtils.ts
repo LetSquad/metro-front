@@ -55,3 +55,45 @@ export function getPassengerCategoryShortNameByPassengerCategoryCodeEnum(passeng
         // skip default
     }
 }
+
+export function getPassengerCategoryFullNameByPassengerCategoryCodeEnum(passengerCategoryCode: PassengerCategoryCodeEnum) {
+    switch (passengerCategoryCode) {
+        case PassengerCategoryCodeEnum.IZT: {
+            return "Инвалид по зрению";
+        }
+        case PassengerCategoryCodeEnum.IZ: {
+            return "Инвалид по зрению с остаточным зрением";
+        }
+        case PassengerCategoryCodeEnum.IS: {
+            return "Инвалид по слуху";
+        }
+        case PassengerCategoryCodeEnum.IK: {
+            return "Инвалид колясочник";
+        }
+        case PassengerCategoryCodeEnum.IO: {
+            return "Инвалид опорник";
+        }
+        case PassengerCategoryCodeEnum.DI: {
+            return "Ребенок инвалид";
+        }
+        case PassengerCategoryCodeEnum.PL: {
+            return "Пожилой человек";
+        }
+        case PassengerCategoryCodeEnum.RD: {
+            return "Родители с детьми";
+        }
+        case PassengerCategoryCodeEnum.RDK: {
+            return "Родители с детскими колясками";
+        }
+        case PassengerCategoryCodeEnum.OGD: {
+            return "Организованные группы детей";
+        }
+        case PassengerCategoryCodeEnum.OV: {
+            return "Временно маломобильные";
+        }
+        case PassengerCategoryCodeEnum.IU: {
+            return "Люди с ментальной инвалидностью";
+        }
+        // skip default
+    }
+}

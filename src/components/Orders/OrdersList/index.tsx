@@ -9,6 +9,7 @@ import { useAxios } from "@api/api";
 import apiUrls from "@api/apiUrls";
 import OrderCard from "@components/Orders/OrderCard/OrderCard";
 import OrdersListFilter from "@components/Orders/OrdersList/OrdersListFilter";
+import OrdersListHeader from "@components/Orders/OrdersList/OrdersListHeader";
 import partsStyles from "@coreStyles/baseParts.module.scss";
 import useWebsocket from "@hooks/useWebsocket";
 import { OrdersFiltersFieldsName } from "@models/order/enums";
@@ -118,6 +119,7 @@ export default function OrdersList() {
 
     return (
         <FormikProvider value={formik}>
+            <OrdersListHeader />
             <div className={styles.container}>
                 {ordersList}
                 <div className={styles.filters}>

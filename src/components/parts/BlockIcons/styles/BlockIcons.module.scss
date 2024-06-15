@@ -1,0 +1,44 @@
+@use 'src/styles/variables.module' as variables;
+
+.icon,
+%block-icon {
+  color: variables.$primary-button-main-color !important;
+
+  &-s {
+    @extend %block-icon;
+    font-size: 14px !important;
+  }
+
+  &-m {
+    @extend %block-icon;
+    font-size: 18px !important;
+  }
+
+  &-l {
+    @extend %block-icon;
+    font-size: 22px !important;
+  }
+
+  &-container {
+    position: absolute;
+    transform: translateY(-50%);
+
+    &-m {
+      @extend %block-icon-container;
+      right: 20px;
+      top: 20px;
+    }
+
+    &-l {
+      @extend %block-icon-container;
+      right: 25px;
+      top: 30px;
+    }
+
+    &-c {
+      @extend %block-icon-container;
+      right: 0;
+      top: 50%;
+    }
+  }
+}

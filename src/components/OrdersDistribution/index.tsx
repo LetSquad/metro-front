@@ -3,7 +3,7 @@ import { Toast, toast } from "react-hot-toast";
 
 import { Loader } from "semantic-ui-react";
 
-import OrderDistributionHeader from "@components/OrdersDistribution/OrderDistributionHeader";
+import OrdersDistributionHeader from "@components/OrdersDistribution/OrdersDistributionHeader";
 import OrdersDistributionTable from "@components/OrdersDistribution/OrdersDistributionTable";
 import partsStyles from "@coreStyles/baseParts.module.scss";
 import useWebsocket from "@hooks/useWebsocket";
@@ -69,7 +69,7 @@ export default function OrdersDistribution() {
 
     return (
         <>
-            <OrderDistributionHeader />
+            <OrdersDistributionHeader />
             <OrdersDistributionTable ordersTimeList={ordersTimeList} />
         </>
     );

@@ -1,5 +1,7 @@
 import { DateTime } from "luxon";
 
+import { Sex } from "@models/common/enums";
+
 export function getFullName(firstName?: string | null, middleName?: string | null, lastName?: string | null): string {
     return `${lastName || ""}${lastName && (firstName || middleName) ? " " : ""}${firstName || ""}${
         firstName && middleName ? " " : ""
@@ -92,4 +94,16 @@ export function getFullExternalLink(link: string) {
     }
 
     return `https://${link}`;
+}
+
+export function getSexLabelBySexEnum(sex: Sex): string {
+    switch (sex) {
+        case Sex.MALE: {
+            return "Мужчина";
+        }
+        case Sex.FEMALE: {
+            return "Женщина";
+        }
+        // skip default
+    }
 }
