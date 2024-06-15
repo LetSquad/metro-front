@@ -95,10 +95,13 @@ export default function OrdersList() {
         }
 
         return (
-            <div className={styles.ordersContainer}>
-                {data.list.map((order) => (
-                    <OrderCard key={order.id} order={order} />
-                ))}
+            <div className={styles.contentContainer}>
+                <OrdersListHeader />
+                <div className={styles.ordersContainer}>
+                    {data.list.map((order) => (
+                        <OrderCard key={order.id} order={order} />
+                    ))}
+                </div>
             </div>
         );
     }, [data, isOrdersLoading, isOrdersLoadingFailed, reloadOrders]);
@@ -119,7 +122,6 @@ export default function OrdersList() {
 
     return (
         <FormikProvider value={formik}>
-            <OrdersListHeader />
             <div className={styles.container}>
                 {ordersList}
                 <div className={styles.filters}>

@@ -1,3 +1,5 @@
+import MockScreen from "@parts/MockScreen/MockScreen";
+
 export default function Passengers() {
-    return <div>Пассажиры</div>;
+    return <MockScreen />;
 }
