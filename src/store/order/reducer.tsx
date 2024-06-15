@@ -1,6 +1,6 @@
 import { Toast, toast } from "react-hot-toast";
 
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, isAnyOf } from "@reduxjs/toolkit";
 import { AxiosResponse } from "axios";
 
 import axios from "@api/api";
@@ -64,6 +64,14 @@ export const updateOrderRequest = createAsyncThunk(
     "updateOrderRequest",
     async ({ orderId, ...values }: OrderFormValues & { orderId: number }) => {
         const response: AxiosResponse<OrderResponse> = await axios.put<OrderResponse>(apiUrls.ordersId(orderId), values);
+        return response.data;
+    }
+);
+
+export const updateOrderStatusRequest = createAsyncThunk(
+    "updateOrderStatusRequest",
+    async ({ orderId, status }: { orderId: number; status: string }) => {
+        const response: AxiosResponse<OrderResponse> = await axios.put<OrderResponse>(apiUrls.ordersIdStatus(orderId), { status });
         return response.data;
     }
 );
@@ -134,15 +142,15 @@ export const orderSlice = createSlice({
                 duration: 120_000
             });
         });
-        builder.addCase(updateOrderRequest.pending, (state, action) => {
+        builder.addMatcher(isAnyOf(updateOrderRequest.pending, updateOrderStatusRequest.pending), (state, action) => {
             state.isOrderUpdating = true;
             toast.loading("Обновляем заявку", { id: UPDATE_ORDER_TOAST(action.meta.arg.orderId) });
         });
-        builder.addCase(updateOrderRequest.rejected, (state, action) => {
+        builder.addMatcher(isAnyOf(updateOrderRequest.rejected, updateOrderStatusRequest.rejected), (state, action) => {
             state.isOrderUpdating = false;
-            toast.error("Произошла ошибка при создании заявки", { id: UPDATE_ORDER_TOAST(action.meta.arg.orderId) });
+            toast.error("Произошла ошибка при обновлении заявки", { id: UPDATE_ORDER_TOAST(action.meta.arg.orderId) });
         });
-        builder.addCase(updateOrderRequest.fulfilled, (state, action) => {
+        builder.addMatcher(isAnyOf(updateOrderRequest.fulfilled, updateOrderStatusRequest.fulfilled), (state, action) => {
             state.isOrderUpdating = false;
             state.order = action.payload;
             toast.success("Заявка успешно обновлена", { id: UPDATE_ORDER_TOAST(action.meta.arg.orderId) });

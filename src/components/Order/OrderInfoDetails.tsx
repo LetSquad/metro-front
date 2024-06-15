@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 
 import { DateTime } from "luxon";
-import { Accordion, AccordionContent, AccordionTitle, Icon, Segment } from "semantic-ui-react";
+import { Accordion, AccordionContent, AccordionTitle, Dropdown, DropdownItem, DropdownMenu, Icon, Segment } from "semantic-ui-react";
 
 import MetroLine from "@components/Metro/MetroLine";
 import { formatEmployeeCount } from "@coreUtils/employeeUtils";
+import { getOrderStatusNameByOrderStatusCodeEnum } from "@coreUtils/orderUtils";
 import { formatPassengersCount } from "@coreUtils/passengerUtils";
 import { formatMinutesCount } from "@coreUtils/timeUtils";
-import { getFullName, getSexLabelBySexEnum } from "@coreUtils/utils";
+import { formatPhoneNumber, getFullName, getSexLabelBySexEnum } from "@coreUtils/utils";
 import { useToggle } from "@hooks/useToogle";
 import { Sex } from "@models/common/enums";
 import { EmployeeFieldsName } from "@models/employee/enums";
-import { OrderFieldsName } from "@models/order/enums";
-import { Order } from "@models/order/types";
+import { OrderFieldsName, OrderStatusCodeEnum } from "@models/order/enums";
+import { Order, OrderStatus } from "@models/order/types";
 import { PassengerFieldsName } from "@models/passenger/enums";
+import { useAppDispatch, useAppSelector } from "@store/hooks";
+import { updateOrderStatusRequest } from "@store/order/reducer";
+import { selectIsOrderUpdating } from "@store/order/selectors";
 
 import styles from "./styles/OrderInfoDetails.module.scss";
 
@@ -22,14 +26,44 @@ interface OrderInfoProps {
 }
 
 export default function OrderInfoDetails({ order }: OrderInfoProps) {
+    const dispatch = useAppDispatch();
+
+    const isOrderUpdating = useAppSelector(selectIsOrderUpdating);
+
     const [isPhonesOpen, togglePhoneAccordion] = useToggle();
     const [isEmployeesOpen, toggleEmployeesAccordion] = useToggle();
+    const [status, setStatus] = useState(order.orderStatus);
+
+    const onStatusChanged = useCallback(
+        (_status: OrderStatus) => {
+            setStatus(_status);
+            dispatch(updateOrderStatusRequest({ orderId: order.id, status: _status.code })).then((payload) => {
+                if (payload.type === updateOrderStatusRequest.rejected.type) {
+                    setStatus(order.orderStatus);
+                }
+            });
+        },
+        [dispatch, order.id, order.orderStatus]
+    );
 
     return (
         <Segment className={styles.segment}>
             <div className={styles.content}>
                 <div className={styles.firstBlock}>
-                    <span>{order.orderStatus.name}</span>
+                    <Dropdown text={status.name} loading={isOrderUpdating} disabled={isOrderUpdating}>
+                        <DropdownMenu>
+                            {Object.values(OrderStatusCodeEnum).map((_status) => {
+                                const statusName = getOrderStatusNameByOrderStatusCodeEnum(_status);
+                                return (
+                                    <DropdownItem
+                                        key={_status}
+                                        text={getOrderStatusNameByOrderStatusCodeEnum(_status)}
+                                        onClick={() => onStatusChanged({ code: _status, name: statusName })}
+                                    />
+                                );
+                            })}
+                        </DropdownMenu>
+                    </Dropdown>
                     <div className={styles.firstBlockTimeContainer}>
                         <span>{`Время встречи: ${DateTime.fromISO(order.orderTime).toFormat("dd.MM.yyyy T")}`}</span>
                         <span>{`Ожидаемое время выполнения: ${formatMinutesCount(order.duration / 60)}`}</span>
@@ -50,13 +84,15 @@ export default function OrderInfoDetails({ order }: OrderInfoProps) {
                         Телефоны пользователя
                     </AccordionTitle>
                     <AccordionContent active={isPhonesOpen}>
-                        <div className={styles.passengerPhonesContent}>
-                            {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES].map((passengerPhone) => (
-                                <span key={`${order[OrderFieldsName.PASSENGER].id}-${passengerPhone.phone}`}>
-                                    {`${passengerPhone.phone} - ${passengerPhone.description}`}
-                                </span>
-                            ))}
-                        </div>
+                        {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES].length > 0 && (
+                            <div className={styles.passengerPhonesContent}>
+                                {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES].map((passengerPhone) => (
+                                    <span key={`${order[OrderFieldsName.PASSENGER].id}-${passengerPhone.phone}`}>
+                                        {`${formatPhoneNumber(passengerPhone.phone)} - ${passengerPhone.description}`}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
                     </AccordionContent>
                 </Accordion>
                 {order.passenger.comment && <span>{`Информация о пассажире: ${order.passenger.comment}`}</span>}
@@ -107,7 +143,9 @@ export default function OrderInfoDetails({ order }: OrderInfoProps) {
                     </AccordionContent>
                 </Accordion>
             </div>
-            <MetroLine transfers={order.transfers} />
+            <div className={styles.metroLineContainer}>
+                <MetroLine transfers={order.transfers} />
+            </div>
         </Segment>
     );
 }

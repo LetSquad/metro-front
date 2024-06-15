@@ -11,6 +11,7 @@ const apiUrls = {
     orders: () => ordersUrl,
     ordersCurrent: () => `${ordersUrl}/current`,
     ordersId: (orderId: number) => `${ordersUrl}/${orderId}`,
+    ordersIdStatus: (orderId: number) => `${ordersUrl}/${orderId}/status`,
     ordersCalculation: () => `${ordersUrl}/calculation`,
     ordersTimeList: () => `${ordersUrl}/time-list`,
     ordersDistribution: () => `${ordersUrl}/distribution`,
