@@ -16,6 +16,39 @@ export default function MetroLine({ transfers }: MetroLineProps) {
     const { lines, stations } = useMemo(() => {
         const _stations: { transfers: { name: string; key: string }[]; duration: number }[] = [];
         const _lines: { key: string; color: string; style?: React.CSSProperties }[] = [];
+
+        if (transfers.length === 1) {
+            const transfer = transfers[0];
+            return {
+                stations: [
+                    {
+                        transfers: [
+                            {
+                                name: transfer.startStation.name,
+                                key: `${transfer.startStation.name}-${transfer.startStation.id}-${transfer.startStation.line.id}`
+                            },
+                            {
+                                name: transfer.finishStation.name,
+                                key: `${transfer.finishStation.name}-${transfer.finishStation.id}-${transfer.finishStation.line.id}`
+                            }
+                        ],
+                        duration: transfer.duration
+                    }
+                ],
+                lines: [
+                    {
+                        key: `${transfer.startStation.id}-${transfer.finishStation.id}`,
+                        color: transfer.startStation.line.color,
+                        // @ts-ignore
+                        style: {
+                            "--first-station-color": transfer.startStation.line.color,
+                            "--last-station-color": transfer.finishStation.line.color
+                        }
+                    }
+                ]
+            };
+        }
+
         for (const [id, transfer] of transfers.entries()) {
             const isFirstStation = id === 0;
             const isLastStation = id === transfers.length - 1;
@@ -61,6 +94,19 @@ export default function MetroLine({ transfers }: MetroLineProps) {
 
     const stationsMobile = useCallback(
         (index: number) => {
+            if (transfers.length === 1) {
+                return (
+                    <>
+                        <div className={styles.startStationContainer}>
+                            <span className={styles.station}>{stations[index].transfers[0].name}</span>
+                        </div>
+                        <div className={styles.finishStationContainer}>
+                            <span className={styles.station}>{stations[index].transfers[1].name}</span>
+                        </div>
+                    </>
+                );
+            }
+
             if (index === 0) {
                 return (
                     <>
@@ -90,7 +136,7 @@ export default function MetroLine({ transfers }: MetroLineProps) {
                 </div>
             );
         },
-        [lines.length, stations]
+        [lines.length, stations, transfers.length]
     );
 
     const stationsDesktop = useCallback(
@@ -107,6 +153,7 @@ export default function MetroLine({ transfers }: MetroLineProps) {
         <div className={styles.container}>
             <div className={styles.linesContainer}>
                 {lines.map(({ key, color, style }, index) => (
+                    /* @ts-ignore */
                     <div key={key} className={styles.lineContainer} style={style}>
                         {isMobile ? stationsMobile(index) : stationsDesktop(index)}
                         <span className={styles.duration}>{`${stations[index].duration / 60} мин`}</span>

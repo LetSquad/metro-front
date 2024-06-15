@@ -1,3 +1,4 @@
+@use 'src/styles/_mq' as *;
 @use '/src/styles/variables.module' as variables;
 
 .segment {
@@ -7,9 +8,18 @@
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
-  padding: 30px !important;
-  row-gap: 20px;
   width: 100%;
+
+  @include mq($until: mobile) {
+    column-gap: 30px;
+    min-width: 350px;
+    padding: 20px !important;
+  }
+
+  @include mq($from: mobile) {
+    padding: 30px !important;
+    row-gap: 20px;
+  }
 }
 
 .content {
@@ -26,21 +36,40 @@
   line-height: 18px;
   margin-bottom: 10px;
 
+  @include mq($until: mobile) {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
   &-time-container {
-    align-items: flex-end;
     display: flex;
     flex-direction: column;
+
+    @include mq($from: mobile) {
+      align-items: flex-end;
+    }
   }
 }
 
 .passenger-main-info-block {
   column-gap: 5px;
   display: flex;
-  flex-wrap: wrap;
+
+  @include mq($until: mobile) {
+    flex-direction: column;
+  }
+
+  @include mq($from: mobile) {
+    flex-wrap: wrap;
+  }
 
   &-name-container {
     column-gap: 5px;
     display: flex;
+
+    @include mq($until: mobile) {
+      flex-direction: column;
+    }
   }
 
   &-name {
@@ -71,3 +100,12 @@
 .divider {
   border-bottom: 1px solid #000;
 }
+
+@include mq($until: mobile) {
+  .metro-line-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+

@@ -4,7 +4,13 @@
   column-gap: 20px;
   display: flex;
   justify-content: space-between;
-  padding: 0 30px 20px;
+  padding: 20px 30px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
 .orders-container {

@@ -1,3 +1,5 @@
+import MockScreen from "@parts/MockScreen/MockScreen";
+
 export default function AddEmployee() {
-    return <div>Регистрация работника</div>;
+    return <MockScreen />;
 }
