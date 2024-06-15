@@ -5,8 +5,8 @@
   flex-wrap: wrap;
 
   @include mq($from: mobile) {
-    gap: 30px;
-    padding: 20px 60px;
+    gap: 20px;
+    padding: 20px 30px;
   }
 
   @include mq($until: mobile) {

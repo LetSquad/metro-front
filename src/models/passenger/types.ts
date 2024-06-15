@@ -28,7 +28,7 @@ export interface Passenger {
     [PassengerFieldsName.COMMENT]?: string | null;
     [PassengerFieldsName.HAS_PACEMAKER]: boolean;
     [PassengerFieldsName.CATEGORY]: PassengerCategory;
-    [PassengerFieldsName.PHONES]: PassengerPhone[];
+    [PassengerFieldsName.PHONES]?: PassengerPhone[] | null;
 }
 
 export interface PassengerFormValue {

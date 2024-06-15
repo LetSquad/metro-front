@@ -51,7 +51,7 @@ export default function OrderCard({ order }: OrderCardProps) {
                     {order.additionalInfo && <span>{`Дополнительеная информация о заявке: ${order.additionalInfo}`}</span>}
                     <span>{`Сопровождающие: ${formatEmployeeCount(order.maleEmployeeCount, Sex.MALE)}, ${formatEmployeeCount(order.femaleEmployeeCount, Sex.FEMALE)}`}</span>
                 </div>
-                <MetroLine transfers={order.transfers} />
+                {order.transfers && order.transfers.length > 0 && <MetroLine transfers={order.transfers} />}
             </Segment>
         </Link>
     );

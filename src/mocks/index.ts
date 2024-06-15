@@ -91,7 +91,7 @@ mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
 });
 
 mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
-    total: 1,
+    total: 4,
     list: [
         {
             id: 0,
@@ -476,12 +476,98 @@ mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
                 },
                 name: "Ховрино"
             }
+        },
+        {
+            id: 3,
+            orderApplication: {
+                code: OrderApplicationCodeEnum.PHONE,
+                name: "Телефон"
+            },
+            startDescription: "Встретить у ТЦ Дискавери",
+            duration: 3000,
+            passengerCount: 1,
+            maleEmployeeCount: 1,
+            femaleEmployeeCount: 1,
+            additionalInfo: null,
+            createdTime: "2024-06-07T13:33:00Z",
+            orderTime: "2024-06-08T19:30:00Z",
+            startTime: null,
+            finishTime: null,
+            absenceTime: null,
+            cancelTime: null,
+            orderStatus: {
+                code: OrderStatusCodeEnum.REVIEW,
+                name: "В рассмотрении"
+            },
+            passenger: {
+                id: 4,
+                firstName: "Федор",
+                lastName: "Вжик",
+                middleName: "Михайлович",
+                sex: Sex.MALE,
+                comment: null,
+                hasPacemaker: false,
+                category: {
+                    code: PassengerCategoryCodeEnum.IO,
+                    name: "Инвалид опорник",
+                    shortName: "ИО"
+                },
+                phones: []
+            },
+            baggage: {
+                type: "Сумка",
+                weight: 8,
+                isHelpNeeded: true
+            },
+            transfers: [
+                {
+                    startStation: {
+                        id: 23,
+                        line: {
+                            id: 1,
+                            name: "2",
+                            color: "#2DBE2C"
+                        },
+                        name: "Ховрино"
+                    },
+                    finishStation: {
+                        id: 27,
+                        line: {
+                            id: 1,
+                            name: "2",
+                            color: "#2DBE2C"
+                        },
+                        name: "Технопарк"
+                    },
+                    duration: 2340,
+                    isCrosswalking: false
+                }
+            ],
+            passengerCategory: null,
+            startStation: {
+                id: 14,
+                line: {
+                    id: 1,
+                    name: "2",
+                    color: "#2DBE2C"
+                },
+                name: "Ховрино"
+            },
+            finishStation: {
+                id: 23,
+                line: {
+                    id: 1,
+                    name: "2",
+                    color: "#2DBE2C"
+                },
+                name: "Технопарк"
+            }
         }
     ]
 });
 
 mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
-    total: 2,
+    total: 4,
     list: [
         {
             id: 0,
@@ -531,7 +617,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                     startStation: {
                         id: 0,
                         line: {
-                            id: 1,
+                            id: 2,
                             name: "2",
                             color: "#2DBE2C"
                         },
@@ -540,7 +626,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                     finishStation: {
                         id: 3,
                         line: {
-                            id: 1,
+                            id: 2,
                             name: "2",
                             color: "#2DBE2C"
                         },
@@ -553,7 +639,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                     startStation: {
                         id: 0,
                         line: {
-                            id: 1,
+                            id: 2,
                             name: "2",
                             color: "#2DBE2C"
                         },
@@ -584,7 +670,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                     finishStation: {
                         id: 5,
                         line: {
-                            id: 4,
+                            id: 5,
                             name: "5",
                             color: "#8D5B2D"
                         },
@@ -783,6 +869,174 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
                     color: "#2DBE2C"
                 },
                 name: "Тверская"
+            }
+        },
+        {
+            id: 2,
+            startDescription: "Встретить у 5 выхода станции Тверская",
+            orderApplication: {
+                code: OrderApplicationCodeEnum.PHONE,
+                name: "Телефон"
+            },
+            duration: 2100,
+            passengerCount: 1,
+            maleEmployeeCount: 0,
+            femaleEmployeeCount: 1,
+            additionalInfo: null,
+            createdTime: "2024-06-07T13:30:00Z",
+            orderTime: "2024-06-08T18:45:00Z",
+            startTime: null,
+            finishTime: null,
+            absenceTime: null,
+            cancelTime: null,
+            orderStatus: {
+                code: OrderStatusCodeEnum.REVIEW,
+                name: "В рассмотрении"
+            },
+            passenger: {
+                id: 3,
+                firstName: "Антон",
+                lastName: "Андроник",
+                middleName: "Сергеевич",
+                sex: Sex.MALE,
+                comment: null,
+                hasPacemaker: false,
+                category: {
+                    code: PassengerCategoryCodeEnum.IS,
+                    name: "Инвалид по слуху",
+                    shortName: "ИС"
+                },
+                phones: []
+            },
+            baggage: null,
+            transfers: [
+                {
+                    startStation: {
+                        id: 14,
+                        line: {
+                            id: 1,
+                            name: "2",
+                            color: "#2DBE2C"
+                        },
+                        name: "Тверская"
+                    },
+                    finishStation: {
+                        id: 23,
+                        line: {
+                            id: 1,
+                            name: "2",
+                            color: "#2DBE2C"
+                        },
+                        name: "Ховрино"
+                    },
+                    duration: 1800,
+                    isCrosswalking: false
+                }
+            ],
+            passengerCategory: null,
+            startStation: {
+                id: 14,
+                line: {
+                    id: 1,
+                    name: "2",
+                    color: "#2DBE2C"
+                },
+                name: "Тверская"
+            },
+            finishStation: {
+                id: 23,
+                line: {
+                    id: 1,
+                    name: "2",
+                    color: "#2DBE2C"
+                },
+                name: "Ховрино"
+            }
+        },
+        {
+            id: 3,
+            orderApplication: {
+                code: OrderApplicationCodeEnum.PHONE,
+                name: "Телефон"
+            },
+            startDescription: "Встретить у ТЦ Дискавери",
+            duration: 3000,
+            passengerCount: 1,
+            maleEmployeeCount: 1,
+            femaleEmployeeCount: 1,
+            additionalInfo: null,
+            createdTime: "2024-06-07T13:33:00Z",
+            orderTime: "2024-06-08T19:30:00Z",
+            startTime: null,
+            finishTime: null,
+            absenceTime: null,
+            cancelTime: null,
+            orderStatus: {
+                code: OrderStatusCodeEnum.REVIEW,
+                name: "В рассмотрении"
+            },
+            passenger: {
+                id: 4,
+                firstName: "Федор",
+                lastName: "Вжик",
+                middleName: "Михайлович",
+                sex: Sex.MALE,
+                comment: null,
+                hasPacemaker: false,
+                category: {
+                    code: PassengerCategoryCodeEnum.IO,
+                    name: "Инвалид опорник",
+                    shortName: "ИО"
+                },
+                phones: []
+            },
+            baggage: {
+                type: "Сумка",
+                weight: 8,
+                isHelpNeeded: true
+            },
+            transfers: [
+                {
+                    startStation: {
+                        id: 23,
+                        line: {
+                            id: 1,
+                            name: "2",
+                            color: "#2DBE2C"
+                        },
+                        name: "Ховрино"
+                    },
+                    finishStation: {
+                        id: 27,
+                        line: {
+                            id: 1,
+                            name: "2",
+                            color: "#2DBE2C"
+                        },
+                        name: "Технопарк"
+                    },
+                    duration: 2340,
+                    isCrosswalking: false
+                }
+            ],
+            passengerCategory: null,
+            startStation: {
+                id: 14,
+                line: {
+                    id: 1,
+                    name: "2",
+                    color: "#2DBE2C"
+                },
+                name: "Ховрино"
+            },
+            finishStation: {
+                id: 23,
+                line: {
+                    id: 1,
+                    name: "2",
+                    color: "#2DBE2C"
+                },
+                name: "Технопарк"
             }
         }
     ]

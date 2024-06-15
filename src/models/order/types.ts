@@ -25,7 +25,7 @@ export interface Order {
     id: number;
     [OrderFieldsName.START_DESCRIPTION]?: string | null;
     [OrderFieldsName.FINISH_DESCRIPTION]?: string | null;
-    [OrderFieldsName.ORDER_APPLICATION]: OrderApplication;
+    [OrderFieldsName.ORDER_APPLICATION]?: OrderApplication | null;
     duration: number; // In seconds
     [OrderFieldsName.PASSENGER_COUNT]: number;
     [OrderFieldsName.MALE_EMPLOYEE_COUNT]: number;
@@ -41,7 +41,7 @@ export interface Order {
     employees?: Employee[] | null;
     [OrderFieldsName.PASSENGER]: Passenger;
     [OrderFieldsName.BAGGAGE]?: Baggage | null;
-    [OrderFieldsName.TRANSFERS]: StationTransfer[];
+    [OrderFieldsName.TRANSFERS]?: StationTransfer[] | null;
     [OrderFieldsName.PASSENGER_CATEGORY]?: PassengerCategory | null;
     [OrderFieldsName.START_STATION]: Station;
     [OrderFieldsName.FINISH_STATION]: Station;
