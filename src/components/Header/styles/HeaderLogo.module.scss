@@ -1,0 +1,16 @@
+@use 'src/styles/_mq' as *;
+
+.header-logo {
+  margin: auto 10px auto auto;
+  max-width: 221px;
+
+  @include mq($until: mobile) {
+    max-width: 170px;
+  }
+}
+
+.menu-item {
+  &::before {
+    width: 0 !important;
+  }
+}

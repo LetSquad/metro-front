@@ -1,0 +1,17 @@
+.fields {
+  column-gap: 7px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.divider {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 38px;
+}
+
+.field {
+  margin: 0 !important;
+  min-width: 100px;
+  width: 100%;
+}

@@ -1,0 +1,41 @@
+@use 'src/styles/variables.module' as variables;
+
+.action,
+%order-time-list-action {
+  border-radius: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  text-wrap: nowrap;
+
+  &-cell {
+    padding: 0 5px;
+  }
+
+  &-break {
+    @extend %order-time-list-action;
+    background-color: #6EAEF8;
+  }
+
+  &-downtime {
+    @extend %order-time-list-action;
+    background-color: #F86E6E;
+  }
+
+  &-order {
+    @extend %order-time-list-action;
+    background-color: #F8EA6E;
+
+    &-link {
+      color: variables.$primary-text-color
+    }
+  }
+
+  &-non-working {
+    background-color: #bdbdbd;
+  }
+
+  &-transfer {
+    @extend %order-time-list-action;
+    background-color: #79F86E;
+  }
+}
