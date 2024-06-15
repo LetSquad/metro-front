@@ -1,6 +1,6 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faBusinessTime, faSquareXmark, faTrainSubway, faUtensils } from "@fortawesome/free-solid-svg-icons";
-import { OrderStatusCodeEnum, TimeListActionType } from "@models/order/enums";
+import { OrderApplicationCodeEnum, OrderStatusCodeEnum, TimeListActionType } from "@models/order/enums";
 
 export function getOrderStatusNameByOrderStatusCodeEnum(orderStatusCode: OrderStatusCodeEnum) {
     switch (orderStatusCode) {
@@ -64,6 +64,18 @@ export function getOrderTimeListActionByOrderTimeListActionEnum(orderTimeListAct
         default: {
             return "";
         }
+    }
+}
+
+export function getOrderApplicationLabelByOrderApplicationCodeEnum(orderApplicationCode: OrderApplicationCodeEnum) {
+    switch (orderApplicationCode) {
+        case OrderApplicationCodeEnum.ELECTRONIC_SERVICES: {
+            return "Электронные сервисы";
+        }
+        case OrderApplicationCodeEnum.PHONE: {
+            return "Телефон";
+        }
+        // skip default
     }
 }
 

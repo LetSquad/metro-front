@@ -9,7 +9,7 @@ import { selectIsOrdersDistributionLoading } from "@store/ordersDistribution/sel
 
 import styles from "./styles/OrdersDistributionHeader.module.scss";
 
-export default function OrderDistributionHeader() {
+export default function OrdersDistributionHeader() {
     const dispatch = useAppDispatch();
 
     const isOrdersDistributionLoading = useAppSelector(selectIsOrdersDistributionLoading);

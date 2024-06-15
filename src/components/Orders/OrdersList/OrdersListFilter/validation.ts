@@ -6,6 +6,9 @@ import { OrdersFiltersFieldsName } from "@models/order/enums";
 
 const PHONE_INVALID_MESSAGE = "Введите корректный номер телефона";
 
+const DATE_FROM_REQUIRED_MESSAGE = `Дата "с" должна быть указана`;
+
+const DATE_TO_REQUIRED_MESSAGE = `Дата "до" должна быть указана`;
 const DATE_TO_LOWER_THEN_FROM_MESSAGE = `Дата "до" должна быть больше или равна дате "с"`;
 
 export const validationSchema = yup.object().shape({
@@ -22,5 +25,6 @@ export const validationSchema = yup.object().shape({
 
             return DateTime.fromISO(dateFrom) <= DateTime.fromISO(dateTo);
         })
-        .optional()
+        .required(DATE_TO_REQUIRED_MESSAGE),
+    [OrdersFiltersFieldsName.DATE_FROM]: yup.string().required(DATE_FROM_REQUIRED_MESSAGE)
 });

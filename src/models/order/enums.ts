@@ -19,6 +19,24 @@ export enum OrderStatusCodeEnum {
     INSPECTOR_LATE = "INSPECTOR_LATE"
 }
 
+export enum OrderFieldsName {
+    START_DESCRIPTION = "startDescription",
+    FINISH_DESCRIPTION = "finishDescription",
+    ORDER_APPLICATION = "orderApplication",
+    PASSENGER_COUNT = "passengerCount",
+    MALE_EMPLOYEE_COUNT = "maleEmployeeCount",
+    FEMALE_EMPLOYEE_COUNT = "femaleEmployeeCount",
+    ADDITIONAL_INFO = "additionalInfo",
+    ORDER_TIME = "orderTime",
+    PASSENGER = "passenger",
+    BAGGAGE = "baggage",
+    TRANSFERS = "transfers",
+    PASSENGER_CATEGORY = "passengerCategory",
+    START_STATION = "startStation",
+    FINISH_STATION = "finishStation",
+    EMPLOYEES = "employees"
+}
+
 export enum OrdersFiltersFieldsName {
     PASSENGER_FIRST_NAME = "passengerFirstName",
     PASSENGER_LAST_NAME = "passengerLastName",

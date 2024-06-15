@@ -6,10 +6,11 @@ import { SignInFieldName } from "@models/auth/enums";
 import { SignInResponse } from "@models/auth/types";
 import { Sex } from "@models/common/enums";
 import { EmployeeRole } from "@models/employee/enums";
-import { EmployeeCurrentResponse } from "@models/employee/types";
+import { EmployeeCurrentResponse, EmployeesResponse } from "@models/employee/types";
 import { OrderApplicationCodeEnum, OrderStatusCodeEnum, TimeListActionType } from "@models/order/enums";
-import { OrdersResponse, OrdersTimeListResponse } from "@models/order/types";
+import { OrderCalculationResponse, OrdersResponse, OrdersTimeListResponse, OrderWithLockResponse } from "@models/order/types";
 import { PassengerCategoryCodeEnum } from "@models/passenger/enums";
+import { PassengersResponse } from "@models/passenger/types";
 
 const mock = new MockAdapter(mockAxios, {
     delayResponse: 1000,
@@ -986,6 +987,440 @@ mock.onGet(apiUrls.ordersTimeList()).reply<OrdersTimeListResponse>(200, {
                     actionType: TimeListActionType.NON_WORKING
                 }
             ]
+        }
+    ]
+});
+
+mock.onGet(apiUrls.ordersId(0)).reply<OrderWithLockResponse>(200, {
+    isLockedForEdit: true,
+    data: {
+        id: 0,
+        startDescription: "Встретить в фойе метро в центре станции Аэропорт",
+        finishDescription: "Отвезти на станцию Университет до выхода 3",
+        orderApplication: {
+            code: OrderApplicationCodeEnum.PHONE,
+            name: "Телефон"
+        },
+        duration: 3600,
+        passengerCount: 2,
+        maleEmployeeCount: 2,
+        femaleEmployeeCount: 1,
+        additionalInfo: "Пассажир в инвалидной коляске с одним сопровождающим",
+        createdTime: "2024-06-07T13:30:00Z",
+        orderTime: "2024-06-08T17:15:00Z",
+        startTime: null,
+        finishTime: null,
+        absenceTime: null,
+        cancelTime: null,
+        orderStatus: {
+            code: OrderStatusCodeEnum.ACCEPTED,
+            name: "Принята"
+        },
+        passenger: {
+            id: 0,
+            firstName: "Михаил",
+            lastName: "Гулкин",
+            middleName: "Иванович",
+            sex: Sex.MALE,
+            comment: null,
+            hasPacemaker: true,
+            category: {
+                code: PassengerCategoryCodeEnum.IK,
+                name: "Инвалид колясочник",
+                shortName: "ИК"
+            },
+            phones: [
+                {
+                    phone: "+7 (999) 123-45-67",
+                    description: "Основной телефон"
+                },
+                {
+                    phone: "+7 (999) 765-43-21",
+                    description: "Телефон сиделки"
+                }
+            ]
+        },
+        baggage: {
+            type: "Чемодан",
+            weight: 20,
+            isHelpNeeded: true
+        },
+        transfers: [
+            {
+                startStation: {
+                    id: 0,
+                    line: {
+                        id: 2,
+                        name: "2",
+                        color: "#2DBE2C"
+                    },
+                    name: "Аэропорт"
+                },
+                finishStation: {
+                    id: 3,
+                    line: {
+                        id: 2,
+                        name: "2",
+                        color: "#2DBE2C"
+                    },
+                    name: "Белорусская"
+                },
+                duration: 360,
+                isCrosswalking: false
+            },
+            {
+                startStation: {
+                    id: 0,
+                    line: {
+                        id: 2,
+                        name: "2",
+                        color: "#2DBE2C"
+                    },
+                    name: "Белорусская"
+                },
+                finishStation: {
+                    id: 4,
+                    line: {
+                        id: 4,
+                        name: "5",
+                        color: "#8D5B2D"
+                    },
+                    name: "Белорусская"
+                },
+                duration: 180,
+                isCrosswalking: true
+            },
+            {
+                startStation: {
+                    id: 4,
+                    line: {
+                        id: 4,
+                        name: "5",
+                        color: "#8D5B2D"
+                    },
+                    name: "Белорусская"
+                },
+                finishStation: {
+                    id: 5,
+                    line: {
+                        id: 5,
+                        name: "5",
+                        color: "#8D5B2D"
+                    },
+                    name: "Добрынинская"
+                },
+                duration: 720,
+                isCrosswalking: false
+            },
+            {
+                startStation: {
+                    id: 5,
+                    line: {
+                        id: 4,
+                        name: "5",
+                        color: "#8D5B2D"
+                    },
+                    name: "Добрынинская"
+                },
+                finishStation: {
+                    id: 6,
+                    line: {
+                        id: 8,
+                        name: "9",
+                        color: "#999999"
+                    },
+                    name: "Серпуховская"
+                },
+                duration: 180,
+                isCrosswalking: true
+            },
+            {
+                startStation: {
+                    id: 6,
+                    line: {
+                        id: 8,
+                        name: "9",
+                        color: "#999999"
+                    },
+                    name: "Серпуховская"
+                },
+                finishStation: {
+                    id: 7,
+                    line: {
+                        id: 8,
+                        name: "9",
+                        color: "#999999"
+                    },
+                    name: "Нагорная"
+                },
+                duration: 600,
+                isCrosswalking: false
+            }
+        ],
+        passengerCategory: null,
+        startStation: {
+            id: 0,
+            line: {
+                id: 1,
+                name: "2",
+                color: "#2DBE2C"
+            },
+            name: "Аэропорт"
+        },
+        finishStation: {
+            id: 7,
+            line: {
+                id: 8,
+                name: "9",
+                color: "#999999"
+            },
+            name: "Нагорная"
+        },
+        employees: [
+            {
+                id: 0,
+                employeeRole: EmployeeRole.EXECUTOR,
+                workPhone: "+7 (999) 999-99-91",
+                personalPhone: "+7 (999) 999-99-19",
+                firstName: "Иван",
+                lastName: "Иванов",
+                middleName: "Иванович",
+                sex: Sex.MALE,
+                shift: "08:00 - 20:00",
+                employeeNumber: 123_456,
+                lightDuties: false,
+                rank: {
+                    code: "INSPECTOR",
+                    name: "Инспектор",
+                    shortName: "ЦИ"
+                }
+            },
+            {
+                id: 1,
+                employeeRole: EmployeeRole.EXECUTOR,
+                workPhone: "+7 (999) 999-99-91",
+                personalPhone: "+7 (999) 999-99-19",
+                firstName: "Иван",
+                lastName: "Иванов",
+                middleName: "Иванович",
+                sex: Sex.MALE,
+                shift: "08:00 - 20:00",
+                employeeNumber: 123_456,
+                lightDuties: false,
+                rank: {
+                    code: "INSPECTOR",
+                    name: "Инспектор",
+                    shortName: "ЦИ"
+                }
+            }
+        ]
+    }
+});
+
+mock.onGet(apiUrls.passengers()).reply<PassengersResponse>(200, {
+    total: 2,
+    list: [
+        {
+            id: 0,
+            firstName: "Михаил",
+            lastName: "Гулкин",
+            middleName: "Иванович",
+            sex: Sex.MALE,
+            comment: null,
+            hasPacemaker: true,
+            category: {
+                code: PassengerCategoryCodeEnum.IK,
+                name: "Инвалид колясочник",
+                shortName: "ИК"
+            },
+            phones: [
+                {
+                    phone: "+7 (999) 123-45-67",
+                    description: "Основной телефон"
+                },
+                {
+                    phone: "+7 (999) 765-43-21",
+                    description: "Телефон сиделки"
+                }
+            ]
+        },
+        {
+            id: 1,
+            firstName: "Александр",
+            lastName: "Лукин",
+            middleName: "Михайлович",
+            sex: Sex.MALE,
+            comment: null,
+            hasPacemaker: true,
+            category: {
+                code: PassengerCategoryCodeEnum.DI,
+                name: "Ребенок инвалид",
+                shortName: "ДИ"
+            },
+            phones: [
+                {
+                    phone: "79917889899",
+                    description: "Телефон матери"
+                }
+            ]
+        }
+    ]
+});
+
+mock.onGet(apiUrls.employees()).reply<EmployeesResponse>(200, {
+    total: 2,
+    list: [
+        {
+            id: 0,
+            employeeRole: EmployeeRole.EXECUTOR,
+            workPhone: "+7 (999) 999-99-91",
+            personalPhone: "+7 (999) 999-99-19",
+            firstName: "Иван",
+            lastName: "Иванов",
+            middleName: "Иванович",
+            sex: Sex.MALE,
+            shift: "08:00 - 20:00",
+            employeeNumber: 123_456,
+            lightDuties: false,
+            rank: {
+                code: "INSPECTOR",
+                name: "Инспектор",
+                shortName: "ЦИ"
+            }
+        },
+        {
+            id: 1,
+            employeeRole: EmployeeRole.EXECUTOR,
+            workPhone: "+7 (999) 999-99-94",
+            personalPhone: "+7 (999) 999-99-49",
+            firstName: "Петр",
+            lastName: "Петров",
+            middleName: "Петрович",
+            sex: Sex.MALE,
+            shift: "07:00 - 19:00",
+            employeeNumber: 134_780,
+            lightDuties: true,
+            rank: {
+                code: "INSPECTOR",
+                name: "Инспектор",
+                shortName: "ЦИ"
+            }
+        }
+    ]
+});
+
+mock.onPost(apiUrls.ordersCalculation()).reply<OrderCalculationResponse>(200, {
+    duration: 45,
+    transfers: [
+        {
+            startStation: {
+                id: 0,
+                line: {
+                    id: 2,
+                    name: "2",
+                    color: "#2DBE2C"
+                },
+                name: "Аэропорт"
+            },
+            finishStation: {
+                id: 3,
+                line: {
+                    id: 2,
+                    name: "2",
+                    color: "#2DBE2C"
+                },
+                name: "Белорусская"
+            },
+            duration: 360,
+            isCrosswalking: false
+        },
+        {
+            startStation: {
+                id: 0,
+                line: {
+                    id: 2,
+                    name: "2",
+                    color: "#2DBE2C"
+                },
+                name: "Белорусская"
+            },
+            finishStation: {
+                id: 4,
+                line: {
+                    id: 4,
+                    name: "5",
+                    color: "#8D5B2D"
+                },
+                name: "Белорусская"
+            },
+            duration: 180,
+            isCrosswalking: true
+        },
+        {
+            startStation: {
+                id: 4,
+                line: {
+                    id: 4,
+                    name: "5",
+                    color: "#8D5B2D"
+                },
+                name: "Белорусская"
+            },
+            finishStation: {
+                id: 5,
+                line: {
+                    id: 5,
+                    name: "5",
+                    color: "#8D5B2D"
+                },
+                name: "Добрынинская"
+            },
+            duration: 720,
+            isCrosswalking: false
+        },
+        {
+            startStation: {
+                id: 5,
+                line: {
+                    id: 4,
+                    name: "5",
+                    color: "#8D5B2D"
+                },
+                name: "Добрынинская"
+            },
+            finishStation: {
+                id: 6,
+                line: {
+                    id: 8,
+                    name: "9",
+                    color: "#999999"
+                },
+                name: "Серпуховская"
+            },
+            duration: 180,
+            isCrosswalking: true
+        },
+        {
+            startStation: {
+                id: 6,
+                line: {
+                    id: 8,
+                    name: "9",
+                    color: "#999999"
+                },
+                name: "Серпуховская"
+            },
+            finishStation: {
+                id: 7,
+                line: {
+                    id: 8,
+                    name: "9",
+                    color: "#999999"
+                },
+                name: "Нагорная"
+            },
+            duration: 600,
+            isCrosswalking: false
         }
     ]
 });
