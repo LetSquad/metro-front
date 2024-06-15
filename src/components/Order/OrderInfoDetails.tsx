@@ -84,15 +84,16 @@ export default function OrderInfoDetails({ order }: OrderInfoProps) {
                         Телефоны пользователя
                     </AccordionTitle>
                     <AccordionContent active={isPhonesOpen}>
-                        {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES].length > 0 && (
-                            <div className={styles.passengerPhonesContent}>
-                                {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES].map((passengerPhone) => (
-                                    <span key={`${order[OrderFieldsName.PASSENGER].id}-${passengerPhone.phone}`}>
-                                        {`${formatPhoneNumber(passengerPhone.phone)} - ${passengerPhone.description}`}
-                                    </span>
-                                ))}
-                            </div>
-                        )}
+                        {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES] &&
+                            order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES]?.length > 0 && (
+                                <div className={styles.passengerPhonesContent}>
+                                    {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES].map((passengerPhone) => (
+                                        <span key={`${order[OrderFieldsName.PASSENGER].id}-${passengerPhone.phone}`}>
+                                            {`${formatPhoneNumber(passengerPhone.phone)} - ${passengerPhone.description}`}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
                     </AccordionContent>
                 </Accordion>
                 {order.passenger.comment && <span>{`Информация о пассажире: ${order.passenger.comment}`}</span>}
@@ -143,9 +144,11 @@ export default function OrderInfoDetails({ order }: OrderInfoProps) {
                     </AccordionContent>
                 </Accordion>
             </div>
-            <div className={styles.metroLineContainer}>
-                <MetroLine transfers={order.transfers} />
-            </div>
+            {order.transfers && order.transfers.length > 0 && (
+                <div className={styles.metroLineContainer}>
+                    <MetroLine transfers={order.transfers} />
+                </div>
+            )}
         </Segment>
     );
 }

@@ -56,7 +56,7 @@ export default function OrderInfo({ order }: OrderInfoProps) {
         () => ({
             [OrderFieldsName.START_DESCRIPTION]: order[OrderFieldsName.START_DESCRIPTION] ?? undefined,
             [OrderFieldsName.FINISH_DESCRIPTION]: order[OrderFieldsName.FINISH_DESCRIPTION] ?? undefined,
-            [OrderFieldsName.ORDER_APPLICATION]: order[OrderFieldsName.ORDER_APPLICATION].code,
+            [OrderFieldsName.ORDER_APPLICATION]: order[OrderFieldsName.ORDER_APPLICATION]?.code,
             [OrderFieldsName.PASSENGER_COUNT]: order[OrderFieldsName.PASSENGER_COUNT],
             [OrderFieldsName.MALE_EMPLOYEE_COUNT]: order[OrderFieldsName.MALE_EMPLOYEE_COUNT],
             [OrderFieldsName.FEMALE_EMPLOYEE_COUNT]: order[OrderFieldsName.FEMALE_EMPLOYEE_COUNT],

@@ -42,10 +42,7 @@ export default function PhoneInputField({
                     excludeCountries={excludeCountries}
                     value={value}
                     autoFormat
-                    onChange={(_value, _data, _event, formattedValue) => {
-                        console.log(_value, _data, _event, formattedValue);
-                        setValue(_value);
-                    }}
+                    onChange={(_value) => setValue(_value)}
                     onBlur={() => setTouched(true)}
                     disableDropdown={onlyCountries?.length === 1}
                     localization={ru}
