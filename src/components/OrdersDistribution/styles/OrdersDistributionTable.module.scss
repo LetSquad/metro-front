@@ -12,13 +12,34 @@ th {
   padding: 5px 15px;
 }
 
-.employee-cell {
+.head-hour-cell {
+  background: #fff;
+  position: sticky;
+  top: -1px;
+}
+
+.head-minutes-cell {
+  background: #fff;
+  position: sticky;
+  top: 30.5px;
+}
+
+.employee-cell,
+%employee-cell {
   padding: 10px;
   text-wrap: nowrap;
+}
+
+.employee-content-cell {
+  @extend %employee-cell;
+  background: #fff;
+  left: -21px;
+  position: sticky;
 }
 
 .table-container {
   height: calc(100% - 66px);
   overflow: auto;
   padding: 0 20px;
+  position: relative;
 }

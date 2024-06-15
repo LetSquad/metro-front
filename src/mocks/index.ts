@@ -51,7 +51,7 @@ mock.onPost(apiUrls.refreshToken(), undefined).reply<SignInResponse>(200, {
     role: EmployeeRole.EXECUTOR
 });
 
-mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
+/* mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
     id: 0,
     login: "+7 (999) 999-99-91",
     employeeRole: EmployeeRole.EXECUTOR,
@@ -69,9 +69,9 @@ mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
         name: "Инспектор",
         shortName: "ЦИ"
     }
-});
+}); */
 
-/* mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
+mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
     id: 1,
     login: "+7 (999) 999-99-92",
     employeeRole: EmployeeRole.OPERATOR,
@@ -88,7 +88,7 @@ mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
         code: "OPERATOR",
         name: "Оператор"
     }
-}); */
+});
 
 mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
     total: 1,
@@ -789,7 +789,7 @@ mock.onGet(apiUrls.orders()).reply<OrdersResponse>(200, {
 });
 
 mock.onGet(apiUrls.ordersTimeList()).reply<OrdersTimeListResponse>(200, {
-    total: 10,
+    total: 1,
     list: [
         {
             employee: {
@@ -812,7 +812,7 @@ mock.onGet(apiUrls.ordersTimeList()).reply<OrdersTimeListResponse>(200, {
             },
             actions: [
                 {
-                    timeStart: "2024-06-08T02:00:00Z",
+                    timeStart: "2024-06-08T02:30:00Z",
                     timeEnd: "2024-06-08T04:30:00Z",
                     actionType: TimeListActionType.NON_WORKING
                 },
@@ -1198,7 +1198,7 @@ mock.onGet(apiUrls.ordersTimeList()).reply<OrdersTimeListResponse>(200, {
                 },
                 {
                     timeStart: "2024-06-08T17:00:00Z",
-                    timeEnd: "2024-06-08T23:00:00Z",
+                    timeEnd: "2024-06-08T22:00:00Z",
                     actionType: TimeListActionType.NON_WORKING
                 }
             ]
