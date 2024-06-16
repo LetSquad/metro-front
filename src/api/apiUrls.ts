@@ -1,11 +1,14 @@
 const externalUrl = process.env.EXTERNAL_URL || "https://localhost:8443";
+const externalWebSocketUrl = process.env.EXTERNAL_URL
+    ? process.env.EXTERNAL_URL.replace("https", "wss").replace("http", "ws")
+    : "wss://localhost:8443";
 const baseUrl = `${externalUrl}/api`;
 const ordersUrl = `${baseUrl}/orders`;
 const passengersUrl = `${baseUrl}/passengers`;
 const employeesUrl = `${baseUrl}/employees`;
 const authUrl = `${baseUrl}/auth`;
 const metro = `${baseUrl}/metro`;
-const websocket = `${externalUrl}/websocket`;
+const websocket = `${externalWebSocketUrl}/websocket`;
 
 const apiUrls = {
     orders: () => ordersUrl,

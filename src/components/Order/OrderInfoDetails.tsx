@@ -11,10 +11,11 @@ import { formatMinutesCount } from "@coreUtils/timeUtils";
 import { formatPhoneNumber, getFullName, getSexLabelBySexEnum } from "@coreUtils/utils";
 import { useToggle } from "@hooks/useToogle";
 import { Sex } from "@models/common/enums";
-import { EmployeeFieldsName } from "@models/employee/enums";
+import { EmployeeFieldsName, EmployeeRole } from "@models/employee/enums";
 import { OrderFieldsName, OrderStatusCodeEnum } from "@models/order/enums";
 import { Order, OrderStatus } from "@models/order/types";
 import { PassengerFieldsName } from "@models/passenger/enums";
+import { selectCurrentEmployeeRole } from "@store/employee/selectors";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import { updateOrderStatusRequest } from "@store/order/reducer";
 import { selectIsOrderUpdating } from "@store/order/selectors";
@@ -29,6 +30,9 @@ export default function OrderInfoDetails({ order }: OrderInfoProps) {
     const dispatch = useAppDispatch();
 
     const isOrderUpdating = useAppSelector(selectIsOrderUpdating);
+    const currentEmployeeRole = useAppSelector(selectCurrentEmployeeRole);
+
+    const isUserExecutor = currentEmployeeRole === EmployeeRole.EXECUTOR;
 
     const [isPhonesOpen, togglePhoneAccordion] = useToggle();
     const [isEmployeesOpen, toggleEmployeesAccordion] = useToggle();
@@ -78,24 +82,26 @@ export default function OrderInfoDetails({ order }: OrderInfoProps) {
                     </div>
                     <span>{`(${formatPassengersCount(order.passengerCount)}, категория ${order.passengerCategory?.shortName || order.passenger.category.shortName}${order.passenger.hasPacemaker ? ", есть ЭКС" : ""})`}</span>
                 </div>
-                <Accordion>
-                    <AccordionTitle index={0} active={isPhonesOpen} onClick={togglePhoneAccordion}>
-                        <Icon name="dropdown" />
-                        Телефоны пользователя
-                    </AccordionTitle>
-                    <AccordionContent active={isPhonesOpen}>
-                        {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES] &&
-                            order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES]?.length > 0 && (
-                                <div className={styles.passengerPhonesContent}>
-                                    {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES].map((passengerPhone) => (
-                                        <span key={`${order[OrderFieldsName.PASSENGER].id}-${passengerPhone.phone}`}>
-                                            {`${formatPhoneNumber(passengerPhone.phone)} - ${passengerPhone.description}`}
-                                        </span>
-                                    ))}
-                                </div>
-                            )}
-                    </AccordionContent>
-                </Accordion>
+                {!isUserExecutor && (
+                    <Accordion>
+                        <AccordionTitle index={0} active={isPhonesOpen} onClick={togglePhoneAccordion}>
+                            <Icon name="dropdown" />
+                            Телефоны пользователя
+                        </AccordionTitle>
+                        <AccordionContent active={isPhonesOpen}>
+                            {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES] &&
+                                order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES]?.length > 0 && (
+                                    <div className={styles.passengerPhonesContent}>
+                                        {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES].map((passengerPhone) => (
+                                            <span key={`${order[OrderFieldsName.PASSENGER].id}-${passengerPhone.phone}`}>
+                                                {`${formatPhoneNumber(passengerPhone.phone)} - ${passengerPhone.description}`}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+                        </AccordionContent>
+                    </Accordion>
+                )}
                 {order.passenger.comment && <span>{`Информация о пассажире: ${order.passenger.comment}`}</span>}
                 {order.baggage ? (
                     <span>{`Багаж: ${order.baggage.type}, ${order.baggage.weight} кг. (${order.baggage.isHelpNeeded ? "нужна помощь" : "помощь не нужна"})`}</span>

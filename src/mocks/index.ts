@@ -51,7 +51,7 @@ mock.onPost(apiUrls.refreshToken(), undefined).reply<SignInResponse>(200, {
     role: EmployeeRole.EXECUTOR
 });
 
-/* mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
+mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
     id: 0,
     login: "+7 (999) 999-99-91",
     employeeRole: EmployeeRole.EXECUTOR,
@@ -69,9 +69,9 @@ mock.onPost(apiUrls.refreshToken(), undefined).reply<SignInResponse>(200, {
         name: "Инспектор",
         shortName: "ЦИ"
     }
-}); */
+});
 
-mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
+/* mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
     id: 1,
     login: "+7 (999) 999-99-92",
     employeeRole: EmployeeRole.OPERATOR,
@@ -88,7 +88,7 @@ mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
         code: "OPERATOR",
         name: "Оператор"
     }
-});
+}); */
 
 mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
     total: 4,
