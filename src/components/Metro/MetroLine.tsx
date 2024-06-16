@@ -13,12 +13,17 @@ interface MetroLineProps {
 export default function MetroLine({ transfers }: MetroLineProps) {
     const isMobile = useMediaQuery({ maxWidth: MOBILE_MAX_WIDTH });
 
+    const filteredTransfers = useMemo(
+        () => transfers.filter((transfer, index) => !(transfer.isCrosswalking && (index === 0 || index === transfers.length - 1))),
+        [transfers]
+    );
+
     const { lines, stations } = useMemo(() => {
         const _stations: { transfers: { name: string; key: string }[]; duration: number }[] = [];
         const _lines: { key: string; color: string; style?: React.CSSProperties }[] = [];
 
-        if (transfers.length === 1) {
-            const transfer = transfers[0];
+        if (filteredTransfers.length === 1) {
+            const transfer = filteredTransfers[0];
             return {
                 stations: [
                     {
@@ -49,9 +54,9 @@ export default function MetroLine({ transfers }: MetroLineProps) {
             };
         }
 
-        for (const [id, transfer] of transfers.entries()) {
+        for (const [id, transfer] of filteredTransfers.entries()) {
             const isFirstStation = id === 0;
-            const isLastStation = id === transfers.length - 1;
+            const isLastStation = id === filteredTransfers.length - 1;
             const lineKey = `${transfer.startStation.id}-${transfer.finishStation.id}`;
 
             if (isFirstStation) {
@@ -90,11 +95,11 @@ export default function MetroLine({ transfers }: MetroLineProps) {
         }
 
         return { stations: _stations, lines: _lines };
-    }, [transfers]);
+    }, [filteredTransfers]);
 
     const stationsMobile = useCallback(
         (index: number) => {
-            if (transfers.length === 1) {
+            if (filteredTransfers.length === 1) {
                 return (
                     <>
                         <div className={styles.startStationContainer}>
@@ -136,17 +141,46 @@ export default function MetroLine({ transfers }: MetroLineProps) {
                 </div>
             );
         },
-        [lines.length, stations, transfers.length]
+        [lines.length, stations, filteredTransfers.length]
     );
 
     const stationsDesktop = useCallback(
-        (index: number) => (
-            <>
-                <span className={styles.stationTop}>{stations[index].transfers[0].name}</span>
-                <span className={styles.stationBottom}>{stations[index].transfers[1].name}</span>
-            </>
-        ),
-        [stations]
+        (index: number) => {
+            if (filteredTransfers.length === 1) {
+                return (
+                    <>
+                        <span className={styles.stationTop}>{stations[index].transfers[0].name}</span>
+                        <span className={styles.stationBottom}>{stations[index].transfers[1].name}</span>
+                    </>
+                );
+            }
+
+            if (index === 0) {
+                return (
+                    <>
+                        <span className={styles.stationTop}>{stations[index].transfers[0].name}</span>
+                        <span className={styles.stationBottom}>{stations[index + 1].transfers[0].name}</span>
+                    </>
+                );
+            }
+
+            if (index === lines.length - 1) {
+                return (
+                    <>
+                        <span className={styles.stationTop}>{stations[index - 1].transfers[1].name}</span>
+                        <span className={styles.stationBottom}>{stations[index].transfers[1].name}</span>
+                    </>
+                );
+            }
+
+            return (
+                <>
+                    <span className={styles.stationTop}>{stations[index - 1].transfers[1].name}</span>
+                    <span className={styles.stationBottom}>{stations[index + 1].transfers[0].name}</span>
+                </>
+            );
+        },
+        [filteredTransfers.length, lines.length, stations]
     );
 
     return (
