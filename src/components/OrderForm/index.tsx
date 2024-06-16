@@ -60,17 +60,19 @@ const OrderForm = forwardRef(
         const onCalculation = useCallback(() => {
             formik.validateForm(formik.values).then(() => {
                 dispatch(calculateOrderRequest(formik.values as OrderFormValues)).then((data) => {
-                    const payload = data.payload as OrderCalculationResponse;
-                    setStep(STEP.FINISH_STEP);
-                    formik.setFieldValue(
-                        OrderFieldsName.TRANSFERS,
-                        payload.transfers.map((transfer) => ({
-                            startStation: transfer.startStation.id,
-                            finishStation: transfer.finishStation.id,
-                            duration: transfer.duration,
-                            isCrosswalking: transfer.isCrosswalking
-                        }))
-                    );
+                    if (calculateOrderRequest.fulfilled.type === data.type) {
+                        const payload = data.payload as OrderCalculationResponse;
+                        setStep(STEP.FINISH_STEP);
+                        formik.setFieldValue(
+                            OrderFieldsName.TRANSFERS,
+                            payload.transfers.map((transfer) => ({
+                                startStation: transfer.startStation.id,
+                                finishStation: transfer.finishStation.id,
+                                duration: transfer.duration,
+                                isCrosswalking: transfer.isCrosswalking
+                            }))
+                        );
+                    }
                 });
             });
         }, [dispatch, formik]);

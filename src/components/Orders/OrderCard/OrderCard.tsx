@@ -48,8 +48,8 @@ export default function OrderCard({ order }: OrderCardProps) {
                     )}
                     {order.startDescription && <span>{`Место встречи: ${order.startDescription}`}</span>}
                     {order.finishDescription && <span>{`Место назначения: ${order.finishDescription}`}</span>}
-                    {order.additionalInfo && <span>{`Дополнительеная информация о заявке: ${order.additionalInfo}`}</span>}
-                    <span>{`Сопровождающие: ${formatEmployeeCount(order.maleEmployeeCount, Sex.MALE)}, ${formatEmployeeCount(order.femaleEmployeeCount, Sex.FEMALE)}`}</span>
+                    {order.additionalInfo && <span>{`Дополнительная информация о заявке: ${order.additionalInfo}`}</span>}
+                    <span>{`Сопровождающие: ${order.maleEmployeeCount ? formatEmployeeCount(order.maleEmployeeCount, Sex.MALE) : ""}${order.maleEmployeeCount && order.femaleEmployeeCount ? ", " : ""}${order.femaleEmployeeCount ? formatEmployeeCount(order.femaleEmployeeCount, Sex.FEMALE) : ""}`}</span>
                 </div>
                 {order.transfers && order.transfers.length > 0 && <MetroLine transfers={order.transfers} />}
             </Segment>

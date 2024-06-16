@@ -12,7 +12,7 @@ export interface Employee {
     id: number;
     [EmployeeFieldsName.EMPLOYEE_ROLE]: EmployeeRole;
     [EmployeeFieldsName.WORK_PHONE]: string;
-    [EmployeeFieldsName.PERSONAL_PHONE]: string;
+    [EmployeeFieldsName.PERSONAL_PHONE]?: string | null;
     [EmployeeFieldsName.FIRST_NAME]: string;
     [EmployeeFieldsName.LAST_NAME]: string;
     [EmployeeFieldsName.MIDDLE_NAME]?: string | null;
