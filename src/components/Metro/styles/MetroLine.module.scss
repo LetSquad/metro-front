@@ -78,6 +78,7 @@
     .line::before {
       @extend %dot;
       background-color: var(--first-station-color);
+      border: var(--first-station-border);
       left: -10px;
 
       @include mq($until: mobile) {
@@ -90,6 +91,7 @@
     .line::after {
       @extend %dot;
       background-color: var(--last-station-color);
+      border: var(--last-station-border);
       right: -10px;
 
       @include mq($until: mobile) {

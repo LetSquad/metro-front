@@ -63,15 +63,21 @@ export default function MetroLine({ transfers }: MetroLineProps) {
                 _lines.push({
                     key: lineKey,
                     color: transfer.startStation.line.color,
-                    // @ts-ignore
-                    style: { "--first-station-color": transfer.startStation.line.color }
+                    style: {
+                        // @ts-ignore
+                        "--first-station-color": transfer.startStation.line.color,
+                        "--first-station-border": transfer.startStation.line.color === "#FFFFFF" ? "1px solid #EF161E" : 0
+                    }
                 });
             } else if (isLastStation) {
                 _lines.push({
                     key: lineKey,
                     color: transfer.finishStation.line.color,
-                    // @ts-ignore
-                    style: { "--last-station-color": transfer.finishStation.line.color }
+                    style: {
+                        // @ts-ignore
+                        "--last-station-color": transfer.finishStation.line.color,
+                        "--last-station-border": transfer.finishStation.line.color === "#FFFFFF" ? "1px solid #EF161E" : 0
+                    }
                 });
             } else if (!transfer.isCrosswalking) {
                 _lines.push({ key: lineKey, color: transfer.startStation.line.color });
@@ -191,7 +197,10 @@ export default function MetroLine({ transfers }: MetroLineProps) {
                     <div key={key} className={styles.lineContainer} style={style}>
                         {isMobile ? stationsMobile(index) : stationsDesktop(index)}
                         <span className={styles.duration}>{`${Math.round(stations[index].duration / 60)} мин`}</span>
-                        <hr style={{ backgroundColor: color }} className={styles.line} />
+                        <hr
+                            style={{ backgroundColor: color, border: color === "#FFFFFF" ? "1px solid #EF161E" : undefined }}
+                            className={styles.line}
+                        />
                     </div>
                 ))}
             </div>
