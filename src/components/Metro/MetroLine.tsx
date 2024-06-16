@@ -156,7 +156,7 @@ export default function MetroLine({ transfers }: MetroLineProps) {
                     /* @ts-ignore */
                     <div key={key} className={styles.lineContainer} style={style}>
                         {isMobile ? stationsMobile(index) : stationsDesktop(index)}
-                        <span className={styles.duration}>{`${stations[index].duration / 60} мин`}</span>
+                        <span className={styles.duration}>{`${Math.round(stations[index].duration / 60)} мин`}</span>
                         <hr style={{ backgroundColor: color }} className={styles.line} />
                     </div>
                 ))}
