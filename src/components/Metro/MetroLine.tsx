@@ -13,10 +13,17 @@ interface MetroLineProps {
 export default function MetroLine({ transfers }: MetroLineProps) {
     const isMobile = useMediaQuery({ maxWidth: MOBILE_MAX_WIDTH });
 
-    const filteredTransfers = useMemo(
-        () => transfers.filter((transfer, index) => !(transfer.isCrosswalking && (index === 0 || index === transfers.length - 1))),
-        [transfers]
-    );
+    const filteredTransfers = useMemo(() => {
+        let _transfers = transfers;
+        while (_transfers[0]?.isCrosswalking || _transfers.at(-1)?.isCrosswalking) {
+            _transfers = _transfers.filter(
+                // eslint-disable-next-line @typescript-eslint/no-loop-func
+                (transfer, index) => !(transfer.isCrosswalking && (index === 0 || index === _transfers.length - 1))
+            );
+        }
+
+        return _transfers;
+    }, [transfers]);
 
     const { lines, stations } = useMemo(() => {
         const _stations: { transfers: { name: string; key: string }[]; duration: number }[] = [];
@@ -47,7 +54,9 @@ export default function MetroLine({ transfers }: MetroLineProps) {
                         // @ts-ignore
                         style: {
                             "--first-station-color": transfer.startStation.line.color,
-                            "--last-station-color": transfer.finishStation.line.color
+                            "--last-station-color": transfer.finishStation.line.color,
+                            "--first-station-border": transfer.startStation.line.color === "#FFFFFF" ? "1px solid #EF161E" : 0,
+                            "--last-station-border": transfer.finishStation.line.color === "#FFFFFF" ? "1px solid #EF161E" : 0
                         }
                     }
                 ]
