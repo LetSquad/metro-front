@@ -44,7 +44,7 @@ export default function OrdersDistributionActionCell({ timeStart, timeEnd, order
 
     return (
         <td
-            colSpan={Math.abs(DateTime.fromISO(timeStart).diff(DateTime.fromISO(timeEnd), ["minutes"]).minutes / 15)}
+            colSpan={Math.abs(DateTime.fromISO(timeStart).diff(DateTime.fromISO(timeEnd), ["minutes"]).minutes)}
             className={classNames(styles.actionCell, {
                 [styles.actionNonWorking]: actionType === TimeListActionType.NON_WORKING
             })}

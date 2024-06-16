@@ -1,5 +1,3 @@
-import React from "react";
-
 import { useFormikContext } from "formik";
 import { DateTime } from "luxon";
 import { Segment } from "semantic-ui-react";
@@ -88,16 +86,13 @@ const fields: (fromDate?: string) => FormFieldProps[] = (fromDate) => [
             name: OrdersFiltersFieldsName.DATE_FROM,
             type: FormFieldType.DATEPICKER,
             placeholder: "C",
-            minDate: DateTime.now().toJSDate(),
-            maxDate: DateTime.now().plus({ month: 3 }).toJSDate(),
             popperPlacement: "top"
         },
         to: {
             name: OrdersFiltersFieldsName.DATE_TO,
             type: FormFieldType.DATEPICKER,
             placeholder: "По",
-            minDate: fromDate ? DateTime.now().toJSDate() : DateTime.now().toJSDate(),
-            maxDate: DateTime.now().plus({ month: 3 }).toJSDate(),
+            minDate: fromDate ? DateTime.fromISO(fromDate).toJSDate() : undefined,
             popperPlacement: "top"
         }
     }

@@ -90,15 +90,17 @@ export default function OrderInfoDetails({ order }: OrderInfoProps) {
                         </AccordionTitle>
                         <AccordionContent active={isPhonesOpen}>
                             {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES] &&
-                                order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES]?.length > 0 && (
-                                    <div className={styles.passengerPhonesContent}>
-                                        {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES].map((passengerPhone) => (
-                                            <span key={`${order[OrderFieldsName.PASSENGER].id}-${passengerPhone.phone}`}>
-                                                {`${formatPhoneNumber(passengerPhone.phone)} - ${passengerPhone.description}`}
-                                            </span>
-                                        ))}
-                                    </div>
-                                )}
+                            order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES].length > 0 ? (
+                                <div className={styles.passengerPhonesContent}>
+                                    {order[OrderFieldsName.PASSENGER][PassengerFieldsName.PHONES].map((passengerPhone) => (
+                                        <span key={`${order[OrderFieldsName.PASSENGER].id}-${passengerPhone.phone}`}>
+                                            {`${formatPhoneNumber(passengerPhone.phone)} - ${passengerPhone.description}`}
+                                        </span>
+                                    ))}
+                                </div>
+                            ) : (
+                                "Телефоны пассажира не указаны"
+                            )}
                         </AccordionContent>
                     </Accordion>
                 )}
@@ -110,8 +112,8 @@ export default function OrderInfoDetails({ order }: OrderInfoProps) {
                 )}
                 {order.startDescription && <span>{`Место встречи: ${order.startDescription}`}</span>}
                 {order.finishDescription && <span>{`Место назначения: ${order.finishDescription}`}</span>}
-                {order.additionalInfo && <span>{`Дополнительеная информация о заявке: ${order.additionalInfo}`}</span>}
-                <span>{`Сопровождающие: ${formatEmployeeCount(order.maleEmployeeCount, Sex.MALE)}, ${formatEmployeeCount(order.femaleEmployeeCount, Sex.FEMALE)}`}</span>
+                {order.additionalInfo && <span>{`Дополнительная информация о заявке: ${order.additionalInfo}`}</span>}
+                <span>{`Сопровождающие: ${order.maleEmployeeCount ? formatEmployeeCount(order.maleEmployeeCount, Sex.MALE) : ""}${order.maleEmployeeCount && order.femaleEmployeeCount ? ", " : ""}${order.femaleEmployeeCount ? formatEmployeeCount(order.femaleEmployeeCount, Sex.FEMALE) : ""}`}</span>
                 <Accordion>
                     <AccordionTitle index={0} active={isEmployeesOpen} onClick={toggleEmployeesAccordion}>
                         <Icon name="dropdown" />
@@ -119,7 +121,7 @@ export default function OrderInfoDetails({ order }: OrderInfoProps) {
                     </AccordionTitle>
                     <AccordionContent active={isEmployeesOpen}>
                         <div className={styles.employeesContent}>
-                            {order[OrderFieldsName.EMPLOYEES]
+                            {order[OrderFieldsName.EMPLOYEES] && order[OrderFieldsName.EMPLOYEES].length > 0
                                 ? order[OrderFieldsName.EMPLOYEES]?.map((employee, index) => (
                                       <>
                                           <div key={employee.id} className={styles.employeeContent}>
