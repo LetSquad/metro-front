@@ -31,7 +31,7 @@ export interface Order {
     [OrderFieldsName.MALE_EMPLOYEE_COUNT]: number;
     [OrderFieldsName.FEMALE_EMPLOYEE_COUNT]: number;
     [OrderFieldsName.ADDITIONAL_INFO]?: string | null;
-    createdTime: string;
+    createdTime?: string | null;
     [OrderFieldsName.ORDER_TIME]: string;
     startTime?: string | null;
     finishTime?: string | null;

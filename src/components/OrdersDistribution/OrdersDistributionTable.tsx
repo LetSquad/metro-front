@@ -31,7 +31,7 @@ export default function OrdersDistributionTable({ ordersTimeList }: OrdersDistri
                             Работник
                         </th>
                         {HOURS_OF_DAY_FORMAT_ARRAY.map((hour) => (
-                            <th key={`hour-${hour}`} colSpan={hour === "05" ? 2 : 4} scope="col" className={styles.headHourCell}>
+                            <th key={`hour-${hour}`} colSpan={hour === "05" ? 30 : 60} scope="col" className={styles.headHourCell}>
                                 {hour}
                             </th>
                         ))}
@@ -42,12 +42,22 @@ export default function OrdersDistributionTable({ ordersTimeList }: OrdersDistri
                                 _hour === "05" ? (
                                     minutes !== "00" &&
                                     minutes !== "15" && (
-                                        <th key={`hour-minutes-${_hour}-${minutes}`} scope="col" className={styles.headMinutesCell}>
+                                        <th
+                                            key={`hour-minutes-${_hour}-${minutes}`}
+                                            scope="col"
+                                            colSpan={15}
+                                            className={styles.headMinutesCell}
+                                        >
                                             {minutes}
                                         </th>
                                     )
                                 ) : (
-                                    <th key={`hour-minutes-${_hour}-${minutes}`} scope="col" className={styles.headMinutesCell}>
+                                    <th
+                                        key={`hour-minutes-${_hour}-${minutes}`}
+                                        scope="col"
+                                        colSpan={15}
+                                        className={styles.headMinutesCell}
+                                    >
                                         {minutes}
                                     </th>
                                 )
