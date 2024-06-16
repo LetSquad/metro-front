@@ -33,8 +33,8 @@ export const initialValues: OrdersFiltersFormValues = {
     [OrdersFiltersFieldsName.EMPLOYEE_PHONE]: undefined,
     [OrdersFiltersFieldsName.ORDER_CATEGORIES]: undefined,
     [OrdersFiltersFieldsName.ORDER_STATUSES]: undefined,
-    [OrdersFiltersFieldsName.DATE_FROM]: DateTime.now().toISO(),
-    [OrdersFiltersFieldsName.DATE_TO]: DateTime.now().plus({ day: 1 }).toISO()
+    [OrdersFiltersFieldsName.DATE_FROM]: DateTime.now().toISODate(),
+    [OrdersFiltersFieldsName.DATE_TO]: DateTime.now().plus({ day: 1 }).toISODate()
 };
 
 export default function OrdersList() {
