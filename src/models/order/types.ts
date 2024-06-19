@@ -107,6 +107,7 @@ export interface OrderFormValues {
     [OrderFieldsName.START_STATION]: number;
     [OrderFieldsName.FINISH_STATION]: number;
     [OrderFieldsName.TRANSFERS]: StationTransferFormValues[];
+    [OrderFieldsName.DURATION]: number;
     [OrderFieldsName.EMPLOYEES]?: number[];
 }
 

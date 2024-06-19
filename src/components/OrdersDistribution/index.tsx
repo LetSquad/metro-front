@@ -45,7 +45,7 @@ export default function OrdersDistribution() {
     );
 
     const { startSocket } = useWebsocket<UpdateListWebSocketRequestData>(
-        [{ type: WebSocketDataTypeEnum.ORDER_LIST_UPDATE, login: currentEmployee?.login as string }],
+        { type: WebSocketDataTypeEnum.ORDER_LIST_UPDATE, login: currentEmployee?.login as string },
         onWebSocketMessage
     );
 

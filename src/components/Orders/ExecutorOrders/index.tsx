@@ -39,7 +39,7 @@ export default function ExecutorOrders() {
     );
 
     const { startSocket } = useWebsocket<UpdateListWebSocketRequestData>(
-        [{ type: WebSocketDataTypeEnum.CURRENT_ORDER_LIST_UPDATE, login: currentEmployee?.login as string }],
+        { type: WebSocketDataTypeEnum.CURRENT_ORDER_LIST_UPDATE, login: currentEmployee?.login as string },
         onWebSocketMessage
     );
 

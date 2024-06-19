@@ -68,6 +68,7 @@ export default function OrderInfo({ order }: OrderInfoProps) {
             [OrderFieldsName.START_STATION]: order[OrderFieldsName.START_STATION]?.id,
             [OrderFieldsName.FINISH_STATION]: order[OrderFieldsName.FINISH_STATION]?.id,
             [OrderFieldsName.TRANSFERS]: [],
+            [OrderFieldsName.DURATION]: undefined,
             [OrderFieldsName.EMPLOYEES]: []
         }),
         [order]
@@ -86,6 +87,7 @@ export default function OrderInfo({ order }: OrderInfoProps) {
                     onSubmit={onSubmitButtonClicked}
                     onCancel={() => changeEditState(false)}
                     className={flipEditCardPartsStyles.editContent}
+                    orderId={order.id}
                     isEdit
                 />
             ) : (

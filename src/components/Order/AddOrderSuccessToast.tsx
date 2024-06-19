@@ -55,7 +55,7 @@ export default function AddOrderSuccessToast({ toast: t, createdOrderId }: AddOr
                             toast.dismiss(t.id);
                         }}
                     >
-                        Перейти к карточке площадки
+                        Перейти к заявке
                     </PrimaryButton>
                 </div>
             </div>

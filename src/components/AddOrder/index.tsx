@@ -23,6 +23,7 @@ const initialValue = {
     [OrderFieldsName.START_STATION]: undefined,
     [OrderFieldsName.FINISH_STATION]: undefined,
     [OrderFieldsName.TRANSFERS]: [],
+    [OrderFieldsName.DURATION]: undefined,
     [OrderFieldsName.EMPLOYEES]: []
 };
 
