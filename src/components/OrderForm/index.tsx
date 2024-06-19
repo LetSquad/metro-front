@@ -191,6 +191,15 @@ const OrderForm = forwardRef(
             // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [loadInitialInfo]);
 
+        useEffect(() => {
+            return () => {
+                if (isEdit) {
+                    toast.dismiss(`order-locked-for-edit-${orderId}`);
+                }
+            };
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, []);
+
         return (
             <Segment className={styles.segment}>
                 <FormikProvider value={formik}>

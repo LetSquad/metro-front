@@ -120,6 +120,12 @@ export default function OrdersList() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]);
 
+    useEffect(() => {
+        return () => {
+            toast.dismiss("update-orders-list-toast");
+        };
+    }, []);
+
     return (
         <FormikProvider value={formik}>
             <div className={styles.container}>

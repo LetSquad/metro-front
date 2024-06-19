@@ -50,6 +50,12 @@ export default function ExecutorOrders() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]);
 
+    useEffect(() => {
+        return () => {
+            toast.dismiss("update-current-orders-list-toast");
+        };
+    }, []);
+
     if (isOrdersLoading) {
         return (
             <div className={partsStyles.flexBaseCenterContainer}>

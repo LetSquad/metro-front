@@ -52,6 +52,10 @@ export default function OrdersDistribution() {
     useEffect(() => {
         getOrdersTimeList();
         startSocket();
+
+        return () => {
+            toast.dismiss("update-orders-time-list-toast");
+        };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
