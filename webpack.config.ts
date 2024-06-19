@@ -107,7 +107,7 @@ const webpack_ = () => {
             topLevelAwait: true
         },
         resolve: {
-            extensions: [".js", ".jsx", ".ts", ".tsx", "json", ".css", ".scss", ".svg", ".ignore"],
+            extensions: [".js", ".jsx", ".ts", ".tsx", "json", ".css", ".scss", ".svg", ".ignore", ".json"],
             alias: {
                 "@coreStyles": path.resolve(__dirname, "src/styles"),
                 "@pages": path.resolve(__dirname, "src/pages"),
