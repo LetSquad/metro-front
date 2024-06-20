@@ -10,6 +10,7 @@ import {
     Passenger,
     PassengerFormValue,
     PassengerResponse,
+    PassengersFiltersFormValues,
     PassengersResponse,
     PassengerWithLockResponse
 } from "@models/passenger/types";
@@ -38,8 +39,8 @@ const initialState: PassengerState = {
     isPassengerUpdating: false
 };
 
-export const getPassengersRequest = createAsyncThunk("getPassengersRequest", async () => {
-    const response: AxiosResponse<PassengersResponse> = await axios.get<PassengersResponse>(apiUrls.passengers());
+export const getPassengersRequest = createAsyncThunk("getPassengersRequest", async (values?: PassengersFiltersFormValues) => {
+    const response: AxiosResponse<PassengersResponse> = await axios.get<PassengersResponse>(apiUrls.passengers(), { params: values });
     return response.data;
 });
 

@@ -1,0 +1,4662 @@
+[
+  {
+    "employee": {
+      "id": 142,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543352",
+      "personalPhone": null,
+      "firstName": "Г",
+      "lastName": "Болотов",
+      "middleName": "Е",
+      "sex": "MALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 142,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 965,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544175",
+      "personalPhone": null,
+      "firstName": "М",
+      "lastName": "Шварева",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 965,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 813,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544023",
+      "personalPhone": null,
+      "firstName": "В",
+      "lastName": "Кузьмичев",
+      "middleName": "К",
+      "sex": "MALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 813,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 227,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543437",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Синяков",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 227,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 231,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543441",
+      "personalPhone": null,
+      "firstName": "К",
+      "lastName": "Фролов",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 231,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 160,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543370",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Шарфутов",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 160,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 325,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543535",
+      "personalPhone": null,
+      "firstName": "Р",
+      "lastName": "Вихров",
+      "middleName": "Т",
+      "sex": "MALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 325,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 77,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543287",
+      "personalPhone": null,
+      "firstName": "П",
+      "lastName": "Нижневский",
+      "middleName": "А",
+      "sex": "MALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 77,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 894,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544104",
+      "personalPhone": null,
+      "firstName": "М",
+      "lastName": "Ноздряков",
+      "middleName": "С",
+      "sex": "MALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 894,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 774,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543984",
+      "personalPhone": null,
+      "firstName": "Н",
+      "lastName": "Марухина",
+      "middleName": "А",
+      "sex": "FEMALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 774,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 850,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544060",
+      "personalPhone": null,
+      "firstName": "В",
+      "lastName": "Арзамасцев",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 850,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 945,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544155",
+      "personalPhone": null,
+      "firstName": "Ф",
+      "lastName": "Куклина",
+      "middleName": "Н",
+      "sex": "FEMALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 945,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 457,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543667",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Кондратенко",
+      "middleName": "Н",
+      "sex": "FEMALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 457,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 712,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543922",
+      "personalPhone": null,
+      "firstName": "Л",
+      "lastName": "Миронова",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 712,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 373,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543583",
+      "personalPhone": null,
+      "firstName": "М",
+      "lastName": "Наротьев",
+      "middleName": "А",
+      "sex": "MALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 373,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 631,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543841",
+      "personalPhone": null,
+      "firstName": "В",
+      "lastName": "Хализев",
+      "middleName": "И",
+      "sex": "MALE",
+      "shift": "20:00-08:00",
+      "employeeNumber": 631,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 62,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543272",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Бушуев",
+      "middleName": "А",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 62,
+      "lightDuties": false,
+      "rank": {
+        "code": "SECTION_FOREMAN",
+        "name": "Начальник участка",
+        "shortName": "ЦУ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 917,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544127",
+      "personalPhone": null,
+      "firstName": "М",
+      "lastName": "Кольцов",
+      "middleName": "Ю",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 917,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 342,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543552",
+      "personalPhone": null,
+      "firstName": "Д",
+      "lastName": "Лазутин",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 342,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 269,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543479",
+      "personalPhone": null,
+      "firstName": "В",
+      "lastName": "Чернявская",
+      "middleName": "А",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 269,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 64,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543274",
+      "personalPhone": null,
+      "firstName": "О",
+      "lastName": "Гавриленко",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 64,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 18,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543228",
+      "personalPhone": null,
+      "firstName": "Е",
+      "lastName": "Горохова",
+      "middleName": "Н",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 18,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 70,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543280",
+      "personalPhone": null,
+      "firstName": "Н",
+      "lastName": "Гусева",
+      "middleName": "И",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 70,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 74,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543284",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Мазеин",
+      "middleName": "П",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 74,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 67,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543277",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Борисов",
+      "middleName": "Ю",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 67,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 69,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543279",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Будников",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 69,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1249,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544459",
+      "personalPhone": null,
+      "firstName": "О",
+      "lastName": "Бодров",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1249,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 86,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543296",
+      "personalPhone": null,
+      "firstName": "Г",
+      "lastName": "Инкин",
+      "middleName": "А",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 86,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 647,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543857",
+      "personalPhone": null,
+      "firstName": "Ю",
+      "lastName": "Ковалева",
+      "middleName": "Г",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 647,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1208,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544418",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Першин",
+      "middleName": "А",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1208,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 79,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543289",
+      "personalPhone": null,
+      "firstName": "О",
+      "lastName": "Силаева",
+      "middleName": "И",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 79,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 21,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543231",
+      "personalPhone": null,
+      "firstName": "С",
+      "lastName": "Скрябин",
+      "middleName": "Н",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 21,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 529,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543739",
+      "personalPhone": null,
+      "firstName": "В",
+      "lastName": "Свечников",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 529,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1222,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544432",
+      "personalPhone": null,
+      "firstName": "К",
+      "lastName": "Садов",
+      "middleName": "К",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1222,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 659,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543869",
+      "personalPhone": null,
+      "firstName": "В",
+      "lastName": "Филиппов",
+      "middleName": "М",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 659,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1148,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544358",
+      "personalPhone": null,
+      "firstName": "Е",
+      "lastName": "Фокина",
+      "middleName": "А",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1148,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 155,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543365",
+      "personalPhone": null,
+      "firstName": "С",
+      "lastName": "Воробьёв",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 155,
+      "lightDuties": false,
+      "rank": {
+        "code": "SECTION_FOREMAN",
+        "name": "Начальник участка",
+        "shortName": "ЦУ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 123,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543333",
+      "personalPhone": null,
+      "firstName": "Е",
+      "lastName": "Быков",
+      "middleName": "А",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 123,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 4,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543214",
+      "personalPhone": null,
+      "firstName": "Г",
+      "lastName": "Жукова",
+      "middleName": "Б",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 4,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 20,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543230",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Сироткин",
+      "middleName": "Н",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 20,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 8,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543218",
+      "personalPhone": null,
+      "firstName": "С",
+      "lastName": "Дядищев",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 8,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1064,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544274",
+      "personalPhone": null,
+      "firstName": "Д",
+      "lastName": "Аггеев",
+      "middleName": "А",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1064,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 9,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543219",
+      "personalPhone": null,
+      "firstName": "К",
+      "lastName": "Корнеев",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 9,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 525,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543735",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Серухин",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 525,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 15,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543225",
+      "personalPhone": null,
+      "firstName": "С",
+      "lastName": "Неустроева",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 15,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 23,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543233",
+      "personalPhone": null,
+      "firstName": "Е",
+      "lastName": "Тихомирова",
+      "middleName": "Е",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 23,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 28,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543238",
+      "personalPhone": null,
+      "firstName": "Е",
+      "lastName": "Минкина",
+      "middleName": "К",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 28,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 297,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543507",
+      "personalPhone": null,
+      "firstName": "Е",
+      "lastName": "Кузнецов",
+      "middleName": "Б",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 297,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 298,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543508",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Макарова",
+      "middleName": "С",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 298,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 52,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543262",
+      "personalPhone": null,
+      "firstName": "В",
+      "lastName": "Теленкова",
+      "middleName": "А",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 52,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 437,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543647",
+      "personalPhone": null,
+      "firstName": "И",
+      "lastName": "Шейман",
+      "middleName": "Г",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 437,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 705,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543915",
+      "personalPhone": null,
+      "firstName": "К",
+      "lastName": "Захарова",
+      "middleName": "Г",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 705,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 709,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543919",
+      "personalPhone": null,
+      "firstName": "Е",
+      "lastName": "Аниськина",
+      "middleName": "А",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 709,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 991,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544201",
+      "personalPhone": null,
+      "firstName": "Н",
+      "lastName": "Таковникова",
+      "middleName": "А",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 991,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 788,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543998",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Бабенков",
+      "middleName": "",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 788,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 65,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543275",
+      "personalPhone": null,
+      "firstName": "С",
+      "lastName": "Цыбаков",
+      "middleName": "Ю",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 65,
+      "lightDuties": false,
+      "rank": {
+        "code": "SECTION_FOREMAN",
+        "name": "Начальник участка",
+        "shortName": "ЦУ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 973,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544183",
+      "personalPhone": null,
+      "firstName": "Э",
+      "lastName": "Исаева",
+      "middleName": "Е",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 973,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 651,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543861",
+      "personalPhone": null,
+      "firstName": "О",
+      "lastName": "Сажнева",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 651,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1257,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544467",
+      "personalPhone": null,
+      "firstName": "С",
+      "lastName": "Андрианов",
+      "middleName": "Д,",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 1257,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 961,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544171",
+      "personalPhone": null,
+      "firstName": "С",
+      "lastName": "Билжа",
+      "middleName": "Й",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 961,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1253,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544463",
+      "personalPhone": null,
+      "firstName": "П",
+      "lastName": "Ефремов",
+      "middleName": "С,",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1253,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 939,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544149",
+      "personalPhone": null,
+      "firstName": "С",
+      "lastName": "Зиновьев",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 939,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 406,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543616",
+      "personalPhone": null,
+      "firstName": "Т",
+      "lastName": "Карева",
+      "middleName": "Ю",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 406,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 960,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544170",
+      "personalPhone": null,
+      "firstName": "П",
+      "lastName": "Медведев",
+      "middleName": "С",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 960,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 685,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543895",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Савченко",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 685,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1060,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544270",
+      "personalPhone": null,
+      "firstName": "О",
+      "lastName": "Смирнова",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 1060,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 736,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543946",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Тимонин",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 736,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 683,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543893",
+      "personalPhone": null,
+      "firstName": "В",
+      "lastName": "Ходорко",
+      "middleName": "Э",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 683,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 203,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543413",
+      "personalPhone": null,
+      "firstName": "Т",
+      "lastName": "Шувалова",
+      "middleName": "А",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 203,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 121,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543331",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Нехаев",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 121,
+      "lightDuties": false,
+      "rank": {
+        "code": "SECTION_FOREMAN",
+        "name": "Начальник участка",
+        "shortName": "ЦУ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 695,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543905",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Боталов",
+      "middleName": "М",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 695,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 860,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544070",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Акульшин",
+      "middleName": "П",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 860,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 642,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543852",
+      "personalPhone": null,
+      "firstName": "Н",
+      "lastName": "Киселева",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 642,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 133,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543343",
+      "personalPhone": null,
+      "firstName": "Т",
+      "lastName": "Ратникова",
+      "middleName": "И",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 133,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 131,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543341",
+      "personalPhone": null,
+      "firstName": "Д",
+      "lastName": "Захаров",
+      "middleName": "И",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 131,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 319,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543529",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Коваленко",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 319,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 682,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543892",
+      "personalPhone": null,
+      "firstName": "М",
+      "lastName": "Исаев",
+      "middleName": "М",
+      "sex": "MALE",
+      "shift": "08:00-16:00",
+      "employeeNumber": 682,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T13:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T13:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1171,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544381",
+      "personalPhone": null,
+      "firstName": "И",
+      "lastName": "Столярова",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1171,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 3,
+      "employeeRole": "OPERATOR",
+      "workPhone": "79876543213",
+      "personalPhone": null,
+      "firstName": "Е,В",
+      "lastName": "Белоусова",
+      "middleName": "",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 3,
+      "lightDuties": false,
+      "rank": {
+        "code": "OPERATOR",
+        "name": "Оператор",
+        "shortName": "ЦИО",
+        "role": "OPERATOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 245,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543455",
+      "personalPhone": null,
+      "firstName": "М",
+      "lastName": "Ходченкова",
+      "middleName": "Н",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 245,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 35,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543245",
+      "personalPhone": null,
+      "firstName": "И",
+      "lastName": "Горностаев",
+      "middleName": "Б",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 35,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1045,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544255",
+      "personalPhone": null,
+      "firstName": "Д",
+      "lastName": "Мурзак",
+      "middleName": "Г",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1045,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1215,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544425",
+      "personalPhone": null,
+      "firstName": "И",
+      "lastName": "Болвачева",
+      "middleName": "",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1215,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1254,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544464",
+      "personalPhone": null,
+      "firstName": "Е,И",
+      "lastName": "Колесникова",
+      "middleName": "",
+      "sex": "FEMALE",
+      "shift": "10:00-22:00",
+      "employeeNumber": 1254,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T07:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T07:00:00Z",
+        "timeEnd": "2024-06-21T19:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T19:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 11,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543221",
+      "personalPhone": null,
+      "firstName": "И",
+      "lastName": "Курочкина",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 11,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 770,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543980",
+      "personalPhone": null,
+      "firstName": "Н",
+      "lastName": "Солодовникова",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 770,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 208,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543418",
+      "personalPhone": null,
+      "firstName": "Р",
+      "lastName": "Мусин",
+      "middleName": "М",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 208,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 305,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543515",
+      "personalPhone": null,
+      "firstName": "В",
+      "lastName": "Костин",
+      "middleName": "Ю",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 305,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 199,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543409",
+      "personalPhone": null,
+      "firstName": "С",
+      "lastName": "Тушинок",
+      "middleName": "Н",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 199,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 200,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543410",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Шипунов",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 200,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 187,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543397",
+      "personalPhone": null,
+      "firstName": "Д",
+      "lastName": "Кобзев",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 187,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 182,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543392",
+      "personalPhone": null,
+      "firstName": "В",
+      "lastName": "Викторов",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 182,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1140,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544350",
+      "personalPhone": null,
+      "firstName": "В",
+      "lastName": "Акимов",
+      "middleName": "И",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1140,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1216,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544426",
+      "personalPhone": null,
+      "firstName": "Н",
+      "lastName": "Костюков",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1216,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1218,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544428",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Демидов",
+      "middleName": "С",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1218,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1221,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544431",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Герасименко",
+      "middleName": "Т",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1221,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1256,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544466",
+      "personalPhone": null,
+      "firstName": "Ю",
+      "lastName": "Тарасова",
+      "middleName": "П",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1256,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 236,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543446",
+      "personalPhone": null,
+      "firstName": "Е",
+      "lastName": "Бубнова",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 236,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 746,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543956",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Пилатова",
+      "middleName": "Е",
+      "sex": "FEMALE",
+      "shift": "10:00-22:00",
+      "employeeNumber": 746,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T07:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T07:00:00Z",
+        "timeEnd": "2024-06-21T19:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T19:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 192,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543402",
+      "personalPhone": null,
+      "firstName": "С",
+      "lastName": "Новожилов",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 192,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1258,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544468",
+      "personalPhone": null,
+      "firstName": "Е",
+      "lastName": "Лобова",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1258,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1177,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544387",
+      "personalPhone": null,
+      "firstName": "Е",
+      "lastName": "Козлова",
+      "middleName": "",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 1177,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1255,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544465",
+      "personalPhone": null,
+      "firstName": "С",
+      "lastName": "Шуйкова",
+      "middleName": "М",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 1255,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 1202,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876544412",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Носова",
+      "middleName": "А",
+      "sex": "FEMALE",
+      "shift": "07:00-19:00",
+      "employeeNumber": 1202,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T04:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T04:00:00Z",
+        "timeEnd": "2024-06-21T16:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T16:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 608,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543818",
+      "personalPhone": null,
+      "firstName": "Г",
+      "lastName": "Павленко",
+      "middleName": "Е",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 608,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 514,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543724",
+      "personalPhone": null,
+      "firstName": "К",
+      "lastName": "Колобков",
+      "middleName": "М",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 514,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 460,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543670",
+      "personalPhone": null,
+      "firstName": "М",
+      "lastName": "Удовенко",
+      "middleName": "С",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 460,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 418,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543628",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Кузнецов",
+      "middleName": "В",
+      "sex": "MALE",
+      "shift": "10:00-22:00",
+      "employeeNumber": 418,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T07:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T07:00:00Z",
+        "timeEnd": "2024-06-21T19:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T19:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 304,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543514",
+      "personalPhone": null,
+      "firstName": "М",
+      "lastName": "Щедрин",
+      "middleName": "А",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 304,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 296,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543506",
+      "personalPhone": null,
+      "firstName": "Н",
+      "lastName": "Уткин",
+      "middleName": "С",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 296,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 246,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543456",
+      "personalPhone": null,
+      "firstName": "Н",
+      "lastName": "Афанасьева",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 246,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 177,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543387",
+      "personalPhone": null,
+      "firstName": "А",
+      "lastName": "Алексеев",
+      "middleName": "Г",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 177,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 148,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543358",
+      "personalPhone": null,
+      "firstName": "Д",
+      "lastName": "Солтан",
+      "middleName": "",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 148,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 111,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543321",
+      "personalPhone": null,
+      "firstName": "К",
+      "lastName": "Лыков",
+      "middleName": "А",
+      "sex": "MALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 111,
+      "lightDuties": false,
+      "rank": {
+        "code": "SECTION_FOREMAN",
+        "name": "Начальник участка",
+        "shortName": "ЦУ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 85,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543295",
+      "personalPhone": null,
+      "firstName": "О",
+      "lastName": "Христофорова",
+      "middleName": "С",
+      "sex": "FEMALE",
+      "shift": "10:00-22:00",
+      "employeeNumber": 85,
+      "lightDuties": false,
+      "rank": {
+        "code": "CHIEF_INSPECTOR",
+        "name": "Старший инспектор",
+        "shortName": "ЦСИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T07:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T07:00:00Z",
+        "timeEnd": "2024-06-21T19:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T19:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  },
+  {
+    "employee": {
+      "id": 24,
+      "employeeRole": "EXECUTOR",
+      "workPhone": "79876543234",
+      "personalPhone": null,
+      "firstName": "Е",
+      "lastName": "Тришкина",
+      "middleName": "В",
+      "sex": "FEMALE",
+      "shift": "08:00-20:00",
+      "employeeNumber": 24,
+      "lightDuties": false,
+      "rank": {
+        "code": "INSPECTOR",
+        "name": "Инспектор",
+        "shortName": "ЦИ",
+        "role": "EXECUTOR"
+      }
+    },
+    "actions": [
+      {
+        "timeStart": "2024-06-21T02:30:00Z",
+        "timeEnd": "2024-06-21T05:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T05:00:00Z",
+        "timeEnd": "2024-06-21T17:00:00Z",
+        "actionType": "DOWNTIME",
+        "order": null
+      },
+      {
+        "timeStart": "2024-06-21T17:00:00Z",
+        "timeEnd": "2024-06-21T22:00:00Z",
+        "actionType": "NON_WORKING",
+        "order": null
+      }
+    ]
+  }
+]

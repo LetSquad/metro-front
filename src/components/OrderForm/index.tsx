@@ -54,14 +54,14 @@ const OrderForm = forwardRef(
 
         const onWebSocketMessage = useCallback(
             (eventData: WebSocketResponse) => {
-                if (eventData.action === WebSocketResponseActionEnum.ERROR) {
+                if (eventData.action === WebSocketResponseActionEnum.ERROR && !isOrderUpdating) {
                     toast.error("Данная заявка сейчас редактируется другим пользователем", {
                         id: `order-locked-for-edit-${orderId}`,
                         duration: 120_000
                     });
                 }
             },
-            [orderId]
+            [isOrderUpdating, orderId]
         );
 
         const { startSocket } = useWebsocket<EditOrderWebSocketRequestData>(
@@ -76,12 +76,17 @@ const OrderForm = forwardRef(
             validateOnMount: true
         });
 
+        const resetForm = useCallback(() => {
+            setStep(STEP.PREPARE_STEP);
+            formik.resetForm();
+        }, [formik]);
+
         useImperativeHandle(
             ref,
             () => ({
-                resetForm: formik.resetForm
+                resetForm
             }),
-            [formik.resetForm]
+            [resetForm]
         );
 
         const onCalculation = useCallback(() => {

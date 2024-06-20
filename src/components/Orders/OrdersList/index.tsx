@@ -7,7 +7,7 @@ import { Loader } from "semantic-ui-react";
 
 import { useAxios } from "@api/api";
 import apiUrls from "@api/apiUrls";
-import OrderCard from "@components/Orders/OrderCard/OrderCard";
+import OrderCard from "@components/Orders/OrderCard";
 import OrdersListFilter from "@components/Orders/OrdersList/OrdersListFilter";
 import OrdersListHeader from "@components/Orders/OrdersList/OrdersListHeader";
 import partsStyles from "@coreStyles/baseParts.module.scss";
@@ -54,14 +54,14 @@ export default function OrdersList() {
 
     const onWebSocketMessage = useCallback(
         (eventData: WebSocketResponse) => {
-            if (eventData.action === WebSocketResponseActionEnum.UPDATE) {
+            if (eventData.action === WebSocketResponseActionEnum.UPDATE && !isOrdersLoading) {
                 toast.custom((t: Toast) => <ListChangedToast onClick={getOrders} toast={t} />, {
                     id: "update-orders-list-toast",
                     duration: 120_000
                 });
             }
         },
-        [getOrders]
+        [getOrders, isOrdersLoading]
     );
 
     const { startSocket } = useWebsocket<UpdateListWebSocketRequestData>(

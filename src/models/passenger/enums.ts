@@ -29,3 +29,10 @@ export enum BaggageFieldsName {
     WEIGHT = "weight",
     IS_HELP_NEEDED = "isHelpNeeded"
 }
+
+export enum PassengersFiltersFieldsName {
+    FIRST_NAME = "firstName",
+    LAST_NAME = "lastName",
+    PHONE = "phone",
+    CATEGORIES = "categories"
+}

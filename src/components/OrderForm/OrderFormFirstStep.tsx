@@ -4,8 +4,7 @@ import classNames from "classnames";
 import { useFormikContext } from "formik";
 import { DateTime } from "luxon";
 
-import MetroStationElement from "@components/Metro/MetroStationElement";
-import { metroStations } from "@coreUtils/metroUtils";
+import { getMetroLineLogoByEnum, metroStations } from "@coreUtils/metroUtils";
 import { getOrderApplicationLabelByOrderApplicationCodeEnum } from "@coreUtils/orderUtils";
 import {
     getPassengerCategoryFullNameByPassengerCategoryCodeEnum,
@@ -77,7 +76,7 @@ export default function OrderFormFirstStep({ isEdit, isReadonly }: OrderFormFirs
             metroStations.map((station) => ({
                 value: station.id,
                 text: station.name,
-                content: <MetroStationElement station={station} />
+                image: { avatar: true, src: getMetroLineLogoByEnum(station.line.id) }
             })),
         []
     );

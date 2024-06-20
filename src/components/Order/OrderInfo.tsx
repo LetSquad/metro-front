@@ -1,4 +1,5 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { toast } from "react-hot-toast";
 import { useSearchParams } from "react-router-dom";
 
 import classNames from "classnames";
@@ -73,6 +74,13 @@ export default function OrderInfo({ order }: OrderInfoProps) {
         }),
         [order]
     );
+
+    useEffect(() => {
+        return () => {
+            toast.dismiss(`order-locked-for-edit-${order.id}`);
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <div
