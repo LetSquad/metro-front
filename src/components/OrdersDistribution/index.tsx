@@ -4,8 +4,10 @@ import { Toast, toast } from "react-hot-toast";
 import { Loader } from "semantic-ui-react";
 
 import OrdersDistributionHeader from "@components/OrdersDistribution/OrdersDistributionHeader";
+import OrdersDistributionSchedule from "@components/OrdersDistribution/OrdersDistributionSchedule";
 import OrdersDistributionTable from "@components/OrdersDistribution/OrdersDistributionTable";
 import partsStyles from "@coreStyles/baseParts.module.scss";
+import { useToggle } from "@hooks/useToogle";
 import useWebsocket from "@hooks/useWebsocket";
 import { WebSocketDataTypeEnum, WebSocketResponseActionEnum } from "@models/websocket/enums";
 import { UpdateListWebSocketRequestData, WebSocketResponse } from "@models/websocket/types";
@@ -28,20 +30,22 @@ export default function OrdersDistribution() {
     const isOrdersTimesListLoading = useAppSelector(selectIsOrdersTimesListLoading);
     const isOrdersTimesListLoadingFailed = useAppSelector(selectIsOrdersTimesListLoadingFailed);
 
+    const [orderDistributionMod, toggleOrderDistributionMod] = useToggle();
+
     const getOrdersTimeList = useCallback(() => {
         dispatch(getOrdersTimeListRequest());
     }, [dispatch]);
 
     const onWebSocketMessage = useCallback(
         (eventData: WebSocketResponse) => {
-            if (eventData.action === WebSocketResponseActionEnum.UPDATE) {
+            if (eventData.action === WebSocketResponseActionEnum.UPDATE && !isOrdersTimesListLoading) {
                 toast.custom((t: Toast) => <ListChangedToast onClick={getOrdersTimeList} toast={t} />, {
                     id: "update-orders-time-list-toast",
                     duration: 120_000
                 });
             }
         },
-        [getOrdersTimeList]
+        [getOrdersTimeList, isOrdersTimesListLoading]
     );
 
     const { startSocket } = useWebsocket<UpdateListWebSocketRequestData>(
@@ -73,8 +77,12 @@ export default function OrdersDistribution() {
 
     return (
         <>
-            <OrdersDistributionHeader />
-            <OrdersDistributionTable ordersTimeList={ordersTimeList} />
+            <OrdersDistributionHeader toggleOrderDistributionMod={toggleOrderDistributionMod} />
+            {orderDistributionMod ? (
+                <OrdersDistributionTable ordersTimeList={ordersTimeList} />
+            ) : (
+                <OrdersDistributionSchedule ordersTimeList={ordersTimeList} />
+            )}
         </>
     );
 }
