@@ -10,10 +10,12 @@ import {
     Employee,
     EmployeeCurrent,
     EmployeeCurrentResponse,
-    EmployeeFormFields,
+    EmployeeFormValues,
     EmployeeResponse,
+    EmployeesFiltersFormValues,
     EmployeesResponse,
-    EmployeeWithLockResponse
+    EmployeeWithLockResponse,
+    NewEmployeeResponse
 } from "@models/employee/types";
 
 const CREATE_EMPLOYEE_TOAST = "create-employee";
@@ -51,8 +53,8 @@ export const getCurrentEmployeeRequest = createAsyncThunk("getCurrentEmployeeReq
     return response.data;
 });
 
-export const getEmployeesRequest = createAsyncThunk("getEmployeesRequest", async () => {
-    const response: AxiosResponse<EmployeesResponse> = await axios.get<EmployeesResponse>(apiUrls.employees());
+export const getEmployeesRequest = createAsyncThunk("getEmployeesRequest", async (values?: EmployeesFiltersFormValues) => {
+    const response: AxiosResponse<EmployeesResponse> = await axios.get<EmployeesResponse>(apiUrls.employees(), { params: values });
     return response.data;
 });
 
@@ -63,14 +65,14 @@ export const getEmployeeRequest = createAsyncThunk("getEmployeeRequest", async (
     return response.data;
 });
 
-export const createEmployeeRequest = createAsyncThunk("createEmployeeRequest", async (values: EmployeeFormFields) => {
-    const response: AxiosResponse<EmployeeResponse> = await axios.post<EmployeeResponse>(apiUrls.employees(), values);
+export const createEmployeeRequest = createAsyncThunk("createEmployeeRequest", async (values: EmployeeFormValues) => {
+    const response: AxiosResponse<NewEmployeeResponse> = await axios.post<NewEmployeeResponse>(apiUrls.employees(), values);
     return response.data;
 });
 
 export const updateEmployeeRequest = createAsyncThunk(
     "updateEmployeeRequest",
-    async ({ employeeId, ...values }: EmployeeFormFields & { employeeId: number }) => {
+    async ({ employeeId, ...values }: EmployeeFormValues & { employeeId: number }) => {
         const response: AxiosResponse<EmployeeResponse> = await axios.put<EmployeeResponse>(apiUrls.employeesId(employeeId), values);
         return response.data;
     }
@@ -121,7 +123,7 @@ export const employeeSlice = createSlice({
             state.isEmployeeLoadingFailed = true;
         });
         builder.addCase(getEmployeeRequest.fulfilled, (state, action) => {
-            state.isEmployeesLoading = false;
+            state.isEmployeeLoading = false;
             state.employee = action.payload.data;
 
             if (action.payload.isLockedForEdit) {
@@ -141,7 +143,6 @@ export const employeeSlice = createSlice({
         });
         builder.addCase(createEmployeeRequest.fulfilled, (state, action) => {
             state.isEmployeeUpdating = false;
-            state.employee = action.payload;
             toast.custom((t: Toast) => <AddEmployeeSuccessToast toast={t} createdEmployeeId={action.payload.id} />, {
                 id: CREATE_EMPLOYEE_TOAST,
                 duration: 120_000

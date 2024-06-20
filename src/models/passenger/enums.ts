@@ -24,6 +24,11 @@ export enum PassengerFieldsName {
     PHONES = "phones"
 }
 
+export enum PassengerPhoneFieldsName {
+    PHONE = "phone",
+    DESCRIPTION = "description"
+}
+
 export enum BaggageFieldsName {
     TYPE = "type",
     WEIGHT = "weight",

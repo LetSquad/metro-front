@@ -67,7 +67,7 @@ export default function OrdersDistributionTable({ ordersTimeList }: OrdersDistri
                 <tbody>
                     {filteredTimeList.map(({ employee, actions }) =>
                         actions.length === 0 ? (
-                            <tr key={employee.id}>
+                            <tr key={`table-empty-row-${employee.id}`}>
                                 <td>
                                     {getShortName(
                                         employee[EmployeeFieldsName.LAST_NAME],
@@ -81,10 +81,11 @@ export default function OrdersDistributionTable({ ordersTimeList }: OrdersDistri
                                 <td />
                                 <td />
                                 <td />
+                                <td />
                             </tr>
                         ) : (
                             actions.map((action, index) => (
-                                <tr key={employee.id}>
+                                <tr key={`table-fill-row-${employee.id}-${action.order?.id}`}>
                                     {index === 0 && (
                                         <td rowSpan={actions.length} className={styles.activeCell}>
                                             {getShortName(

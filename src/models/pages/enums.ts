@@ -1,13 +1,13 @@
 export enum PageSlugs {
     ORDERS = "/",
-    ORDER = "/orders/:orderId",
+    ORDER = "/order/:orderId",
     ORDER_NEW = "/orders/new",
     ORDERS_DISTRIBUTION = "/orders/distribution",
     PASSENGERS = "/passengers",
-    PASSENGER = "/passengers/:passengerId",
+    PASSENGER = "/passenger/:passengerId",
     PASSENGER_REGISTER = "/passengers/register",
     EMPLOYEES = "/employees",
-    EMPLOYEE = "/employees/:employeeId",
+    EMPLOYEE = "/employee/:employeeId",
     EMPLOYEE_REGISTER = "/employees/register"
 }
 

@@ -139,8 +139,8 @@ export default function OrderInfoDetails({ order }: OrderInfoProps) {
                                                   <span>{`Персональный телефон: ${employee[EmployeeFieldsName.PERSONAL_PHONE]}`}</span>
                                                   <span>
                                                       {employee[EmployeeFieldsName.LIGHT_DUTIES]
-                                                          ? "Может носить тяжести"
-                                                          : "Нельзя носить тяжести"}
+                                                          ? "Нельзя носить тяжести"
+                                                          : "Может носить тяжести"}
                                                   </span>
                                               </div>
                                               {index !== (order[OrderFieldsName.EMPLOYEES]?.length as number) - 1 && (

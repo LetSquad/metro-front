@@ -31,7 +31,12 @@ export default function OrdersDistributionSchedule({ ordersTimeList }: OrdersDis
                             Работник
                         </th>
                         {HOURS_OF_DAY_FORMAT_ARRAY.map((hour) => (
-                            <th key={`hour-${hour}`} colSpan={hour === "05" ? 30 : 60} scope="col" className={styles.headHourCell}>
+                            <th
+                                key={`schedule-hour-${hour}`}
+                                colSpan={hour === "05" ? 30 : 60}
+                                scope="col"
+                                className={styles.headHourCell}
+                            >
                                 {hour}
                             </th>
                         ))}
@@ -43,7 +48,7 @@ export default function OrdersDistributionSchedule({ ordersTimeList }: OrdersDis
                                     minutes !== "00" &&
                                     minutes !== "15" && (
                                         <th
-                                            key={`hour-minutes-${_hour}-${minutes}`}
+                                            key={`schedule-hour-minutes-${_hour}-${minutes}`}
                                             scope="col"
                                             colSpan={15}
                                             className={styles.headMinutesCell}
@@ -67,7 +72,7 @@ export default function OrdersDistributionSchedule({ ordersTimeList }: OrdersDis
                 </thead>
                 <tbody>
                     {ordersTimeList.map(({ employee, actions }) => (
-                        <tr key={employee.id}>
+                        <tr key={`schedule-row-${employee.id}`}>
                             <td className={styles.employeeContentCell}>
                                 {getShortName(
                                     employee[EmployeeFieldsName.LAST_NAME],
@@ -77,7 +82,7 @@ export default function OrdersDistributionSchedule({ ordersTimeList }: OrdersDis
                             </td>
                             {actions.map(({ timeStart, timeEnd, actionType, order }) => (
                                 <OrdersDistributionActionCell
-                                    key={`${employee.id}-${timeStart}-${timeEnd}-${actionType}`}
+                                    key={`schedule-cell-${employee.id}-${timeStart}-${timeEnd}-${actionType}`}
                                     actionType={actionType}
                                     order={order}
                                     timeStart={timeStart}

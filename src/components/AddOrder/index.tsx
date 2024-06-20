@@ -4,7 +4,7 @@ import OrderForm from "@components/OrderForm";
 import { OrderFieldsName } from "@models/order/enums";
 import { OrderFormRef, OrderFormValues } from "@models/order/types";
 import { useAppDispatch } from "@store/hooks";
-import { createOrderRequest, updateOrderRequest } from "@store/order/reducer";
+import { createOrderRequest } from "@store/order/reducer";
 
 import styles from "./styles/AddOrder.module.scss";
 
@@ -35,7 +35,7 @@ export default function AddOrder() {
     const onSubmitButtonClicked = useCallback(
         (values: Partial<OrderFormValues>) => {
             dispatch(createOrderRequest({ ...(values as OrderFormValues) })).then((payload) => {
-                if (payload.type === updateOrderRequest.fulfilled.type) {
+                if (payload.type === createOrderRequest.fulfilled.type) {
                     addOrderFormRef?.current?.resetForm();
                 }
             });

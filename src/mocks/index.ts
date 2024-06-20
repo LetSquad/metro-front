@@ -5,8 +5,8 @@ import apiUrls from "@api/apiUrls";
 import { SignInFieldName } from "@models/auth/enums";
 import { SignInResponse } from "@models/auth/types";
 import { Sex } from "@models/common/enums";
-import { EmployeeRole } from "@models/employee/enums";
-import { EmployeeCurrentResponse, EmployeesResponse } from "@models/employee/types";
+import { EmployeeRankCodeEnum, EmployeeRole } from "@models/employee/enums";
+import { EmployeeCurrentResponse, EmployeesResponse, EmployeeWithLockResponse, NewEmployeeResponse } from "@models/employee/types";
 import { OrderStatusCodeEnum } from "@models/order/enums";
 import {
     Order,
@@ -18,7 +18,7 @@ import {
     OrderWithLockResponse
 } from "@models/order/types";
 import { PassengerCategoryCodeEnum } from "@models/passenger/enums";
-import { PassengersResponse } from "@models/passenger/types";
+import { PassengersResponse, PassengerWithLockResponse } from "@models/passenger/types";
 
 import calculation from "./calculation.json";
 import distribution from "./distribution.json";
@@ -62,40 +62,59 @@ mock.onPost(apiUrls.refreshToken(), undefined).reply<SignInResponse>(200, {
 
 /* mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
     id: 0,
-    login: "+7 (999) 999-99-91",
+    login: "79999999991",
     employeeRole: EmployeeRole.EXECUTOR,
-    workPhone: "+7 (999) 999-99-91",
-    personalPhone: "+7 (999) 999-99-19",
+    workPhone: "79999999991",
+    personalPhone: "79999999919",
     firstName: "Иван",
     lastName: "Иванов",
     middleName: "Иванович",
     sex: Sex.MALE,
-    shift: "08:00 - 20:00",
+    shift: "08:00-20:00",
     employeeNumber: 123_456,
     lightDuties: false,
     rank: {
-        code: "INSPECTOR",
+        code: EmployeeRankCodeEnum.INSPECTOR,
         name: "Инспектор",
         shortName: "ЦИ"
     }
 }); */
 
-mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
+/* mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
     id: 1,
-    login: "+7 (999) 999-99-92",
+    login: "79999999992",
     employeeRole: EmployeeRole.OPERATOR,
-    workPhone: "+7 (999) 999-99-92",
-    personalPhone: "+7 (999) 999-99-29",
+    workPhone: "79999999992",
+    personalPhone: "79999999929",
     firstName: "Петр",
     lastName: "Петров",
     middleName: "Петрович",
     sex: Sex.MALE,
-    shift: "20:00 - 08:00",
+    shift: "20:00-08:00",
     employeeNumber: 654_321,
     lightDuties: false,
     rank: {
-        code: "OPERATOR",
+        code: EmployeeRankCodeEnum.OPERATOR,
         name: "Оператор"
+    }
+}); */
+
+mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
+    id: 4,
+    login: "79999999994",
+    employeeRole: EmployeeRole.ADMIN,
+    workPhone: "79999999994",
+    personalPhone: "79999999949",
+    firstName: "Илья",
+    lastName: "Смирнов",
+    middleName: "Изосимович",
+    sex: Sex.MALE,
+    shift: "20:00-08:00",
+    employeeNumber: 654_874,
+    lightDuties: false,
+    rank: {
+        code: EmployeeRankCodeEnum.ADMINISTRATOR,
+        name: "Администратор"
     }
 });
 
@@ -174,23 +193,51 @@ mock.onGet(apiUrls.passengers()).reply<PassengersResponse>(200, {
     ]
 });
 
+mock.onGet(apiUrls.passengersId(0)).reply<PassengerWithLockResponse>(200, {
+    isLockedForEdit: true,
+    data: {
+        id: 0,
+        firstName: "Михаил",
+        lastName: "Гулкин",
+        middleName: "Иванович",
+        sex: Sex.MALE,
+        comment: null,
+        hasPacemaker: true,
+        category: {
+            code: PassengerCategoryCodeEnum.IK,
+            name: "Инвалид колясочник",
+            shortName: "ИК"
+        },
+        phones: [
+            {
+                phone: "79991234567",
+                description: "Основной телефон"
+            },
+            {
+                phone: "79997654321",
+                description: "Телефон сиделки"
+            }
+        ]
+    }
+});
+
 mock.onGet(apiUrls.employees()).reply<EmployeesResponse>(200, {
     total: 2,
     list: [
         {
             id: 0,
             employeeRole: EmployeeRole.EXECUTOR,
-            workPhone: "+7 (999) 999-99-91",
-            personalPhone: "+7 (999) 999-99-19",
+            workPhone: "79999999991",
+            personalPhone: "79999999919",
             firstName: "Иван",
             lastName: "Иванов",
             middleName: "Иванович",
             sex: Sex.MALE,
-            shift: "08:00 - 20:00",
+            shift: "08:00-20:00",
             employeeNumber: 123_456,
             lightDuties: false,
             rank: {
-                code: "INSPECTOR",
+                code: EmployeeRankCodeEnum.INSPECTOR,
                 name: "Инспектор",
                 shortName: "ЦИ"
             }
@@ -198,22 +245,65 @@ mock.onGet(apiUrls.employees()).reply<EmployeesResponse>(200, {
         {
             id: 1,
             employeeRole: EmployeeRole.EXECUTOR,
-            workPhone: "+7 (999) 999-99-94",
-            personalPhone: "+7 (999) 999-99-49",
+            workPhone: "79999999994",
+            personalPhone: "79999999949",
             firstName: "Петр",
             lastName: "Петров",
             middleName: "Петрович",
             sex: Sex.MALE,
-            shift: "07:00 - 19:00",
+            shift: "07:00-19:00",
             employeeNumber: 134_780,
             lightDuties: true,
             rank: {
-                code: "INSPECTOR",
+                code: EmployeeRankCodeEnum.INSPECTOR,
                 name: "Инспектор",
                 shortName: "ЦИ"
             }
         }
     ]
+});
+
+mock.onGet(apiUrls.employeesId(0)).reply<EmployeeWithLockResponse>(200, {
+    isLockedForEdit: true,
+    data: {
+        id: 0,
+        employeeRole: EmployeeRole.EXECUTOR,
+        workPhone: "79999999991",
+        personalPhone: "79999999919",
+        firstName: "Иван",
+        lastName: "Иванов",
+        middleName: "Иванович",
+        sex: Sex.MALE,
+        shift: "08:00-20:00",
+        employeeNumber: 123_456,
+        lightDuties: false,
+        rank: {
+            code: EmployeeRankCodeEnum.INSPECTOR,
+            name: "Инспектор",
+            shortName: "ЦИ"
+        }
+    }
+});
+
+mock.onPost(apiUrls.employees()).reply<NewEmployeeResponse>(200, {
+    id: 3,
+    employeeRole: EmployeeRole.EXECUTOR,
+    workPhone: "79999999995",
+    personalPhone: "79999999959",
+    firstName: "Семен",
+    lastName: "Остроухов",
+    middleName: "Никитич",
+    sex: Sex.MALE,
+    shift: "08:00-20:00",
+    employeeNumber: 123_987,
+    lightDuties: false,
+    rank: {
+        code: EmployeeRankCodeEnum.INSPECTOR,
+        name: "Инспектор",
+        shortName: "ЦИ"
+    },
+    login: "79999999995",
+    password: "ve6G2!*jH4$0"
 });
 
 mock.onPost(apiUrls.ordersCalculation()).reply<OrderCalculationResponse>(200, calculation);
