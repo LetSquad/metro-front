@@ -5,7 +5,7 @@ import { Loader } from "semantic-ui-react";
 
 import { useAxios } from "@api/api";
 import apiUrls from "@api/apiUrls";
-import OrderCard from "@components/Orders/OrderCard/OrderCard";
+import OrderCard from "@components/Orders/OrderCard";
 import partsStyles from "@coreStyles/baseParts.module.scss";
 import useWebsocket from "@hooks/useWebsocket";
 import { OrdersResponse } from "@models/order/types";
@@ -28,18 +28,18 @@ export default function ExecutorOrders() {
 
     const onWebSocketMessage = useCallback(
         (eventData: WebSocketResponse) => {
-            if (eventData.action === WebSocketResponseActionEnum.UPDATE) {
+            if (eventData.action === WebSocketResponseActionEnum.UPDATE && !isOrdersLoading) {
                 toast.custom((t: Toast) => <ListChangedToast onClick={reloadOrders} toast={t} />, {
                     id: "update-current-orders-list-toast",
                     duration: 120_000
                 });
             }
         },
-        [reloadOrders]
+        [isOrdersLoading, reloadOrders]
     );
 
     const { startSocket } = useWebsocket<UpdateListWebSocketRequestData>(
-        [{ type: WebSocketDataTypeEnum.CURRENT_ORDER_LIST_UPDATE, login: currentEmployee?.login as string }],
+        { type: WebSocketDataTypeEnum.CURRENT_ORDER_LIST_UPDATE, login: currentEmployee?.login as string },
         onWebSocketMessage
     );
 
@@ -49,6 +49,12 @@ export default function ExecutorOrders() {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data]);
+
+    useEffect(() => {
+        return () => {
+            toast.dismiss("update-current-orders-list-toast");
+        };
+    }, []);
 
     if (isOrdersLoading) {
         return (

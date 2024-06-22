@@ -1,15 +1,19 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import { generatePath, Link } from "react-router-dom";
 
 import { DateTime } from "luxon";
 import { Segment } from "semantic-ui-react";
 
 import MetroLine from "@components/Metro/MetroLine";
+import ShortMetroLine from "@components/Metro/ShortMetroLine";
+import { MOBILE_MAX_WIDTH } from "@coreUtils/constants";
 import { formatEmployeeCount } from "@coreUtils/employeeUtils";
 import { formatPassengersCount } from "@coreUtils/passengerUtils";
 import { formatMinutesCount } from "@coreUtils/timeUtils";
 import { getFullName } from "@coreUtils/utils";
 import { Sex } from "@models/common/enums";
+import { OrderFieldsName } from "@models/order/enums";
 import { Order } from "@models/order/types";
 import { PageSlugs } from "@models/pages/enums";
 
@@ -20,6 +24,8 @@ interface OrderCardProps {
 }
 
 export default function OrderCard({ order }: OrderCardProps) {
+    const isMobile = useMediaQuery({ maxWidth: MOBILE_MAX_WIDTH });
+
     return (
         <Link to={generatePath(PageSlugs.ORDER, { orderId: order.id.toString() })} className={styles.link}>
             <Segment className={styles.segment}>
@@ -51,7 +57,14 @@ export default function OrderCard({ order }: OrderCardProps) {
                     {order.additionalInfo && <span>{`Дополнительная информация о заявке: ${order.additionalInfo}`}</span>}
                     <span>{`Сопровождающие: ${order.maleEmployeeCount ? formatEmployeeCount(order.maleEmployeeCount, Sex.MALE) : ""}${order.maleEmployeeCount && order.femaleEmployeeCount ? ", " : ""}${order.femaleEmployeeCount ? formatEmployeeCount(order.femaleEmployeeCount, Sex.FEMALE) : ""}`}</span>
                 </div>
-                {order.transfers && order.transfers.length > 0 && <MetroLine transfers={order.transfers} />}
+                {isMobile && order.transfers && order.transfers.length > 0 && <MetroLine transfers={order.transfers} />}
+                {!isMobile && (
+                    <ShortMetroLine
+                        startStation={order[OrderFieldsName.START_STATION]}
+                        finishStation={order[OrderFieldsName.FINISH_STATION]}
+                        duration={order.duration}
+                    />
+                )}
             </Segment>
         </Link>
     );

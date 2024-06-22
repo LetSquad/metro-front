@@ -136,7 +136,6 @@ export const orderSlice = createSlice({
         });
         builder.addCase(createOrderRequest.fulfilled, (state, action) => {
             state.isOrderUpdating = false;
-            state.order = action.payload;
             toast.custom((t: Toast) => <AddOrderSuccessToast toast={t} createdOrderId={action.payload.id} />, {
                 id: CREATE_ORDER_TOAST,
                 duration: 120_000

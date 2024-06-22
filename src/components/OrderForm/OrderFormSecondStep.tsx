@@ -1,4 +1,5 @@
 import MetroLine from "@components/Metro/MetroLine";
+import { formatMinutesCount } from "@coreUtils/timeUtils";
 import { useAppSelector } from "@store/hooks";
 import { selectOrderCalculation } from "@store/order/selectors";
 
@@ -11,7 +12,8 @@ export default function OrderFormSecondStep() {
         orderCalculation && (
             <div className={styles.container}>
                 <span>
-                    Общая продолжительность маршрута: <span className={styles.timeLabel}>{orderCalculation.duration} минут</span>
+                    Общая продолжительность маршрута:{" "}
+                    <span className={styles.timeLabel}>{formatMinutesCount(orderCalculation.duration / 60)}</span>
                 </span>
                 <MetroLine transfers={orderCalculation.transfers} />
             </div>

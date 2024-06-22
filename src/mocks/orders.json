@@ -1,0 +1,2332 @@
+[
+  {
+    "id": 1,
+    "startDescription": "Встретить у первого входа",
+    "finishDescription": "Отвезти к эскалатору у второго выхода",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 7550,
+    "passengerCount": 1,
+    "maleEmployeeCount": 3,
+    "femaleEmployeeCount": 0,
+    "additionalInfo": "Пассажир будет в красной футболке",
+    "orderTime": "2024-06-19T03:30:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 19643,
+      "firstName": "Петр",
+      "lastName": "Федоров",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "DI",
+        "name": "Ребенок инвалид",
+        "shortName": "ДИ"
+      },
+      "phones": [
+        {
+          "phone": "79876543441",
+          "description": "Телефон рабочий"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Сумка",
+      "weight": 2,
+      "isHelpNeeded": false
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 197,
+          "name": "Улица Скобелевская",
+          "line": {
+            "id": 12,
+            "name": "Л1",
+            "color": "#A1B3D4"
+          }
+        },
+        "finishStation": {
+          "id": 196,
+          "name": "Улица Старокачаловская",
+          "line": {
+            "id": 12,
+            "name": "Л1",
+            "color": "#A1B3D4"
+          }
+        },
+        "duration": 240,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 196,
+          "name": "Улица Старокачаловская",
+          "line": {
+            "id": 12,
+            "name": "Л1",
+            "color": "#A1B3D4"
+          }
+        },
+        "finishStation": {
+          "id": 173,
+          "name": "Бульвар Дмитрия Донского",
+          "line": {
+            "id": 9,
+            "name": "9",
+            "color": "#999999"
+          }
+        },
+        "duration": 60,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 173,
+          "name": "Бульвар Дмитрия Донского",
+          "line": {
+            "id": 9,
+            "name": "9",
+            "color": "#999999"
+          }
+        },
+        "finishStation": {
+          "id": 162,
+          "name": "Серпуховская",
+          "line": {
+            "id": 9,
+            "name": "9",
+            "color": "#999999"
+          }
+        },
+        "duration": 1620,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 162,
+          "name": "Серпуховская",
+          "line": {
+            "id": 9,
+            "name": "9",
+            "color": "#999999"
+          }
+        },
+        "finishStation": {
+          "id": 84,
+          "name": "Добрынинская",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 84,
+          "name": "Добрынинская",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "finishStation": {
+          "id": 85,
+          "name": "Октябрьская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 85,
+          "name": "Октябрьская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "finishStation": {
+          "id": 104,
+          "name": "Октябрьская КРЛ",
+          "line": {
+            "id": 6,
+            "name": "6",
+            "color": "#ED9121"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 104,
+          "name": "Октябрьская КРЛ",
+          "line": {
+            "id": 6,
+            "name": "6",
+            "color": "#ED9121"
+          }
+        },
+        "finishStation": {
+          "id": 96,
+          "name": "ВДНХ",
+          "line": {
+            "id": 6,
+            "name": "6",
+            "color": "#ED9121"
+          }
+        },
+        "duration": 1070,
+        "isCrosswalking": false
+      }
+    ],
+    "passengerCategory": "DI",
+    "startStation": {
+      "id": 197,
+      "name": "Улица Скобелевская",
+      "line": {
+        "id": 12,
+        "name": "Л1",
+        "color": "#A1B3D4"
+      }
+    },
+    "finishStation": {
+      "id": 96,
+      "name": "ВДНХ",
+      "line": {
+        "id": 6,
+        "name": "6",
+        "color": "#ED9121"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 489133171,
+    "startDescription": "Встретить у второго входа",
+    "finishDescription": "Отвезти к первому выходу",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 2880,
+    "passengerCount": 1,
+    "maleEmployeeCount": 0,
+    "femaleEmployeeCount": 1,
+    "additionalInfo": "Пассажир будет в красной футболке",
+    "orderTime": "2024-06-19T02:45:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 25959,
+      "firstName": "Егор",
+      "lastName": "Петров",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IZT",
+        "name": "Инвалид по зрению",
+        "shortName": "ИЗТ"
+      },
+      "phones": [
+        {
+          "phone": "79876543735",
+          "description": "Телефон сопровождающего"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Портфель",
+      "weight": 1,
+      "isHelpNeeded": false
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 80,
+          "name": "Комсомольская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "finishStation": {
+          "id": 81,
+          "name": "Курская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "duration": 180,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 81,
+          "name": "Курская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "finishStation": {
+          "id": 59,
+          "name": "Курская АПЛ",
+          "line": {
+            "id": 3,
+            "name": "3",
+            "color": "#0078BE"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 59,
+          "name": "Курская АПЛ",
+          "line": {
+            "id": 3,
+            "name": "3",
+            "color": "#0078BE"
+          }
+        },
+        "finishStation": {
+          "id": 65,
+          "name": "Первомайская",
+          "line": {
+            "id": 3,
+            "name": "3",
+            "color": "#0078BE"
+          }
+        },
+        "duration": 1020,
+        "isCrosswalking": false
+      }
+    ],
+    "passengerCategory": "IZT",
+    "startStation": {
+      "id": 80,
+      "name": "Комсомольская КЛ",
+      "line": {
+        "id": 5,
+        "name": "5",
+        "color": "#8D5B2D"
+      }
+    },
+    "finishStation": {
+      "id": 65,
+      "name": "Первомайская",
+      "line": {
+        "id": 3,
+        "name": "3",
+        "color": "#0078BE"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 481488171,
+    "startDescription": "Встретить у второго входа",
+    "finishDescription": "Отвезти к эскалатору у второго выхода",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 2535,
+    "passengerCount": 1,
+    "maleEmployeeCount": 0,
+    "femaleEmployeeCount": 1,
+    "additionalInfo": "Пассажир будет в зеленой куртке",
+    "orderTime": "2024-06-19T03:10:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 27758,
+      "firstName": "Борис",
+      "lastName": "Базов",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IZ",
+        "name": "Инвалид по зрению с остаточным зрением",
+        "shortName": "ИЗ"
+      },
+      "phones": [
+        {
+          "phone": "79876543895",
+          "description": "Телефон сопровождающего"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Портфель",
+      "weight": 1,
+      "isHelpNeeded": false
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 87,
+          "name": "Киевская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "finishStation": {
+          "id": 55,
+          "name": "Киевская АПЛ",
+          "line": {
+            "id": 3,
+            "name": "3",
+            "color": "#0078BE"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 55,
+          "name": "Киевская АПЛ",
+          "line": {
+            "id": 3,
+            "name": "3",
+            "color": "#0078BE"
+          }
+        },
+        "finishStation": {
+          "id": 51,
+          "name": "Молодёжная",
+          "line": {
+            "id": 3,
+            "name": "3",
+            "color": "#0078BE"
+          }
+        },
+        "duration": 930,
+        "isCrosswalking": false
+      }
+    ],
+    "passengerCategory": "IZ",
+    "startStation": {
+      "id": 87,
+      "name": "Киевская КЛ",
+      "line": {
+        "id": 5,
+        "name": "5",
+        "color": "#8D5B2D"
+      }
+    },
+    "finishStation": {
+      "id": 51,
+      "name": "Молодёжная",
+      "line": {
+        "id": 3,
+        "name": "3",
+        "color": "#0078BE"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 480889171,
+    "startDescription": "Встретить у первого входа",
+    "finishDescription": "Отвезти к первому выходу",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 6600,
+    "passengerCount": 1,
+    "maleEmployeeCount": 0,
+    "femaleEmployeeCount": 1,
+    "additionalInfo": "Пассажир высокого роста",
+    "orderTime": "2024-06-19T03:20:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 44307,
+      "firstName": "Федор",
+      "lastName": "Федоров",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IZT",
+        "name": "Инвалид по зрению",
+        "shortName": "ИЗТ"
+      },
+      "phones": [
+        {
+          "phone": "79876544468",
+          "description": "Телефон личный"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Авоська",
+      "weight": 1,
+      "isHelpNeeded": false
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 256,
+          "name": "Солнцево",
+          "line": {
+            "id": 88,
+            "name": "8А",
+            "color": "#FFD702"
+          }
+        },
+        "finishStation": {
+          "id": 147,
+          "name": "Деловой центр",
+          "line": {
+            "id": 88,
+            "name": "8А",
+            "color": "#FFD702"
+          }
+        },
+        "duration": 1590,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 147,
+          "name": "Деловой центр",
+          "line": {
+            "id": 88,
+            "name": "8А",
+            "color": "#FFD702"
+          }
+        },
+        "finishStation": {
+          "id": 245,
+          "name": "БКЛ Деловой центр",
+          "line": {
+            "id": 111,
+            "name": "БКЛ(А)",
+            "color": "#82C0C0"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 245,
+          "name": "БКЛ Деловой центр",
+          "line": {
+            "id": 111,
+            "name": "БКЛ(А)",
+            "color": "#82C0C0"
+          }
+        },
+        "finishStation": {
+          "id": 246,
+          "name": "БКЛ Шелепиха",
+          "line": {
+            "id": 111,
+            "name": "БКЛ(А)",
+            "color": "#82C0C0"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 246,
+          "name": "БКЛ Шелепиха",
+          "line": {
+            "id": 111,
+            "name": "БКЛ(А)",
+            "color": "#82C0C0"
+          }
+        },
+        "finishStation": {
+          "id": 247,
+          "name": "БКЛ Хорошёвская",
+          "line": {
+            "id": 11,
+            "name": "БКЛ",
+            "color": "#82C0C0"
+          }
+        },
+        "duration": 240,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 247,
+          "name": "БКЛ Хорошёвская",
+          "line": {
+            "id": 11,
+            "name": "БКЛ",
+            "color": "#82C0C0"
+          }
+        },
+        "finishStation": {
+          "id": 249,
+          "name": "БКЛ Петровский Парк",
+          "line": {
+            "id": 11,
+            "name": "БКЛ",
+            "color": "#82C0C0"
+          }
+        },
+        "duration": 300,
+        "isCrosswalking": false
+      }
+    ],
+    "passengerCategory": "IZT",
+    "startStation": {
+      "id": 256,
+      "name": "Солнцево",
+      "line": {
+        "id": 88,
+        "name": "8А",
+        "color": "#FFD702"
+      }
+    },
+    "finishStation": {
+      "id": 249,
+      "name": "БКЛ Петровский Парк",
+      "line": {
+        "id": 11,
+        "name": "БКЛ",
+        "color": "#82C0C0"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 488686171,
+    "startDescription": "Встретить у шестого входа",
+    "finishDescription": "Отвезти к четвертому выходу",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 3505,
+    "passengerCount": 1,
+    "maleEmployeeCount": 0,
+    "femaleEmployeeCount": 1,
+    "additionalInfo": "Пассажир высокого роста",
+    "orderTime": "2024-06-19T03:30:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 3667,
+      "firstName": "Никита",
+      "lastName": "Смирнов",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IZT",
+        "name": "Инвалид по зрению",
+        "shortName": "ИЗТ"
+      },
+      "phones": [
+        {
+          "phone": "79876543213",
+          "description": "Телефон сопровождающего"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Сумка",
+      "weight": 2,
+      "isHelpNeeded": false
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 43,
+          "name": "Красногвардейская",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "finishStation": {
+          "id": 33,
+          "name": "Новокузнецкая",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "duration": 1680,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 33,
+          "name": "Новокузнецкая",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "finishStation": {
+          "id": 146,
+          "name": "Третьяковская КЛ",
+          "line": {
+            "id": 8,
+            "name": "8",
+            "color": "#FFD702"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 146,
+          "name": "Третьяковская КЛ",
+          "line": {
+            "id": 8,
+            "name": "8",
+            "color": "#FFD702"
+          }
+        },
+        "finishStation": {
+          "id": 142,
+          "name": "Шоссе Энтузиастов",
+          "line": {
+            "id": 8,
+            "name": "8",
+            "color": "#FFD702"
+          }
+        },
+        "duration": 540,
+        "isCrosswalking": false
+      }
+    ],
+    "passengerCategory": "IZT",
+    "startStation": {
+      "id": 43,
+      "name": "Красногвардейская",
+      "line": {
+        "id": 2,
+        "name": "2",
+        "color": "#2DBE2C"
+      }
+    },
+    "finishStation": {
+      "id": 142,
+      "name": "Шоссе Энтузиастов",
+      "line": {
+        "id": 8,
+        "name": "8",
+        "color": "#FFD702"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 489050171,
+    "startDescription": "Встретить у пятого входа на станцию",
+    "finishDescription": "Отвезти к третьему выходу",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 2020,
+    "passengerCount": 1,
+    "maleEmployeeCount": 2,
+    "femaleEmployeeCount": 0,
+    "additionalInfo": "Пассажир будет в синей футболке",
+    "orderTime": "2024-06-19T03:30:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 38738,
+      "firstName": "Роман",
+      "lastName": "Попов",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IO",
+        "name": "Инвалид опорник",
+        "shortName": "ИО"
+      },
+      "phones": [
+        {
+          "phone": "79876544467",
+          "description": "Телефон личный"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Чемодан и авоська",
+      "weight": 4,
+      "isHelpNeeded": true
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 35,
+          "name": "Автозаводская",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "finishStation": {
+          "id": 29,
+          "name": "Белорусская ЗЛ",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "duration": 820,
+        "isCrosswalking": false
+      }
+    ],
+    "passengerCategory": "IO",
+    "startStation": {
+      "id": 35,
+      "name": "Автозаводская",
+      "line": {
+        "id": 2,
+        "name": "2",
+        "color": "#2DBE2C"
+      }
+    },
+    "finishStation": {
+      "id": 29,
+      "name": "Белорусская ЗЛ",
+      "line": {
+        "id": 2,
+        "name": "2",
+        "color": "#2DBE2C"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 488784171,
+    "startDescription": "Встретить в центре зала",
+    "finishDescription": "Отвезти ко второму выходу",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 2280,
+    "passengerCount": 1,
+    "maleEmployeeCount": 0,
+    "femaleEmployeeCount": 1,
+    "additionalInfo": "Пассажир будет в зеленой куртке",
+    "orderTime": "2024-06-19T03:45:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 31146,
+      "firstName": "Алексей",
+      "lastName": "Есенин",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IZT",
+        "name": "Инвалид по зрению",
+        "shortName": "ИЗТ"
+      },
+      "phones": [
+        {
+          "phone": "79876544425",
+          "description": "Телефон рабочий"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Авоська",
+      "weight": 1,
+      "isHelpNeeded": false
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 80,
+          "name": "Комсомольская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "finishStation": {
+          "id": 82,
+          "name": "Таганская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "duration": 360,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 82,
+          "name": "Таганская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "finishStation": {
+          "id": 145,
+          "name": "Марксистская",
+          "line": {
+            "id": 8,
+            "name": "8",
+            "color": "#FFD702"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": true
+      }
+    ],
+    "passengerCategory": "IZT",
+    "startStation": {
+      "id": 80,
+      "name": "Комсомольская КЛ",
+      "line": {
+        "id": 5,
+        "name": "5",
+        "color": "#8D5B2D"
+      }
+    },
+    "finishStation": {
+      "id": 145,
+      "name": "Марксистская",
+      "line": {
+        "id": 8,
+        "name": "8",
+        "color": "#FFD702"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 487542171,
+    "startDescription": "Встретить у третьего входа",
+    "finishDescription": "Отвезти к эскалатору у второго выхода",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 2760,
+    "passengerCount": 1,
+    "maleEmployeeCount": 1,
+    "femaleEmployeeCount": 0,
+    "additionalInfo": "Пассажир будет в синей куртке",
+    "orderTime": "2024-06-19T03:46:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 43745,
+      "firstName": "Виктор",
+      "lastName": "Попов",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "PL",
+        "name": "Пожилой человек",
+        "shortName": "ПЛ"
+      },
+      "phones": [
+        {
+          "phone": "79876543956",
+          "description": "Телефон рабочий"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Портфель",
+      "weight": 1,
+      "isHelpNeeded": false
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 29,
+          "name": "Белорусская ЗЛ",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "finishStation": {
+          "id": 89,
+          "name": "Белорусская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 89,
+          "name": "Белорусская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "finishStation": {
+          "id": 80,
+          "name": "Комсомольская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "duration": 540,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 80,
+          "name": "Комсомольская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "finishStation": {
+          "id": 6,
+          "name": "Комсомольская СЛ",
+          "line": {
+            "id": 1,
+            "name": "1",
+            "color": "#EF161E"
+          }
+        },
+        "duration": 300,
+        "isCrosswalking": true
+      }
+    ],
+    "passengerCategory": "PL",
+    "startStation": {
+      "id": 29,
+      "name": "Белорусская ЗЛ",
+      "line": {
+        "id": 2,
+        "name": "2",
+        "color": "#2DBE2C"
+      }
+    },
+    "finishStation": {
+      "id": 6,
+      "name": "Комсомольская СЛ",
+      "line": {
+        "id": 1,
+        "name": "1",
+        "color": "#EF161E"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 488886171,
+    "startDescription": "Встретить в центре зала",
+    "finishDescription": "Отвезти к первому выходу",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 4290,
+    "passengerCount": 1,
+    "maleEmployeeCount": 0,
+    "femaleEmployeeCount": 1,
+    "additionalInfo": "Пассажир будет в синей куртке",
+    "orderTime": "2024-06-19T03:46:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 32300,
+      "firstName": "Борис",
+      "lastName": "Попов",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IZT",
+        "name": "Инвалид по зрению",
+        "shortName": "ИЗТ"
+      },
+      "phones": [
+        {
+          "phone": "79876544023",
+          "description": "Телефон личный"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Чемодан",
+      "weight": 3,
+      "isHelpNeeded": true
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 6,
+          "name": "Комсомольская СЛ",
+          "line": {
+            "id": 1,
+            "name": "1",
+            "color": "#EF161E"
+          }
+        },
+        "finishStation": {
+          "id": 8,
+          "name": "Чистые пруды",
+          "line": {
+            "id": 1,
+            "name": "1",
+            "color": "#EF161E"
+          }
+        },
+        "duration": 210,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 8,
+          "name": "Чистые пруды",
+          "line": {
+            "id": 1,
+            "name": "1",
+            "color": "#EF161E"
+          }
+        },
+        "finishStation": {
+          "id": 101,
+          "name": "Тургеневская",
+          "line": {
+            "id": 6,
+            "name": "6",
+            "color": "#ED9121"
+          }
+        },
+        "duration": 180,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 101,
+          "name": "Тургеневская",
+          "line": {
+            "id": 6,
+            "name": "6",
+            "color": "#ED9121"
+          }
+        },
+        "finishStation": {
+          "id": 107,
+          "name": "Академическая",
+          "line": {
+            "id": 6,
+            "name": "6",
+            "color": "#ED9121"
+          }
+        },
+        "duration": 900,
+        "isCrosswalking": false
+      }
+    ],
+    "passengerCategory": "IZT",
+    "startStation": {
+      "id": 6,
+      "name": "Комсомольская СЛ",
+      "line": {
+        "id": 1,
+        "name": "1",
+        "color": "#EF161E"
+      }
+    },
+    "finishStation": {
+      "id": 107,
+      "name": "Академическая",
+      "line": {
+        "id": 6,
+        "name": "6",
+        "color": "#ED9121"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 484238171,
+    "startDescription": "Встретить у шестого входа",
+    "finishDescription": "Отвезти к эскалатору у второго выхода",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 3540,
+    "passengerCount": 1,
+    "maleEmployeeCount": 0,
+    "femaleEmployeeCount": 1,
+    "additionalInfo": "Пассажир с одним сопровождающим в черной шляпе и синем пальто",
+    "orderTime": "2024-06-19T03:50:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 4269,
+      "firstName": "Лев",
+      "lastName": "Репин",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IZT",
+        "name": "Инвалид по зрению",
+        "shortName": "ИЗТ"
+      },
+      "phones": [
+        {
+          "phone": "79876543230",
+          "description": "Телефон сопровождающего"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "2 чемодана",
+      "weight": 10,
+      "isHelpNeeded": true
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 135,
+          "name": "Выхино",
+          "line": {
+            "id": 7,
+            "name": "7",
+            "color": "#800080"
+          }
+        },
+        "finishStation": {
+          "id": 129,
+          "name": "Таганская ТКЛ",
+          "line": {
+            "id": 7,
+            "name": "7",
+            "color": "#800080"
+          }
+        },
+        "duration": 960,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 129,
+          "name": "Таганская ТКЛ",
+          "line": {
+            "id": 7,
+            "name": "7",
+            "color": "#800080"
+          }
+        },
+        "finishStation": {
+          "id": 82,
+          "name": "Таганская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 82,
+          "name": "Таганская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "finishStation": {
+          "id": 83,
+          "name": "Павелецкая КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "duration": 180,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 83,
+          "name": "Павелецкая КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "finishStation": {
+          "id": 34,
+          "name": "Павелецкая ЗЛ",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "duration": 180,
+        "isCrosswalking": true
+      }
+    ],
+    "passengerCategory": "IZT",
+    "startStation": {
+      "id": 135,
+      "name": "Выхино",
+      "line": {
+        "id": 7,
+        "name": "7",
+        "color": "#800080"
+      }
+    },
+    "finishStation": {
+      "id": 34,
+      "name": "Павелецкая ЗЛ",
+      "line": {
+        "id": 2,
+        "name": "2",
+        "color": "#2DBE2C"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 487861171,
+    "startDescription": "Встретить у третьего входа",
+    "finishDescription": "Отвезти к третьему выходу",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 3610,
+    "passengerCount": 1,
+    "maleEmployeeCount": 0,
+    "femaleEmployeeCount": 1,
+    "additionalInfo": "Пассажир будет в зеленой куртке",
+    "orderTime": "2024-06-19T03:50:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 1690,
+      "firstName": "Борис",
+      "lastName": "Онегин",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IZ",
+        "name": "Инвалид по зрению с остаточным зрением",
+        "shortName": "ИЗ"
+      },
+      "phones": [
+        {
+          "phone": "79876543418",
+          "description": "Телефон личный"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Авоська",
+      "weight": 1,
+      "isHelpNeeded": false
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 142,
+          "name": "Шоссе Энтузиастов",
+          "line": {
+            "id": 8,
+            "name": "8",
+            "color": "#FFD702"
+          }
+        },
+        "finishStation": {
+          "id": 146,
+          "name": "Третьяковская КЛ",
+          "line": {
+            "id": 8,
+            "name": "8",
+            "color": "#FFD702"
+          }
+        },
+        "duration": 540,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 146,
+          "name": "Третьяковская КЛ",
+          "line": {
+            "id": 8,
+            "name": "8",
+            "color": "#FFD702"
+          }
+        },
+        "finishStation": {
+          "id": 103,
+          "name": "Третьяковская КРЛ",
+          "line": {
+            "id": 6,
+            "name": "6",
+            "color": "#ED9121"
+          }
+        },
+        "duration": 60,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 103,
+          "name": "Третьяковская КРЛ",
+          "line": {
+            "id": 6,
+            "name": "6",
+            "color": "#ED9121"
+          }
+        },
+        "finishStation": {
+          "id": 106,
+          "name": "Ленинский проспект",
+          "line": {
+            "id": 6,
+            "name": "6",
+            "color": "#ED9121"
+          }
+        },
+        "duration": 450,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 106,
+          "name": "Ленинский проспект",
+          "line": {
+            "id": 6,
+            "name": "6",
+            "color": "#ED9121"
+          }
+        },
+        "finishStation": {
+          "id": 220,
+          "name": "МЦК Площадь Гагарина",
+          "line": {
+            "id": 14,
+            "name": "14",
+            "color": "#FFFFFF"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 220,
+          "name": "МЦК Площадь Гагарина",
+          "line": {
+            "id": 14,
+            "name": "14",
+            "color": "#FFFFFF"
+          }
+        },
+        "finishStation": {
+          "id": 224,
+          "name": "МЦК Шелепиха",
+          "line": {
+            "id": 14,
+            "name": "14",
+            "color": "#FFFFFF"
+          }
+        },
+        "duration": 640,
+        "isCrosswalking": false
+      }
+    ],
+    "passengerCategory": "IZ",
+    "startStation": {
+      "id": 142,
+      "name": "Шоссе Энтузиастов",
+      "line": {
+        "id": 8,
+        "name": "8",
+        "color": "#FFD702"
+      }
+    },
+    "finishStation": {
+      "id": 224,
+      "name": "МЦК Шелепиха",
+      "line": {
+        "id": 14,
+        "name": "14",
+        "color": "#FFFFFF"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 488872171,
+    "startDescription": "Встретить в центре зала",
+    "finishDescription": "Отвезти к эскалатору у второго выхода",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 3700,
+    "passengerCount": 1,
+    "maleEmployeeCount": 2,
+    "femaleEmployeeCount": 0,
+    "additionalInfo": "Пассажир будет в зеленой куртке",
+    "orderTime": "2024-06-19T03:52:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 44451,
+      "firstName": "Василий",
+      "lastName": "Пушкин",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IO",
+        "name": "Инвалид опорник",
+        "shortName": "ИО"
+      },
+      "phones": [
+        {
+          "phone": "79876544387",
+          "description": "Телефон личный"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Чемодан и авоська",
+      "weight": 4,
+      "isHelpNeeded": true
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 34,
+          "name": "Павелецкая ЗЛ",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "finishStation": {
+          "id": 31,
+          "name": "Тверская",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "duration": 420,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 31,
+          "name": "Тверская",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "finishStation": {
+          "id": 126,
+          "name": "Пушкинская",
+          "line": {
+            "id": 7,
+            "name": "7",
+            "color": "#800080"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 126,
+          "name": "Пушкинская",
+          "line": {
+            "id": 7,
+            "name": "7",
+            "color": "#800080"
+          }
+        },
+        "finishStation": {
+          "id": 121,
+          "name": "Октябрьское поле",
+          "line": {
+            "id": 7,
+            "name": "7",
+            "color": "#800080"
+          }
+        },
+        "duration": 680,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 121,
+          "name": "Октябрьское поле",
+          "line": {
+            "id": 7,
+            "name": "7",
+            "color": "#800080"
+          }
+        },
+        "finishStation": {
+          "id": 227,
+          "name": "МЦК Панфиловская",
+          "line": {
+            "id": 14,
+            "name": "14",
+            "color": "#FFFFFF"
+          }
+        },
+        "duration": 480,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 227,
+          "name": "МЦК Панфиловская",
+          "line": {
+            "id": 14,
+            "name": "14",
+            "color": "#FFFFFF"
+          }
+        },
+        "finishStation": {
+          "id": 228,
+          "name": "МЦК Стрешнево",
+          "line": {
+            "id": 14,
+            "name": "14",
+            "color": "#FFFFFF"
+          }
+        },
+        "duration": 140,
+        "isCrosswalking": false
+      }
+    ],
+    "passengerCategory": "IO",
+    "startStation": {
+      "id": 34,
+      "name": "Павелецкая ЗЛ",
+      "line": {
+        "id": 2,
+        "name": "2",
+        "color": "#2DBE2C"
+      }
+    },
+    "finishStation": {
+      "id": 228,
+      "name": "МЦК Стрешнево",
+      "line": {
+        "id": 14,
+        "name": "14",
+        "color": "#FFFFFF"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 488504171,
+    "startDescription": "Встретить у шестого входа",
+    "finishDescription": "Отвезти к четвертому выходу",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 4810,
+    "passengerCount": 1,
+    "maleEmployeeCount": 0,
+    "femaleEmployeeCount": 1,
+    "additionalInfo": "Пассажир высокого роста",
+    "orderTime": "2024-06-19T03:55:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 3301,
+      "firstName": "Петр",
+      "lastName": "Онегин",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IZ",
+        "name": "Инвалид по зрению с остаточным зрением",
+        "shortName": "ИЗ"
+      },
+      "phones": [
+        {
+          "phone": "79876544467",
+          "description": "Телефон личный"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Портфель",
+      "weight": 1,
+      "isHelpNeeded": false
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 422,
+          "name": "Нижегородская МЦД-4",
+          "line": {
+            "id": 19,
+            "name": "Д4",
+            "color": "#40B280"
+          }
+        },
+        "finishStation": {
+          "id": 212,
+          "name": "МЦК Нижегородская",
+          "line": {
+            "id": 14,
+            "name": "14",
+            "color": "#FFFFFF"
+          }
+        },
+        "duration": 1200,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 212,
+          "name": "МЦК Нижегородская",
+          "line": {
+            "id": 14,
+            "name": "14",
+            "color": "#FFFFFF"
+          }
+        },
+        "finishStation": {
+          "id": 224,
+          "name": "МЦК Шелепиха",
+          "line": {
+            "id": 14,
+            "name": "14",
+            "color": "#FFFFFF"
+          }
+        },
+        "duration": 1750,
+        "isCrosswalking": false
+      }
+    ],
+    "passengerCategory": "IZ",
+    "startStation": {
+      "id": 422,
+      "name": "Нижегородская МЦД-4",
+      "line": {
+        "id": 19,
+        "name": "Д4",
+        "color": "#40B280"
+      }
+    },
+    "finishStation": {
+      "id": 224,
+      "name": "МЦК Шелепиха",
+      "line": {
+        "id": 14,
+        "name": "14",
+        "color": "#FFFFFF"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 488248171,
+    "startDescription": "Встретить в центре зала",
+    "finishDescription": "Отвезти к первому выходу",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 3820,
+    "passengerCount": 1,
+    "maleEmployeeCount": 0,
+    "femaleEmployeeCount": 1,
+    "additionalInfo": "Пассажир будет в синей куртке",
+    "orderTime": "2024-06-19T04:00:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 1344,
+      "firstName": "Евгений",
+      "lastName": "Ожегов",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IZT",
+        "name": "Инвалид по зрению",
+        "shortName": "ИЗТ"
+      },
+      "phones": [
+        {
+          "phone": "79876543410",
+          "description": "Телефон личный"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Портфель",
+      "weight": 1,
+      "isHelpNeeded": false
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 172,
+          "name": "Аннино",
+          "line": {
+            "id": 9,
+            "name": "9",
+            "color": "#999999"
+          }
+        },
+        "finishStation": {
+          "id": 159,
+          "name": "Чеховская",
+          "line": {
+            "id": 9,
+            "name": "9",
+            "color": "#999999"
+          }
+        },
+        "duration": 1920,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 159,
+          "name": "Чеховская",
+          "line": {
+            "id": 9,
+            "name": "9",
+            "color": "#999999"
+          }
+        },
+        "finishStation": {
+          "id": 31,
+          "name": "Тверская",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "duration": 180,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 31,
+          "name": "Тверская",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "finishStation": {
+          "id": 29,
+          "name": "Белорусская ЗЛ",
+          "line": {
+            "id": 2,
+            "name": "2",
+            "color": "#2DBE2C"
+          }
+        },
+        "duration": 220,
+        "isCrosswalking": false
+      }
+    ],
+    "passengerCategory": "IZT",
+    "startStation": {
+      "id": 172,
+      "name": "Аннино",
+      "line": {
+        "id": 9,
+        "name": "9",
+        "color": "#999999"
+      }
+    },
+    "finishStation": {
+      "id": 29,
+      "name": "Белорусская ЗЛ",
+      "line": {
+        "id": 2,
+        "name": "2",
+        "color": "#2DBE2C"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 488365171,
+    "startDescription": "Встретить у второго входа",
+    "finishDescription": "Отвезти к третьему выходу",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 2580,
+    "passengerCount": 1,
+    "maleEmployeeCount": 0,
+    "femaleEmployeeCount": 1,
+    "additionalInfo": "Пассажир будет в зеленой куртке",
+    "orderTime": "2024-06-19T04:00:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 3776,
+      "firstName": "Иван",
+      "lastName": "Андреев",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IZT",
+        "name": "Инвалид по зрению",
+        "shortName": "ИЗТ"
+      },
+      "phones": [
+        {
+          "phone": "79876543409",
+          "description": "Телефон личный"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "Чемодан",
+      "weight": 3,
+      "isHelpNeeded": true
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 59,
+          "name": "Курская АПЛ",
+          "line": {
+            "id": 3,
+            "name": "3",
+            "color": "#0078BE"
+          }
+        },
+        "finishStation": {
+          "id": 81,
+          "name": "Курская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "duration": 120,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 81,
+          "name": "Курская КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "finishStation": {
+          "id": 91,
+          "name": "Проспект мира КЛ",
+          "line": {
+            "id": 5,
+            "name": "5",
+            "color": "#8D5B2D"
+          }
+        },
+        "duration": 360,
+        "isCrosswalking": false
+      }
+    ],
+    "passengerCategory": "IZT",
+    "startStation": {
+      "id": 59,
+      "name": "Курская АПЛ",
+      "line": {
+        "id": 3,
+        "name": "3",
+        "color": "#0078BE"
+      }
+    },
+    "finishStation": {
+      "id": 91,
+      "name": "Проспект мира КЛ",
+      "line": {
+        "id": 5,
+        "name": "5",
+        "color": "#8D5B2D"
+      }
+    },
+    "employees": []
+  },
+  {
+    "id": 488406171,
+    "startDescription": "Встретить у второго входа",
+    "finishDescription": "Отвезти ко второму выходу",
+    "orderApplication": {
+      "code": "ELECTRONIC_SERVICES",
+      "name": "Электронные сервисы"
+    },
+    "duration": 3975,
+    "passengerCount": 1,
+    "maleEmployeeCount": 0,
+    "femaleEmployeeCount": 1,
+    "additionalInfo": "Пассажир высокого роста",
+    "orderTime": "2024-06-19T04:00:00Z",
+    "startTime": null,
+    "finishTime": null,
+    "absenceTime": null,
+    "cancelTime": null,
+    "orderStatus": {
+      "code": "REVIEW",
+      "name": "В рассмотрении"
+    },
+    "passenger": {
+      "id": 40828,
+      "firstName": "Артем",
+      "lastName": "Достоевский",
+      "middleName": null,
+      "sex": "MALE",
+      "comment": null,
+      "hasPacemaker": false,
+      "category": {
+        "code": "IZT",
+        "name": "Инвалид по зрению",
+        "shortName": "ИЗТ"
+      },
+      "phones": [
+        {
+          "phone": "79876543397",
+          "description": "Телефон личный"
+        }
+      ]
+    },
+    "baggage": {
+      "type": "2 чемодана",
+      "weight": 10,
+      "isHelpNeeded": true
+    },
+    "transfers": [
+      {
+        "startStation": {
+          "id": 184,
+          "name": "Волжская",
+          "line": {
+            "id": 10,
+            "name": "10",
+            "color": "#99CC00"
+          }
+        },
+        "finishStation": {
+          "id": 180,
+          "name": "Крестьянская застава",
+          "line": {
+            "id": 10,
+            "name": "10",
+            "color": "#99CC00"
+          }
+        },
+        "duration": 1250,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 180,
+          "name": "Крестьянская застава",
+          "line": {
+            "id": 10,
+            "name": "10",
+            "color": "#99CC00"
+          }
+        },
+        "finishStation": {
+          "id": 130,
+          "name": "Пролетарская",
+          "line": {
+            "id": 7,
+            "name": "7",
+            "color": "#800080"
+          }
+        },
+        "duration": 180,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 130,
+          "name": "Пролетарская",
+          "line": {
+            "id": 7,
+            "name": "7",
+            "color": "#800080"
+          }
+        },
+        "finishStation": {
+          "id": 122,
+          "name": "Полежаевская",
+          "line": {
+            "id": 7,
+            "name": "7",
+            "color": "#800080"
+          }
+        },
+        "duration": 1050,
+        "isCrosswalking": false
+      },
+      {
+        "startStation": {
+          "id": 122,
+          "name": "Полежаевская",
+          "line": {
+            "id": 7,
+            "name": "7",
+            "color": "#800080"
+          }
+        },
+        "finishStation": {
+          "id": 247,
+          "name": "БКЛ Хорошёвская",
+          "line": {
+            "id": 11,
+            "name": "БКЛ",
+            "color": "#82C0C0"
+          }
+        },
+        "duration": 240,
+        "isCrosswalking": true
+      },
+      {
+        "startStation": {
+          "id": 247,
+          "name": "БКЛ Хорошёвская",
+          "line": {
+            "id": 11,
+            "name": "БКЛ",
+            "color": "#82C0C0"
+          }
+        },
+        "finishStation": {
+          "id": 246,
+          "name": "БКЛ Шелепиха",
+          "line": {
+            "id": 111,
+            "name": "БКЛ(А)",
+            "color": "#82C0C0"
+          }
+        },
+        "duration": 240,
+        "isCrosswalking": true
+      }
+    ],
+    "passengerCategory": "IZT",
+    "startStation": {
+      "id": 184,
+      "name": "Волжская",
+      "line": {
+        "id": 10,
+        "name": "10",
+        "color": "#99CC00"
+      }
+    },
+    "finishStation": {
+      "id": 246,
+      "name": "БКЛ Шелепиха",
+      "line": {
+        "id": 111,
+        "name": "БКЛ(А)",
+        "color": "#82C0C0"
+      }
+    },
+    "employees": []
+  }
+]

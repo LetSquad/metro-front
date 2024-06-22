@@ -10,19 +10,19 @@ import { PageSlugs } from "@models/pages/enums";
 import PrimaryButton from "@parts/Buttons/PrimaryButton";
 import SecondaryButton from "@parts/Buttons/SecondaryButton";
 
-interface AddOrderSuccessToastProps {
+interface AddPassengerSuccessToastProps {
     toast: Toast;
-    createdOrderId: number;
+    createdPassengerId: number;
 }
 
-export default function AddOrderSuccessToast({ toast: t, createdOrderId }: AddOrderSuccessToastProps) {
+export default function AddPassengerSuccessToast({ toast: t, createdPassengerId }: AddPassengerSuccessToastProps) {
     const navigate = useNavigate();
 
-    const goToOrdersPage = useCallback(() => navigate(PageSlugs.ORDERS), [navigate]);
+    const goToPassengersPage = useCallback(() => navigate(PageSlugs.PASSENGERS), [navigate]);
 
-    const goToOrderPage = useCallback(
-        () => navigate(generatePath(PageSlugs.ORDER, { orderId: createdOrderId.toString() })),
-        [createdOrderId, navigate]
+    const goToPassengerPage = useCallback(
+        () => navigate(generatePath(PageSlugs.PASSENGER, { passengerId: createdPassengerId.toString() })),
+        [createdPassengerId, navigate]
     );
 
     return (
@@ -36,26 +36,28 @@ export default function AddOrderSuccessToast({ toast: t, createdOrderId }: AddOr
             )}
         >
             <div className={customSuccessToastStyles.successToastContent}>
-                <span className={customSuccessToastStyles.successToastText}>Заявка успешно создана! Теперь ее можно распределить</span>
+                <span className={customSuccessToastStyles.successToastText}>
+                    Пассажир успешно создан! Теперь можно создать на него заявку
+                </span>
                 <div className={customSuccessToastStyles.successToastButtonContainer}>
                     <SecondaryButton
                         className={customSuccessToastStyles.successToastButton}
                         onClick={() => {
-                            goToOrdersPage();
+                            goToPassengersPage();
                             toast.dismiss(t.id);
                         }}
                     >
-                        Перейти к списку заявок
+                        Перейти к списку пассажиров
                     </SecondaryButton>
                     <PrimaryButton
                         className={customSuccessToastStyles.successToastButton}
                         color="positive"
                         onClick={() => {
-                            goToOrderPage();
+                            goToPassengerPage();
                             toast.dismiss(t.id);
                         }}
                     >
-                        Перейти к заявке
+                        Перейти к пассажиру
                     </PrimaryButton>
                 </div>
             </div>

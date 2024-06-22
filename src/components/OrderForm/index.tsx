@@ -1,16 +1,21 @@
 import React, { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useState } from "react";
+import { toast } from "react-hot-toast";
 
 import classNames from "classnames";
 import { FormikProvider, useFormik } from "formik";
 import { Dimmer, Form, Loader, Segment } from "semantic-ui-react";
 
+import useWebsocket from "@hooks/useWebsocket";
 import { OrderFieldsName } from "@models/order/enums";
 import { OrderCalculationResponse, OrderFormRef, OrderFormValues } from "@models/order/types";
+import { WebSocketDataTypeEnum, WebSocketResponseActionEnum } from "@models/websocket/enums";
+import { EditOrderWebSocketRequestData, WebSocketResponse } from "@models/websocket/types";
 import PrimaryButton from "@parts/Buttons/PrimaryButton";
 import SecondaryButton from "@parts/Buttons/SecondaryButton";
 import UnderscoreButton from "@parts/Buttons/UnderscoreButton";
 import formStyles from "@parts/EditForm/styles/AddEditForm.module.scss";
 import { getEmployeesRequest } from "@store/employee/reducer";
+import { selectCurrentEmployee } from "@store/employee/selectors";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import { calculateOrderRequest } from "@store/order/reducer";
 import { selectIsOrderUpdating } from "@store/order/selectors";
@@ -27,6 +32,7 @@ enum STEP {
 }
 
 interface OrderFormProps {
+    orderId?: number;
     initialValues: Partial<OrderFormValues>;
     onSubmit: (values: Partial<OrderFormValues>) => void;
     onCancel?: () => void;
@@ -35,12 +41,33 @@ interface OrderFormProps {
 }
 
 const OrderForm = forwardRef(
-    ({ onSubmit, onCancel, initialValues, isEdit = false, className }: OrderFormProps, ref: React.ForwardedRef<OrderFormRef>) => {
+    (
+        { onSubmit, onCancel, initialValues, isEdit = false, className, orderId = -1 }: OrderFormProps,
+        ref: React.ForwardedRef<OrderFormRef>
+    ) => {
         const dispatch = useAppDispatch();
 
         const isOrderUpdating = useAppSelector(selectIsOrderUpdating);
+        const currentEmployee = useAppSelector(selectCurrentEmployee);
 
         const [step, setStep] = useState(STEP.PREPARE_STEP);
+
+        const onWebSocketMessage = useCallback(
+            (eventData: WebSocketResponse) => {
+                if (eventData.action === WebSocketResponseActionEnum.ERROR && !isOrderUpdating) {
+                    toast.error("Данная заявка сейчас редактируется другим пользователем", {
+                        id: `order-locked-for-edit-${orderId}`,
+                        duration: 120_000
+                    });
+                }
+            },
+            [isOrderUpdating, orderId]
+        );
+
+        const { startSocket } = useWebsocket<EditOrderWebSocketRequestData>(
+            { type: WebSocketDataTypeEnum.ORDER_EDIT, login: currentEmployee?.login as string, id: orderId },
+            onWebSocketMessage
+        );
 
         const formik = useFormik<Partial<OrderFormValues>>({
             onSubmit,
@@ -49,12 +76,17 @@ const OrderForm = forwardRef(
             validateOnMount: true
         });
 
+        const resetForm = useCallback(() => {
+            setStep(STEP.PREPARE_STEP);
+            formik.resetForm();
+        }, [formik]);
+
         useImperativeHandle(
             ref,
             () => ({
-                resetForm: formik.resetForm
+                resetForm
             }),
-            [formik.resetForm]
+            [resetForm]
         );
 
         const onCalculation = useCallback(() => {
@@ -72,6 +104,7 @@ const OrderForm = forwardRef(
                                 isCrosswalking: transfer.isCrosswalking
                             }))
                         );
+                        formik.setFieldValue(OrderFieldsName.DURATION, payload.duration);
                     }
                 });
             });
@@ -157,7 +190,20 @@ const OrderForm = forwardRef(
 
         useEffect(() => {
             loadInitialInfo();
+            if (isEdit) {
+                startSocket();
+            }
+            // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [loadInitialInfo]);
+
+        useEffect(() => {
+            return () => {
+                if (isEdit) {
+                    toast.dismiss(`order-locked-for-edit-${orderId}`);
+                }
+            };
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, []);
 
         return (
             <Segment className={styles.segment}>

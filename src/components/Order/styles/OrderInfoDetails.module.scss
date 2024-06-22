@@ -24,8 +24,22 @@
 
 .content {
   display: flex;
+
+  @include mq($until: mobile) {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  @include mq($from: mobile) {
+    column-gap: 30px;
+  }
+}
+
+.base-content {
+  display: flex;
   flex-direction: column;
   row-gap: 10px;
+  width: 100%;
 }
 
 .first-block {

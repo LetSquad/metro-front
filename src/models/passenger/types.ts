@@ -1,6 +1,12 @@
 import { Sex } from "@models/common/enums";
 import { BasePageResponse, ResponseWithEditLock } from "@models/http/types";
-import { BaggageFieldsName, PassengerCategoryCodeEnum, PassengerFieldsName } from "@models/passenger/enums";
+import {
+    BaggageFieldsName,
+    PassengerCategoryCodeEnum,
+    PassengerFieldsName,
+    PassengerPhoneFieldsName,
+    PassengersFiltersFieldsName
+} from "@models/passenger/enums";
 
 export interface Baggage {
     [BaggageFieldsName.TYPE]: string;
@@ -15,8 +21,8 @@ export interface PassengerCategory {
 }
 
 export interface PassengerPhone {
-    phone: string;
-    description?: string | null;
+    [PassengerPhoneFieldsName.PHONE]: string;
+    [PassengerPhoneFieldsName.DESCRIPTION]?: string | null;
 }
 
 export interface Passenger {
@@ -31,7 +37,14 @@ export interface Passenger {
     [PassengerFieldsName.PHONES]?: PassengerPhone[] | null;
 }
 
-export interface PassengerFormValue {
+export interface PassengersFiltersFormValues {
+    [PassengersFiltersFieldsName.FIRST_NAME]?: string;
+    [PassengersFiltersFieldsName.LAST_NAME]?: string;
+    [PassengersFiltersFieldsName.PHONE]?: string;
+    [PassengersFiltersFieldsName.CATEGORIES]?: string[];
+}
+
+export interface PassengerFormValues {
     [PassengerFieldsName.FIRST_NAME]: string;
     [PassengerFieldsName.LAST_NAME]: string;
     [PassengerFieldsName.MIDDLE_NAME]?: string;
@@ -40,6 +53,10 @@ export interface PassengerFormValue {
     [PassengerFieldsName.HAS_PACEMAKER]: boolean;
     [PassengerFieldsName.CATEGORY]: PassengerCategoryCodeEnum;
     [PassengerFieldsName.PHONES]: PassengerPhone[];
+}
+
+export interface PassengerFormRef {
+    resetForm: () => void;
 }
 
 export type PassengerResponse = Passenger;

@@ -5,8 +5,17 @@ export enum EmployeeRole {
     ADMIN = "ADMIN"
 }
 
+export enum EmployeeRankCodeEnum {
+    ADMINISTRATOR = "ADMINISTRATOR",
+    SPECIALIST = "SPECIALIST",
+    SECTION_FOREMAN = "SECTION_FOREMAN",
+    CHIEF_INSPECTOR = "CHIEF_INSPECTOR",
+    OPERATOR = "OPERATOR",
+    INSPECTOR = "INSPECTOR"
+}
+
 export enum EmployeeFieldsName {
-    EMPLOYEE_ROLE = "employeeRole",
+    RANK = "rank",
     FIRST_NAME = "firstName",
     MIDDLE_NAME = "middleName",
     LAST_NAME = "lastName",
@@ -18,6 +27,10 @@ export enum EmployeeFieldsName {
     LIGHT_DUTIES = "lightDuties"
 }
 
-export enum RankFieldsName {
-    RANK_CODE = "rankCode"
+export enum EmployeesFiltersFieldsName {
+    FIRST_NAME = "firstName",
+    LAST_NAME = "lastName",
+    PHONE = "phone",
+    SHIFT = "shift",
+    LIGHT_DUTIES = "lightDuties"
 }

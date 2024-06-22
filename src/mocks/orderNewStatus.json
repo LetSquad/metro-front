@@ -1,0 +1,224 @@
+{
+  "id": 1,
+  "startDescription": "Встретить у первого входа",
+  "finishDescription": "Отвезти к эскалатору у второго выхода",
+  "orderApplication": {
+    "code": "ELECTRONIC_SERVICES",
+    "name": "Электронные сервисы"
+  },
+  "duration": 7550,
+  "passengerCount": 1,
+  "maleEmployeeCount": 3,
+  "femaleEmployeeCount": 0,
+  "additionalInfo": "Пассажир будет в красной футболке",
+  "orderTime": "2024-06-19T03:30:00Z",
+  "startTime": null,
+  "finishTime": null,
+  "absenceTime": null,
+  "cancelTime": null,
+  "orderStatus": {
+    "code": "RIDE",
+    "name": "Поездка"
+  },
+  "passenger": {
+    "id": 19643,
+    "firstName": "Петр",
+    "lastName": "Федоров",
+    "middleName": null,
+    "sex": "MALE",
+    "comment": null,
+    "hasPacemaker": false,
+    "category": {
+      "code": "DI",
+      "name": "Ребенок инвалид",
+      "shortName": "ДИ"
+    },
+    "phones": [
+      {
+        "phone": "79876543441",
+        "description": "Телефон рабочий"
+      }
+    ]
+  },
+  "baggage": {
+    "type": "Сумка",
+    "weight": 2,
+    "isHelpNeeded": false
+  },
+  "transfers": [
+    {
+      "startStation": {
+        "id": 197,
+        "name": "Улица Скобелевская",
+        "line": {
+          "id": 12,
+          "name": "Л1",
+          "color": "#A1B3D4"
+        }
+      },
+      "finishStation": {
+        "id": 196,
+        "name": "Улица Старокачаловская",
+        "line": {
+          "id": 12,
+          "name": "Л1",
+          "color": "#A1B3D4"
+        }
+      },
+      "duration": 240,
+      "isCrosswalking": false
+    },
+    {
+      "startStation": {
+        "id": 196,
+        "name": "Улица Старокачаловская",
+        "line": {
+          "id": 12,
+          "name": "Л1",
+          "color": "#A1B3D4"
+        }
+      },
+      "finishStation": {
+        "id": 173,
+        "name": "Бульвар Дмитрия Донского",
+        "line": {
+          "id": 9,
+          "name": "9",
+          "color": "#999999"
+        }
+      },
+      "duration": 60,
+      "isCrosswalking": true
+    },
+    {
+      "startStation": {
+        "id": 173,
+        "name": "Бульвар Дмитрия Донского",
+        "line": {
+          "id": 9,
+          "name": "9",
+          "color": "#999999"
+        }
+      },
+      "finishStation": {
+        "id": 162,
+        "name": "Серпуховская",
+        "line": {
+          "id": 9,
+          "name": "9",
+          "color": "#999999"
+        }
+      },
+      "duration": 1620,
+      "isCrosswalking": false
+    },
+    {
+      "startStation": {
+        "id": 162,
+        "name": "Серпуховская",
+        "line": {
+          "id": 9,
+          "name": "9",
+          "color": "#999999"
+        }
+      },
+      "finishStation": {
+        "id": 84,
+        "name": "Добрынинская",
+        "line": {
+          "id": 5,
+          "name": "5",
+          "color": "#8D5B2D"
+        }
+      },
+      "duration": 120,
+      "isCrosswalking": true
+    },
+    {
+      "startStation": {
+        "id": 84,
+        "name": "Добрынинская",
+        "line": {
+          "id": 5,
+          "name": "5",
+          "color": "#8D5B2D"
+        }
+      },
+      "finishStation": {
+        "id": 85,
+        "name": "Октябрьская КЛ",
+        "line": {
+          "id": 5,
+          "name": "5",
+          "color": "#8D5B2D"
+        }
+      },
+      "duration": 120,
+      "isCrosswalking": false
+    },
+    {
+      "startStation": {
+        "id": 85,
+        "name": "Октябрьская КЛ",
+        "line": {
+          "id": 5,
+          "name": "5",
+          "color": "#8D5B2D"
+        }
+      },
+      "finishStation": {
+        "id": 104,
+        "name": "Октябрьская КРЛ",
+        "line": {
+          "id": 6,
+          "name": "6",
+          "color": "#ED9121"
+        }
+      },
+      "duration": 120,
+      "isCrosswalking": true
+    },
+    {
+      "startStation": {
+        "id": 104,
+        "name": "Октябрьская КРЛ",
+        "line": {
+          "id": 6,
+          "name": "6",
+          "color": "#ED9121"
+        }
+      },
+      "finishStation": {
+        "id": 96,
+        "name": "ВДНХ",
+        "line": {
+          "id": 6,
+          "name": "6",
+          "color": "#ED9121"
+        }
+      },
+      "duration": 1070,
+      "isCrosswalking": false
+    }
+  ],
+  "passengerCategory": "DI",
+  "startStation": {
+    "id": 197,
+    "name": "Улица Скобелевская",
+    "line": {
+      "id": 12,
+      "name": "Л1",
+      "color": "#A1B3D4"
+    }
+  },
+  "finishStation": {
+    "id": 96,
+    "name": "ВДНХ",
+    "line": {
+      "id": 6,
+      "name": "6",
+      "color": "#ED9121"
+    }
+  },
+  "employees": []
+}
