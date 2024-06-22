@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development EXTERNAL_URL= webpack serve",
     "dev:local": "cross-env NODE_ENV=development WITH_MOCK=true webpack serve",
-    "build": "npm run lint && cross-env NODE_ENV=development EXTERNAL_URL=https://localhost:8443 webpack",
+    "build": "npm run lint && cross-env NODE_ENV=production EXTERNAL_URL= webpack",
     "build:local": "npm run lint && cross-env NODE_ENV=production webpack",
     "bundle-analyze": "mkdir -p dist/analyze && cross-env NODE_ENV=production WITH_ANALYZER=true webpack --profile --json > dist/analyze/stats.json && webpack-bundle-analyzer dist/analyze/stats.json",
     "lint": "npm run eslint && npm run stylelint",
