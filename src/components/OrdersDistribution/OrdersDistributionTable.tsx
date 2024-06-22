@@ -56,6 +56,7 @@ export default function OrdersDistributionTable({ ordersTimeList }: OrdersDistri
                     <tr>
                         <th scope="col">ФИО работника</th>
                         <th scope="col">Идентификатор заявки</th>
+                        <th scope="col">Время прибытия</th>
                         <th scope="col">Время встречи</th>
                         <th scope="col">Ожидаемое время окончания</th>
                         <th scope="col">Общая продолжительность</th>
@@ -82,6 +83,7 @@ export default function OrdersDistributionTable({ ordersTimeList }: OrdersDistri
                                 <td />
                                 <td />
                                 <td />
+                                <td />
                             </tr>
                         ) : (
                             actions.map((action, index) => (
@@ -99,6 +101,9 @@ export default function OrdersDistributionTable({ ordersTimeList }: OrdersDistri
                                         <Link to={generatePath(PageSlugs.ORDER, { orderId: (action.order?.id as number).toString() })}>
                                             {action.order?.id}
                                         </Link>
+                                    </td>
+                                    <td className={styles.activeCell}>
+                                        {DateTime.fromISO(action.timeStart).toFormat("dd.MM.yyyy, HH:mm")}
                                     </td>
                                     <td className={styles.activeCell}>
                                         {DateTime.fromISO(action.order?.orderTime as string).toFormat("dd.MM.yyyy, HH:mm")}

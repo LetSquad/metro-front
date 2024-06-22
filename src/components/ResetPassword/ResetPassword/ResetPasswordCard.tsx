@@ -54,10 +54,9 @@ export default function ResetPasswordCard() {
         (values: ResetPasswordFormValues) => {
             setIsResetPasswordLoading(true);
             setIsResetPasswordLoadingFailedFalse();
-            const { passwordConfirm, ...properties } = values;
 
             axios
-                .post(apiUrls.employeesResetPassword(), properties)
+                .post(apiUrls.employeesResetPassword(), { newPassword: values[ResetPasswordFieldName.PASSWORD] })
                 .then(() => {
                     dispatch(getCurrentEmployeeRequest());
                     toast.success("Пароль успешно изменен");
