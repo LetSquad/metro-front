@@ -1,7 +1,8 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Toast, toast } from "react-hot-toast";
 
 import { Loader } from "semantic-ui-react";
+import { useDebounce } from "use-debounce";
 
 import OrdersDistributionHeader from "@components/OrdersDistribution/OrdersDistributionHeader";
 import OrdersDistributionSchedule from "@components/OrdersDistribution/OrdersDistributionSchedule";
@@ -9,6 +10,7 @@ import OrdersDistributionTable from "@components/OrdersDistribution/OrdersDistri
 import partsStyles from "@coreStyles/baseParts.module.scss";
 import { useToggle } from "@hooks/useToogle";
 import useWebsocket from "@hooks/useWebsocket";
+import { EmployeeFieldsName } from "@models/employee/enums";
 import { WebSocketDataTypeEnum, WebSocketResponseActionEnum } from "@models/websocket/enums";
 import { UpdateListWebSocketRequestData, WebSocketResponse } from "@models/websocket/types";
 import ListChangedToast from "@parts/ListChangedToast";
@@ -30,7 +32,18 @@ export default function OrdersDistribution() {
     const isOrdersTimesListLoading = useAppSelector(selectIsOrdersTimesListLoading);
     const isOrdersTimesListLoadingFailed = useAppSelector(selectIsOrdersTimesListLoadingFailed);
 
+    const [filter, setFilter] = useState<string>();
     const [orderDistributionMod, toggleOrderDistributionMod] = useToggle();
+
+    const [debounceFilter] = useDebounce(filter, 1000);
+
+    const filteredOrderTimeList = useMemo(
+        () =>
+            debounceFilter
+                ? ordersTimeList.filter((list) => list.employee[EmployeeFieldsName.LAST_NAME].includes(debounceFilter))
+                : ordersTimeList,
+        [debounceFilter, ordersTimeList]
+    );
 
     const getOrdersTimeList = useCallback(() => {
         dispatch(getOrdersTimeListRequest());
@@ -77,11 +90,15 @@ export default function OrdersDistribution() {
 
     return (
         <>
-            <OrdersDistributionHeader toggleOrderDistributionMod={toggleOrderDistributionMod} />
+            <OrdersDistributionHeader
+                toggleOrderDistributionMod={toggleOrderDistributionMod}
+                filterValue={filter}
+                setFilterValue={setFilter}
+            />
             {orderDistributionMod ? (
-                <OrdersDistributionTable ordersTimeList={ordersTimeList} />
+                <OrdersDistributionTable ordersTimeList={filteredOrderTimeList} />
             ) : (
-                <OrdersDistributionSchedule ordersTimeList={ordersTimeList} />
+                <OrdersDistributionSchedule ordersTimeList={filteredOrderTimeList} />
             )}
         </>
     );
