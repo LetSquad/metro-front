@@ -36,7 +36,7 @@ export default function AddEmployeeSuccessToast({ toast: t, createdEmployeeId }:
             )}
         >
             <div className={customSuccessToastStyles.successToastContent}>
-                <span className={customSuccessToastStyles.successToastText}>Сотрудник успешно создана!</span>
+                <span className={customSuccessToastStyles.successToastText}>Сотрудник успешно создан!</span>
                 <div className={customSuccessToastStyles.successToastButtonContainer}>
                     <SecondaryButton
                         className={customSuccessToastStyles.successToastButton}
