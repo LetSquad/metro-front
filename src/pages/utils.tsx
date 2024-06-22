@@ -1,6 +1,7 @@
 import { Route } from "react-router-dom";
 
 import WithAuth from "@coreUtils/WithAuth";
+import WithPasswordReset from "@coreUtils/WithPasswordReset";
 import { WithSuspense } from "@coreUtils/WithSuspense";
 import { Page as PageType } from "@models/pages/types";
 
@@ -14,9 +15,11 @@ export function pagesToRoutes(pages: PageType) {
                     path={slug}
                     element={
                         <WithAuth>
-                            <WithSuspense>
-                                <Component />
-                            </WithSuspense>
+                            <WithPasswordReset>
+                                <WithSuspense>
+                                    <Component />
+                                </WithSuspense>
+                            </WithPasswordReset>
                         </WithAuth>
                     }
                 />

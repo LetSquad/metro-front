@@ -77,7 +77,8 @@ mock.onPost(apiUrls.refreshToken(), undefined).reply<SignInResponse>(200, {
         code: EmployeeRankCodeEnum.INSPECTOR,
         name: "Инспектор",
         shortName: "ЦИ"
-    }
+    },
+    isPasswordTemp: false
 }); */
 
 /* mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
@@ -96,7 +97,8 @@ mock.onPost(apiUrls.refreshToken(), undefined).reply<SignInResponse>(200, {
     rank: {
         code: EmployeeRankCodeEnum.OPERATOR,
         name: "Оператор"
-    }
+    },
+    isPasswordTemp: false
 }); */
 
 mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
@@ -115,8 +117,11 @@ mock.onGet(apiUrls.employeesProfile()).reply<EmployeeCurrentResponse>(200, {
     rank: {
         code: EmployeeRankCodeEnum.ADMINISTRATOR,
         name: "Администратор"
-    }
+    },
+    isPasswordTemp: false
 });
+
+mock.onPost(apiUrls.employeesResetPassword()).reply(204);
 
 mock.onGet(apiUrls.ordersCurrent()).reply<OrdersResponse>(200, {
     total: 4,

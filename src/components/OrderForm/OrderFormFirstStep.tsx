@@ -17,7 +17,7 @@ import { DropdownOption } from "@models/forms/types";
 import { OrderApplicationCodeEnum, OrderFieldsName } from "@models/order/enums";
 import { OrderFormValues } from "@models/order/types";
 import { BaggageFieldsName, PassengerCategoryCodeEnum, PassengerFieldsName } from "@models/passenger/enums";
-import FormField from "@parts/FormField/FormField";
+import FormField from "@parts/FormField";
 import loadingErrorBlockStyles from "@parts/LoadingErrorBlock/styles/LoadingErrorBlock.module.scss";
 import { getEmployeesRequest } from "@store/employee/reducer";
 import { selectEmployees, selectIsEmployeesLoading, selectIsEmployeesLoadingFailed } from "@store/employee/selectors";

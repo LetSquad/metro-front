@@ -24,10 +24,12 @@ export interface Employee {
 }
 
 export interface EmployeeCurrent extends Employee {
+    isPasswordTemp: boolean;
     login: string;
 }
 
-export interface NewEmployee extends EmployeeCurrent {
+export interface NewEmployee extends Employee {
+    login: string;
     password: string;
 }
 

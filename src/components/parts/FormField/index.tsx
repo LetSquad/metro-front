@@ -10,25 +10,14 @@ import FormFieldPlaceholder from "@parts/FormField/Placeholders/FormFieldPlaceho
 import styles from "./styles/FormField.module.scss";
 
 const DatePickerField = lazy(/* webpackChunkName: "DatePickerField" */ () => import("./DatePickerField"));
-
 const TimePickerField = lazy(/* webpackChunkName: "TimePickerField" */ () => import("./TimePickerField"));
-
 const DateTimePickerField = lazy(/* webpackChunkName: "DateTimePickerField" */ () => import("./DateTimePickerField"));
-
-const ImageEditorField = lazy(/* webpackChunkName: "ImageEditorField" */ () => import("./ImageEditorField"));
-
 const InputField = lazy(/* webpackChunkName: "InputField" */ () => import("./InputField"));
-
 const PasswordInputField = lazy(/* webpackChunkName: "PasswordInputField" */ () => import("./PasswordInputField"));
-
 const PhoneInputField = lazy(/* webpackChunkName: "PhoneInputField" */ () => import("./PhoneInputField"));
-
 const DropdownField = lazy(/* webpackChunkName: "DropdownField" */ () => import("./DropdownField"));
-
 const TextAreaField = lazy(/* webpackChunkName: "TextAreaField" */ () => import("./TextAreaField"));
 const CheckboxField = lazy(/* webpackChunkName: "CheckboxField" */ () => import("./CheckboxField"));
-const ImageSelectorField = lazy(/* webpackChunkName: "ImageSelectorField" */ () => import("./ImageSelectorField"));
-const RatingField = lazy(/* webpackChunkName: "ImageSelectorField" */ () => import("./RatingField"));
 const ButtonGroupField = lazy(/* webpackChunkName: "ImageSelectorField" */ () => import("./ButtonGroupField"));
 // eslint-disable-next-line import/no-cycle
 const FormFieldsRange = lazy(/* webpackChunkName: "ImageSelectorField" */ () => import("./FormFieldsRange"));
@@ -68,23 +57,14 @@ export default function FormField({
             case FormFieldType.DATE_TIMEPICKER: {
                 return <DateTimePickerField {...props} />;
             }
-            case FormFieldType.IMAGE_EDITOR: {
-                return <ImageEditorField {...props} />;
-            }
             case FormFieldType.BUTTON_GROUP: {
                 return <ButtonGroupField {...props} />;
             }
             case FormFieldType.CHECKBOX: {
                 return <CheckboxField {...props} />;
             }
-            case FormFieldType.IMAGE_SELECTOR: {
-                return <ImageSelectorField {...props} />;
-            }
             case FormFieldType.FORM_FIELDS_RANGE: {
                 return <FormFieldsRange {...props} />;
-            }
-            case FormFieldType.RATING: {
-                return <RatingField {...props} />;
             }
             // skip default
         }
