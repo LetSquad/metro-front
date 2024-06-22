@@ -31,7 +31,7 @@ export default function PassengerInfoDetails({ passenger }: PassengerInfoProps) 
                         <div className={styles.passengerPhonesContent}>
                             {passenger[PassengerFieldsName.PHONES].map((passengerPhone) => (
                                 <span key={`${passenger.id}-${passengerPhone.phone}`}>
-                                    {`${formatPhoneNumber(passengerPhone.phone)} - ${passengerPhone.description}`}
+                                    {`${formatPhoneNumber(passengerPhone.phone)}${passengerPhone.description ? ` - ${passengerPhone.description}` : ""}`}
                                 </span>
                             ))}
                         </div>

@@ -1,6 +1,6 @@
 import { Segment } from "semantic-ui-react";
 
-import { getFullName, getSexLabelBySexEnum } from "@coreUtils/utils";
+import { formatPhoneNumber, getFullName, getSexLabelBySexEnum } from "@coreUtils/utils";
 import { EmployeeFieldsName } from "@models/employee/enums";
 import { Employee } from "@models/employee/types";
 
@@ -17,8 +17,10 @@ export default function EmployeeInfoDetails({ employee }: EmployeeInfoProps) {
             <div className={styles.contentContainer}>
                 <div className={styles.contentBlock}>
                     <span>{getSexLabelBySexEnum(employee[EmployeeFieldsName.SEX])}</span>
-                    <span>{`Рабочий телефон: ${employee[EmployeeFieldsName.WORK_PHONE]}`}</span>
-                    <span>{`Личный телефон: ${employee[EmployeeFieldsName.PERSONAL_PHONE]}`}</span>
+                    <span>{`Рабочий телефон: ${formatPhoneNumber(employee[EmployeeFieldsName.WORK_PHONE])}`}</span>
+                    {employee[EmployeeFieldsName.PERSONAL_PHONE] && (
+                        <span>{`Личный телефон: ${formatPhoneNumber(employee[EmployeeFieldsName.PERSONAL_PHONE])}`}</span>
+                    )}
                 </div>
                 <div className={styles.contentBlock}>
                     <span>{`Должность: ${employee[EmployeeFieldsName.RANK].name} ${employee[EmployeeFieldsName.RANK].shortName ? `(${employee[EmployeeFieldsName.RANK].shortName})` : ""}`}</span>

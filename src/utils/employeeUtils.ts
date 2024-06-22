@@ -1,7 +1,15 @@
 import { Sex } from "@models/common/enums";
 import { EmployeeRankCodeEnum } from "@models/employee/enums";
 
-export const EMPLOYEE_TIME_SHIFT = ["08:00-20:00", "09:00-21:00", "11:00-21:00", "20:00-08:00", "21:00-09:00"];
+export const EMPLOYEE_TIME_SHIFT = [
+    "07:00-19:00",
+    "08:00-20:00",
+    "09:00-21:00",
+    "11:00-21:00",
+    "19:00-07:00",
+    "20:00-08:00",
+    "21:00-09:00"
+];
 
 const ruRules = new Intl.PluralRules("ru-RU");
 

@@ -3,7 +3,7 @@ import { generatePath, Link } from "react-router-dom";
 
 import { Segment } from "semantic-ui-react";
 
-import { getFullName, getSexLabelBySexEnum } from "@coreUtils/utils";
+import { formatPhoneNumber, getFullName, getSexLabelBySexEnum } from "@coreUtils/utils";
 import { EmployeeFieldsName } from "@models/employee/enums";
 import { Employee } from "@models/employee/types";
 import { PageSlugs } from "@models/pages/enums";
@@ -20,7 +20,7 @@ export default function EmployeeCard({ employee }: EmployeeCardProps) {
             <Segment className={styles.segment}>
                 <span className={styles.name}>{getFullName(employee.firstName, employee.middleName, employee.lastName)}</span>
                 <span>{getSexLabelBySexEnum(employee[EmployeeFieldsName.SEX])}</span>
-                <span>{`Рабочий телефон: ${employee[EmployeeFieldsName.WORK_PHONE]}`}</span>
+                <span>{`Рабочий телефон: ${formatPhoneNumber(employee[EmployeeFieldsName.WORK_PHONE])}`}</span>
                 <span>{`Должность: ${employee[EmployeeFieldsName.RANK].name} ${employee[EmployeeFieldsName.RANK].shortName ? `(${employee[EmployeeFieldsName.RANK].shortName})` : ""}`}</span>
                 <span>{`Табельный номер: ${employee[EmployeeFieldsName.EMPLOYEE_NUMBER]}`}</span>
                 <span>{`Рабочее время: ${employee[EmployeeFieldsName.SHIFT]}`}</span>
