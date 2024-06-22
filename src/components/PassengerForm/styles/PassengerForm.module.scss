@@ -1,0 +1,38 @@
+@use '/src/styles/variables.module' as variables;
+
+.segment {
+  background-color: variables.$background-color !important;
+  box-shadow: variables.$primary-box-shadow !important;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.prompt-label {
+  background: #fff !important;
+  border: 1px solid #e0b4b4 !important;
+  color: #9f3a38 !important;
+  white-space: normal;
+}
+
+.phones-label {
+  color: variables.$primary-text-color;
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  text-transform: none;
+  
+  &::after {
+    color: #db2828;
+    content: '*';
+    display: inline-block;
+    margin: -.2em 0 0 .2em;
+    vertical-align: top;
+  }
+}
+
+.array-form-fields {
+  padding-left: 20px;
+}
