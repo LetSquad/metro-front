@@ -5,11 +5,12 @@ import { AxiosResponse } from "axios";
 
 import axios from "@api/api";
 import apiUrls from "@api/apiUrls";
-import AddOrderSuccessToast from "@components/Order/AddOrderSuccessToast";
+import AddPassengerSuccessToast from "@components/Passenger/AddPassengerSuccessToast";
 import {
     Passenger,
-    PassengerFormValue,
+    PassengerFormValues,
     PassengerResponse,
+    PassengersFiltersFormValues,
     PassengersResponse,
     PassengerWithLockResponse
 } from "@models/passenger/types";
@@ -38,8 +39,8 @@ const initialState: PassengerState = {
     isPassengerUpdating: false
 };
 
-export const getPassengersRequest = createAsyncThunk("getPassengersRequest", async () => {
-    const response: AxiosResponse<PassengersResponse> = await axios.get<PassengersResponse>(apiUrls.passengers());
+export const getPassengersRequest = createAsyncThunk("getPassengersRequest", async (values?: PassengersFiltersFormValues) => {
+    const response: AxiosResponse<PassengersResponse> = await axios.get<PassengersResponse>(apiUrls.passengers(), { params: values });
     return response.data;
 });
 
@@ -50,14 +51,14 @@ export const getPassengerRequest = createAsyncThunk("getPassengerRequest", async
     return response.data;
 });
 
-export const createPassengerRequest = createAsyncThunk("createPassengerRequest", async (values: PassengerFormValue) => {
+export const createPassengerRequest = createAsyncThunk("createPassengerRequest", async (values: PassengerFormValues) => {
     const response: AxiosResponse<PassengerResponse> = await axios.post<PassengerResponse>(apiUrls.passengers(), values);
     return response.data;
 });
 
 export const updatePassengerRequest = createAsyncThunk(
     "updatePassengerRequest",
-    async ({ passengerId, ...values }: PassengerFormValue & { passengerId: number }) => {
+    async ({ passengerId, ...values }: PassengerFormValues & { passengerId: number }) => {
         const response: AxiosResponse<PassengerResponse> = await axios.put<PassengerResponse>(
             apiUrls.passengersId(passengerId),
             values
@@ -94,7 +95,7 @@ export const passengerSlice = createSlice({
             state.isPassengerLoadingFailed = true;
         });
         builder.addCase(getPassengerRequest.fulfilled, (state, action) => {
-            state.isPassengersLoading = false;
+            state.isPassengerLoading = false;
             state.passenger = action.payload.data;
 
             if (action.payload.isLockedForEdit) {
@@ -114,8 +115,7 @@ export const passengerSlice = createSlice({
         });
         builder.addCase(createPassengerRequest.fulfilled, (state, action) => {
             state.isPassengerUpdating = false;
-            state.passenger = action.payload;
-            toast.custom((t: Toast) => <AddOrderSuccessToast toast={t} createdOrderId={action.payload.id} />, {
+            toast.custom((t: Toast) => <AddPassengerSuccessToast toast={t} createdPassengerId={action.payload.id} />, {
                 id: CREATE_PASSENGER_TOAST,
                 duration: 120_000
             });

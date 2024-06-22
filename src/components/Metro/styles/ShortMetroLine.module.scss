@@ -1,0 +1,62 @@
+@use 'src/styles/variables.module' as variables;
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.station-container {
+  > div {
+    > span {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 15px;
+      text-wrap: nowrap;
+    }
+  }
+}
+
+.duration {
+  bottom: 25px;
+  font-size: 12px;
+  font-weight: 700;
+  left: 50%;
+  line-height: 13px;
+  position: absolute;
+  transform: translateX(-50%);
+  width: max-content;
+}
+
+.crosswalking-icon-container {
+  background: variables.$background-color;
+  height: 18px;
+  width: 18px;
+  z-index: 1;
+}
+
+.crosswalking-icon {
+  height: 18px;
+  width: 18px;
+}
+
+.crosswalking-icon-content-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  position: relative;
+  width: 100%;
+}
+
+.crosswalking-icon-content-container::after {
+  border: dotted #737ce6;
+  border-width: 0 0 2px;
+  bottom: 50%;
+  content: "";
+  height: 2px;
+  left: 0;
+  margin-bottom: -1px;
+  position: absolute;
+  right: 0;
+}

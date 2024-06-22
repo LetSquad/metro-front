@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from "react";
+import { useCallback } from "react";
 
 import createAuthRefreshInterceptor from "axios-auth-refresh";
 
@@ -34,10 +34,6 @@ export default function App() {
     );
 
     createAuthRefreshInterceptor(axios, refreshAuthLogic);
-
-    useEffect(() => {
-        axios.defaults.withCredentials = true;
-    }, []);
 
     return (
         <div id="app" className={styles.app}>

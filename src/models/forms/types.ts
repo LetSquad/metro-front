@@ -5,7 +5,7 @@ import { SemanticCOLORS, SemanticShorthandItem } from "semantic-ui-react/dist/co
 
 import { Placement } from "@floating-ui/react";
 
-import { FormFieldType, ImageEditorPreviewType } from "./enums";
+import { FormFieldType } from "./enums";
 
 export interface BaseFieldProps {
     name: string;
@@ -48,10 +48,6 @@ export interface PasswordInputFieldProps extends BaseFieldProps {
 }
 
 export type InputFieldProps = NumberInputFieldProps | BaseInputFieldProps;
-
-export interface ImageSelectorFieldProps extends BaseFieldProps {
-    multiple?: boolean;
-}
 
 export interface PhoneNumberInputFieldProps extends BaseFieldPropsWithDisabled {
     country?: string | number;
@@ -102,15 +98,6 @@ export type DateTimePickerFieldProps = BaseFieldPropsWithDisabled &
         includeDates?: Date[];
     };
 
-export interface ImageEditorFieldProps extends BaseFieldProps {
-    width?: number;
-    height?: number;
-    border?: number | number[];
-    isBorderRadiusEnable?: boolean;
-    borderColor?: number[];
-    previewType?: ImageEditorPreviewType;
-}
-
 interface GroupFieldOptionsType {
     value: string;
     displayText: string;
@@ -126,12 +113,6 @@ export interface FormFieldsRangeProps extends BaseFieldProps {
     to: FormFieldProps;
 }
 
-export interface RatingFieldProps extends BaseFieldPropsWithDisabled {
-    clearable?: boolean;
-    maxRating?: number;
-    size?: "mini" | "tiny" | "small" | "large" | "huge" | "massive";
-}
-
 export type FormFieldProps =
     | (PhoneNumberInputFieldProps & { type: FormFieldType.PHONE_NUMBER_INPUT })
     | (PasswordInputFieldProps & { type: FormFieldType.PASSWORD_INPUT })
@@ -141,12 +122,9 @@ export type FormFieldProps =
     | (DatePickerFieldProps & { type: FormFieldType.DATEPICKER })
     | (TimePickerFieldProps & { type: FormFieldType.TIMEPICKER })
     | (DateTimePickerFieldProps & { type: FormFieldType.DATE_TIMEPICKER })
-    | (ImageEditorFieldProps & { type: FormFieldType.IMAGE_EDITOR })
     | (ButtonGroupFieldProps & { type: FormFieldType.BUTTON_GROUP })
     | (BaseFieldPropsWithDisabled & { type: FormFieldType.CHECKBOX })
-    | (ImageSelectorFieldProps & { type: FormFieldType.IMAGE_SELECTOR })
-    | (FormFieldsRangeProps & { type: FormFieldType.FORM_FIELDS_RANGE })
-    | (RatingFieldProps & { type: FormFieldType.RATING });
+    | (FormFieldsRangeProps & { type: FormFieldType.FORM_FIELDS_RANGE });
 
 export interface AccordionsFormFieldProps {
     id: string;

@@ -1,4 +1,5 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { toast } from "react-hot-toast";
 import { useSearchParams } from "react-router-dom";
 
 import classNames from "classnames";
@@ -68,10 +69,18 @@ export default function OrderInfo({ order }: OrderInfoProps) {
             [OrderFieldsName.START_STATION]: order[OrderFieldsName.START_STATION]?.id,
             [OrderFieldsName.FINISH_STATION]: order[OrderFieldsName.FINISH_STATION]?.id,
             [OrderFieldsName.TRANSFERS]: [],
+            [OrderFieldsName.DURATION]: undefined,
             [OrderFieldsName.EMPLOYEES]: []
         }),
         [order]
     );
+
+    useEffect(() => {
+        return () => {
+            toast.dismiss(`order-locked-for-edit-${order.id}`);
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <div
@@ -86,6 +95,7 @@ export default function OrderInfo({ order }: OrderInfoProps) {
                     onSubmit={onSubmitButtonClicked}
                     onCancel={() => changeEditState(false)}
                     className={flipEditCardPartsStyles.editContent}
+                    orderId={order.id}
                     isEdit
                 />
             ) : (

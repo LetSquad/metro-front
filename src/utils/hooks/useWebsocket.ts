@@ -8,7 +8,7 @@ import { WebSocketRequestData, WebSocketResponse } from "@models/websocket/types
 import { mockWebSocket } from "../../mocks/mockWebSocket";
 
 export default function useWebsocket<T extends WebSocketRequestData>(
-    data: T[],
+    data: T,
     onMessage: (eventData: WebSocketResponse) => void,
     onError?: (errorEvent: Event) => void,
     autoStart: boolean = false
@@ -19,31 +19,41 @@ export default function useWebsocket<T extends WebSocketRequestData>(
     const [isReconnect, , setReconnectTrue, setReconnectFalse] = useToggle();
 
     const socketRef = useRef(socket);
+    const intervalIdRef = useRef(intervalId);
+    const updatedAtRef = useRef(updatedAt);
 
     const healthcheck = useCallback(() => {
-        if (!socket) {
+        const _socket = socketRef.current;
+        const _updatedAt = updatedAtRef.current;
+        if (!_socket) {
             return;
         }
 
-        if (socket.readyState !== 1) {
+        if (_socket.readyState !== 1) {
             return;
         }
 
-        if (Date.now() - updatedAt > 5000) {
-            socket.send(JSON.stringify({ action: WebSocketRequestActionEnum.PING }));
+        if (Date.now() - _updatedAt > 5000) {
+            _socket.send(JSON.stringify({ action: WebSocketRequestActionEnum.PING }));
         }
-    }, [updatedAt, socket]);
+    }, []);
 
-    const onOpenSocketHandler = useCallback(() => {
-        socket?.send(JSON.stringify({ action: WebSocketRequestActionEnum.INIT }));
-        socket?.send(JSON.stringify({ action: WebSocketRequestActionEnum.WANT, data }));
-    }, [data, socket]);
+    const onOpenSocketHandler = useCallback(
+        (_socket: WebSocket) => {
+            _socket?.send(JSON.stringify({ action: WebSocketRequestActionEnum.INIT }));
+            _socket?.send(JSON.stringify({ action: WebSocketRequestActionEnum.WANT, data }));
+        },
+        [data]
+    );
 
     const onCloseSocketWithReconnectHandler = useCallback(
         (event: CloseEvent) => {
-            if (socket && event.code !== 1000) {
-                if (intervalId) {
-                    clearInterval(intervalId);
+            const _socket = socketRef.current;
+            const _intervalId = intervalIdRef.current;
+
+            if (_socket && event.code !== 1000) {
+                if (_intervalId) {
+                    clearInterval(_intervalId);
                 }
 
                 setIntervalId(undefined);
@@ -53,25 +63,26 @@ export default function useWebsocket<T extends WebSocketRequestData>(
                     setReconnectTrue();
                 }, 1000);
             } else {
-                if (intervalId) {
-                    clearInterval(intervalId);
+                if (_intervalId) {
+                    clearInterval(_intervalId);
                 }
 
                 setIntervalId(undefined);
                 setSocket(undefined);
             }
         },
-        [intervalId, setReconnectTrue, socket]
+        [setReconnectTrue]
     );
 
     const onErrorSocketHandler = useCallback(
         (errorEvent: Event) => {
+            const _socket = socketRef.current;
             if (onError) {
                 onError(errorEvent);
             }
-            socket?.close(3000, "Restart socket after error");
+            _socket?.close(3000, "Restart socket after error");
         },
-        [onError, socket]
+        [onError]
     );
 
     const connectSocket = useCallback(() => {
@@ -82,7 +93,7 @@ export default function useWebsocket<T extends WebSocketRequestData>(
             setSocket(_socket);
             setUpdatedAt(Date.now());
 
-            _socket.addEventListener("open", onOpenSocketHandler);
+            _socket.addEventListener("open", () => onOpenSocketHandler(_socket));
 
             _socket.addEventListener("message", (event) => {
                 setUpdatedAt(Date.now());
@@ -123,6 +134,14 @@ export default function useWebsocket<T extends WebSocketRequestData>(
     useEffect(() => {
         socketRef.current = socket;
     }, [socket]);
+
+    useEffect(() => {
+        intervalIdRef.current = intervalId;
+    }, [intervalId]);
+
+    useEffect(() => {
+        updatedAtRef.current = updatedAt;
+    }, [updatedAt]);
 
     useEffect(() => {
         if (autoStart) {

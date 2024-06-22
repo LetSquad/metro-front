@@ -31,6 +31,7 @@ export enum OrderFieldsName {
     PASSENGER = "passenger",
     BAGGAGE = "baggage",
     TRANSFERS = "transfers",
+    DURATION = "duration",
     PASSENGER_CATEGORY = "passengerCategory",
     START_STATION = "startStation",
     FINISH_STATION = "finishStation",

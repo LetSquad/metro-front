@@ -3,7 +3,7 @@ import { Form } from "semantic-ui-react";
 
 import { FormFieldsRangeProps } from "@models/forms/types";
 // eslint-disable-next-line import/no-cycle
-import FormField from "@parts/FormField/FormField";
+import FormField from "@parts/FormField/index";
 
 import styles from "./styles/FormFieldsRange.module.scss";
 

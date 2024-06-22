@@ -10,7 +10,7 @@ import AddEditForm from "@parts/EditForm/AddEditForm";
 import styles from "@parts/EditForm/styles/AccordionsAddEditForm.module.scss";
 import FormFieldPlaceholder from "@parts/FormField/Placeholders/FormFieldPlaceholder";
 
-const FormField = lazy(/* webpackChunkName: "FormField" */ () => import("@parts/FormField/FormField"));
+const FormField = lazy(/* webpackChunkName: "FormField" */ () => import("@parts/FormField"));
 
 export interface AccordionsFormProps<Values> {
     accordions: AccordionsFormFieldProps[];

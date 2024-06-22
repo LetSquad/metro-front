@@ -8,7 +8,7 @@ import FormFieldPlaceholder from "@parts/FormField/Placeholders/FormFieldPlaceho
 
 import styles from "./styles/BaseFormFields.module.scss";
 
-const FormField = lazy(/* webpackChunkName: "FormField" */ () => import("@parts/FormField/FormField"));
+const FormField = lazy(/* webpackChunkName: "FormField" */ () => import("@parts/FormField"));
 
 export interface BaseFormFieldsProps extends PropsWithChildren {
     fields: FormFieldProps[];

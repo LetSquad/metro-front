@@ -8,7 +8,7 @@ import { WithSuspense } from "@coreUtils/WithSuspense";
 import { FormFieldProps } from "@models/forms/types";
 import SecondaryButton from "@parts/Buttons/SecondaryButton";
 import baseFormFieldsStyles from "@parts/EditForm/styles/BaseFormFields.module.scss";
-import FormField from "@parts/FormField/FormField";
+import FormField from "@parts/FormField";
 import FormFieldPlaceholder from "@parts/FormField/Placeholders/FormFieldPlaceholder";
 
 import styles from "./styles/ArrayFormFields.module.scss";

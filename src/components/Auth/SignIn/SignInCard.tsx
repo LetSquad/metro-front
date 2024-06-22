@@ -7,7 +7,6 @@ import { Dimmer, Form, Loader, Message } from "semantic-ui-react";
 import axios from "@api/api";
 import apiUrls from "@api/apiUrls";
 import { validationSchema } from "@components/Auth/SignIn/signInValidation";
-import authStyles from "@components/Auth/styles/AuthForm.module.scss";
 import { WithSuspense } from "@coreUtils/WithSuspense";
 import { useToggle } from "@hooks/useToogle";
 import { SignInFieldName } from "@models/auth/enums";
@@ -15,7 +14,7 @@ import { SignInFormValues, SignInResponse } from "@models/auth/types";
 import { FormFieldType } from "@models/forms/enums";
 import { FormFieldProps } from "@models/forms/types";
 import PrimaryButton from "@parts/Buttons/PrimaryButton";
-import FormField from "@parts/FormField/FormField";
+import FormField from "@parts/FormField";
 import FormFieldPlaceholder from "@parts/FormField/Placeholders/FormFieldPlaceholder";
 import { setAuth, setIsLoginOpen, setRole } from "@store/info/reducer";
 
@@ -96,22 +95,22 @@ export default function SignInCard() {
             )}
             <Formik onSubmit={signIn} initialValues={initialValue} validationSchema={validationSchema}>
                 {({ handleSubmit }) => (
-                    <Form onSubmit={handleSubmit} className={authStyles.authForm}>
+                    <Form onSubmit={handleSubmit} className={styles.authForm}>
                         <h2>Войдите в аккаунт</h2>
-                        <div className={authStyles.authFieldsContainer}>
+                        <div className={styles.authFieldsContainer}>
                             {Inputs.map((input) => (
                                 <WithSuspense key={input.name} loader={<FormFieldPlaceholder />}>
-                                    <FormField {...input} className={authStyles.authField} />
+                                    <FormField {...input} className={styles.authField} />
                                 </WithSuspense>
                             ))}
                         </div>
                         {(isLoginDataError || isLoginLoadingFailed) && (
-                            <div className={authStyles.messageContainer}>
+                            <div className={styles.messageContainer}>
                                 {isLoginDataError && (
                                     <Message
                                         visible
                                         error
-                                        className={authStyles.message}
+                                        className={styles.message}
                                         header="Введены некорректные данные"
                                         content="Введите корректный логин и пароль и попробуйте снова"
                                     />
@@ -120,15 +119,15 @@ export default function SignInCard() {
                                     <Message
                                         visible
                                         error
-                                        className={authStyles.message}
+                                        className={styles.message}
                                         header="Произошла непредвиденная ошибка"
                                         content="Повторите авторизацию еще раз позднее"
                                     />
                                 )}
                             </div>
                         )}
-                        <div className={authStyles.authButtonsContainer}>
-                            <PrimaryButton className={authStyles.authButton} type="submit">
+                        <div className={styles.authButtonsContainer}>
+                            <PrimaryButton className={styles.authButton} type="submit">
                                 Войти
                             </PrimaryButton>
                         </div>

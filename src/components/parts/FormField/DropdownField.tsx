@@ -65,6 +65,7 @@ export default function DropdownField({
             clearable={clearable}
             className={className}
             multiple={multiple}
+            noResultsMessage="Результаты не найдены"
         />
     );
 }

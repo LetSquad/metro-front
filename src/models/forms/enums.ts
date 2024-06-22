@@ -7,16 +7,7 @@ export enum FormFieldType {
     DATEPICKER = "datepicker",
     TIMEPICKER = "timepicker",
     DATE_TIMEPICKER = "dateTimepicker",
-    IMAGE_EDITOR = "imageEditor",
     BUTTON_GROUP = "buttonGroup",
     CHECKBOX = "checkbox",
-    IMAGE_SELECTOR = "imageSelector",
-    FORM_FIELDS_RANGE = "formFieldsRange",
-    RATING = "rating"
-}
-
-export enum ImageEditorPreviewType {
-    CIRCLE = "circle",
-    SQUARE = "square",
-    BOTH = "both"
+    FORM_FIELDS_RANGE = "formFieldsRange"
 }

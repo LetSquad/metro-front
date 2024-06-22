@@ -1,0 +1,17 @@
+@use 'src/styles/_mq' as *;
+
+.container {
+  display: flow-root;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: padding 0.2s ease-in;
+
+  @include mq($until: mobile) {
+    padding: 20px;
+  }
+
+  @include mq($from: mobile) {
+    padding: 20px 90px;
+  }
+}

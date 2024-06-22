@@ -1,0 +1,12 @@
+@use 'src/styles/variables.module' as variables;
+@use '/src/styles/_mq' as *;
+
+.segment {
+  background-color: variables.$background-color !important;
+  box-shadow: variables.$primary-box-shadow !important;
+  max-height: 550px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 20px !important;
+  width: 380px;
+}

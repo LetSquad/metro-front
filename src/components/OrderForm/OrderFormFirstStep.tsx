@@ -4,8 +4,7 @@ import classNames from "classnames";
 import { useFormikContext } from "formik";
 import { DateTime } from "luxon";
 
-import MetroStationElement from "@components/Metro/MetroStationElement";
-import { metroStations } from "@coreUtils/metroUtils";
+import { getMetroLineLogoByEnum, metroStations } from "@coreUtils/metroUtils";
 import { getOrderApplicationLabelByOrderApplicationCodeEnum } from "@coreUtils/orderUtils";
 import {
     getPassengerCategoryFullNameByPassengerCategoryCodeEnum,
@@ -18,7 +17,7 @@ import { DropdownOption } from "@models/forms/types";
 import { OrderApplicationCodeEnum, OrderFieldsName } from "@models/order/enums";
 import { OrderFormValues } from "@models/order/types";
 import { BaggageFieldsName, PassengerCategoryCodeEnum, PassengerFieldsName } from "@models/passenger/enums";
-import FormField from "@parts/FormField/FormField";
+import FormField from "@parts/FormField";
 import loadingErrorBlockStyles from "@parts/LoadingErrorBlock/styles/LoadingErrorBlock.module.scss";
 import { getEmployeesRequest } from "@store/employee/reducer";
 import { selectEmployees, selectIsEmployeesLoading, selectIsEmployeesLoadingFailed } from "@store/employee/selectors";
@@ -77,7 +76,7 @@ export default function OrderFormFirstStep({ isEdit, isReadonly }: OrderFormFirs
             metroStations.map((station) => ({
                 value: station.id,
                 text: station.name,
-                content: <MetroStationElement station={station} />
+                image: { avatar: true, src: getMetroLineLogoByEnum(station.line.id) }
             })),
         []
     );

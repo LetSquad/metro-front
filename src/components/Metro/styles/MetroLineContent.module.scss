@@ -1,0 +1,113 @@
+@use 'src/styles/variables.module' as variables;
+
+.transfers-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dot,
+%dot {
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 15px;
+  position: absolute;
+  width: 15px;
+}
+
+.line-container {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.line-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  border: 0;
+  height: 50px;
+  position: relative;
+  width: 5px;
+}
+
+.line::before {
+    @extend %dot;
+    background-color: var(--dot-color);
+    border: var(--dot-border);
+    left: -5px;
+    top: -5px;
+  }
+
+.line::after {
+    @extend %dot;
+    background-color: var(--dot-color);
+    border: var(--dot-border);
+    bottom: -5px;
+    right: -5px;
+  }
+
+.crosswalking-station-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.station,
+%station {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.duration {
+  font-size: 10px;
+  font-weight: 700;
+  left: calc(50% + 10px);
+  line-height: 13px;
+  position: absolute;
+  width: max-content;
+}
+
+.crosswalking-icon-container {
+  background: variables.$background-color;
+  height: 18px;
+  width: 18px;
+  z-index: 1;
+}
+
+.crosswalking-icon {
+  height: 18px;
+  width: 18px;
+}
+
+.crosswalking-icon-content {
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+.crosswalking-icon-content-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.crosswalking-icon-content-container::after {
+  border: dotted #737ce6;
+  border-width: 0 0 0 2px;
+  bottom: 0;
+  content: "";
+  left: 50%;
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  width: 2px;
+}
