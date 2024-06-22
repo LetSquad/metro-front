@@ -18,7 +18,9 @@ export default function EmployeeInfoDetails({ employee }: EmployeeInfoProps) {
                 <div className={styles.contentBlock}>
                     <span>{getSexLabelBySexEnum(employee[EmployeeFieldsName.SEX])}</span>
                     <span>{`Рабочий телефон: ${employee[EmployeeFieldsName.WORK_PHONE]}`}</span>
-                    <span>{`Личный телефон: ${employee[EmployeeFieldsName.PERSONAL_PHONE]}`}</span>
+                    {employee[EmployeeFieldsName.PERSONAL_PHONE] && (
+                        <span>{`Личный телефон: ${employee[EmployeeFieldsName.PERSONAL_PHONE]}`}</span>
+                    )}
                 </div>
                 <div className={styles.contentBlock}>
                     <span>{`Должность: ${employee[EmployeeFieldsName.RANK].name} ${employee[EmployeeFieldsName.RANK].shortName ? `(${employee[EmployeeFieldsName.RANK].shortName})` : ""}`}</span>
