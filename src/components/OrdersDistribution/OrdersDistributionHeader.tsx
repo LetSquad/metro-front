@@ -2,6 +2,7 @@ import { useCallback } from "react";
 import * as React from "react";
 import { Link } from "react-router-dom";
 
+import { DateTime } from "luxon";
 import { Checkbox, Icon, Input } from "semantic-ui-react";
 import { InputOnChangeData } from "semantic-ui-react/dist/commonjs/elements/Input/Input";
 
@@ -70,7 +71,7 @@ export default function OrdersDistributionHeader({
                     loading={isOrdersDistributionLoading}
                     onClick={ordersDistribution}
                 >
-                    Распределить заявки
+                    {`Распределить заявки на ${DateTime.now().plus({ day: 1 }).toFormat("dd.MM.yyyy")}`}
                 </PrimaryButton>
             </div>
         </div>

@@ -92,6 +92,12 @@ export default function EmployeesList() {
         validateOnMount: true
     });
 
+    const onFiltersReset = useCallback(() => {
+        formik.resetForm();
+        setFilterValues(initialValues);
+        getEmployees(initialValues);
+    }, [formik, getEmployees]);
+
     useEffect(() => {
         getEmployees(initialValues);
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -102,7 +108,7 @@ export default function EmployeesList() {
             <div className={styles.container}>
                 {employeesList}
                 <div className={styles.filters}>
-                    <EmployeesListFilter isLoading={isEmployeesLoading} />
+                    <EmployeesListFilter isLoading={isEmployeesLoading} onFiltersReset={onFiltersReset} />
                 </div>
             </div>
         </FormikProvider>

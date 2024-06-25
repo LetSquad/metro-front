@@ -1,5 +1,29 @@
 .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.buttons-container {
   column-gap: 10px;
   display: flex;
-  height: 36px;
+}
+
+.toggle-container {
+  align-items: center;
+  column-gap: 10px;
+  display: flex;
+}
+
+.dropdown {
+  i {
+    align-items: center;
+    display: flex !important;
+    font-size: 25px !important;
+  }
+
+  &-checkbox {
+    padding: 5px 7px;
+  }
 }

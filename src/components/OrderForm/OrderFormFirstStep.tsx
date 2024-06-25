@@ -166,8 +166,12 @@ export default function OrderFormFirstStep({ isEdit, isReadonly }: OrderFormFirs
                 options={passengerCategoryOptions}
                 disabled={isReadonly}
             />
-            <div className={classNames(styles.baggageContainer, { [styles.baggageLabelDisabled]: isReadonly })}>
-                <span className={styles.baggageLabel}>Багаж пассажира</span>
+            <div className={styles.baggageContainer}>
+                <div className={classNames({ [styles.baggageLabelDisabled]: isReadonly })}>
+                    <span className={classNames(styles.baggageLabel, { [styles.baggageLabelDisabled]: isReadonly })}>
+                        Багаж пассажира
+                    </span>
+                </div>
                 <div className={styles.baggageContent}>
                     <FormField
                         name={`${OrderFieldsName.BAGGAGE}.${BaggageFieldsName.TYPE}`}

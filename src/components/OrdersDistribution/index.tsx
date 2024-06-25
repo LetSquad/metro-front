@@ -40,7 +40,9 @@ export default function OrdersDistribution() {
     const filteredOrderTimeList = useMemo(
         () =>
             debounceFilter
-                ? ordersTimeList.filter((list) => list.employee[EmployeeFieldsName.LAST_NAME].includes(debounceFilter))
+                ? ordersTimeList.filter((list) =>
+                      list.employee[EmployeeFieldsName.LAST_NAME].toLowerCase().includes(debounceFilter.toLowerCase())
+                  )
                 : ordersTimeList,
         [debounceFilter, ordersTimeList]
     );

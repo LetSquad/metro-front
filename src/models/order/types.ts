@@ -120,3 +120,7 @@ export type OrderWithLockResponse = ResponseWithEditLock<Order>;
 export type OrderCalculationResponse = OrderCalculation;
 export type OrdersResponse = BasePageResponse<Order>;
 export type OrdersTimeListResponse = BasePageResponse<OrdersTimeList>;
+export type OrdersDistributionResponse = BasePageResponse<OrdersTimeList> & {
+    ordersNotInPlan?: number;
+    totalOrders?: number;
+};

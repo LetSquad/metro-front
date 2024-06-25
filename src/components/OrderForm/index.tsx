@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { FormikProvider, useFormik } from "formik";
 import { Dimmer, Form, Loader, Segment } from "semantic-ui-react";
 
+import { useToggle } from "@hooks/useToogle";
 import useWebsocket from "@hooks/useWebsocket";
 import { OrderFieldsName } from "@models/order/enums";
 import { OrderCalculationResponse, OrderFormRef, OrderFormValues } from "@models/order/types";
@@ -13,6 +14,7 @@ import { EditOrderWebSocketRequestData, WebSocketResponse } from "@models/websoc
 import PrimaryButton from "@parts/Buttons/PrimaryButton";
 import SecondaryButton from "@parts/Buttons/SecondaryButton";
 import UnderscoreButton from "@parts/Buttons/UnderscoreButton";
+import ConfirmationModal from "@parts/ConfirmationModal/ConfirmationModal";
 import formStyles from "@parts/EditForm/styles/AddEditForm.module.scss";
 import { getEmployeesRequest } from "@store/employee/reducer";
 import { selectCurrentEmployee } from "@store/employee/selectors";
@@ -51,6 +53,7 @@ const OrderForm = forwardRef(
         const currentEmployee = useAppSelector(selectCurrentEmployee);
 
         const [step, setStep] = useState(STEP.PREPARE_STEP);
+        const [isConfirmModalOpen, , openConfirmModal, closeConfirmModal] = useToggle();
 
         const onWebSocketMessage = useCallback(
             (eventData: WebSocketResponse) => {
@@ -80,6 +83,11 @@ const OrderForm = forwardRef(
             setStep(STEP.PREPARE_STEP);
             formik.resetForm();
         }, [formik]);
+
+        const onFormSubmitFromModal = useCallback(() => {
+            closeConfirmModal();
+            formik.submitForm();
+        }, [closeConfirmModal, formik]);
 
         useImperativeHandle(
             ref,
@@ -175,9 +183,10 @@ const OrderForm = forwardRef(
                         </SecondaryButton>
                         <PrimaryButton
                             className={formStyles.primaryButton}
-                            type="submit"
+                            type={isEdit ? "button" : "submit"}
                             disabled={isSubmitDisabled || isOrderUpdating}
                             loading={isOrderUpdating}
+                            onClick={isEdit ? openConfirmModal : undefined}
                         >
                             Сохранить
                         </PrimaryButton>
@@ -186,7 +195,7 @@ const OrderForm = forwardRef(
             }
 
             return null;
-        }, [isOrderUpdating, isSubmitDisabled, onCalculation, onCancel, step]);
+        }, [isEdit, isOrderUpdating, isSubmitDisabled, onCalculation, onCancel, openConfirmModal, step]);
 
         useEffect(() => {
             loadInitialInfo();
@@ -206,19 +215,28 @@ const OrderForm = forwardRef(
         }, []);
 
         return (
-            <Segment className={styles.segment}>
-                <FormikProvider value={formik}>
-                    <Form onSubmit={formik.handleSubmit} className={classNames(formStyles.form, className)}>
-                        {isOrderUpdating && (
-                            <Dimmer active>
-                                <Loader />
-                            </Dimmer>
-                        )}
-                        {content}
-                        {actions}
-                    </Form>
-                </FormikProvider>
-            </Segment>
+            <>
+                {isConfirmModalOpen && isEdit && (
+                    <ConfirmationModal
+                        confirmationText="Вы уверены что хотите обновить заявку? Это может привести к перераспределению списка заявок"
+                        action={onFormSubmitFromModal}
+                        cancelAction={closeConfirmModal}
+                    />
+                )}
+                <Segment className={styles.segment}>
+                    <FormikProvider value={formik}>
+                        <Form onSubmit={formik.handleSubmit} className={classNames(formStyles.form, className)}>
+                            {isOrderUpdating && (
+                                <Dimmer active>
+                                    <Loader />
+                                </Dimmer>
+                            )}
+                            {content}
+                            {actions}
+                        </Form>
+                    </FormikProvider>
+                </Segment>
+            </>
         );
     }
 );

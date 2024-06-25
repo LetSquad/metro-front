@@ -37,9 +37,10 @@ const fields: FormFieldProps[] = [
 
 interface EmployeesListFilterProps {
     isLoading: boolean;
+    onFiltersReset: () => void;
 }
 
-export default function EmployeesListFilter({ isLoading }: EmployeesListFilterProps) {
+export default function EmployeesListFilter({ isLoading, onFiltersReset }: EmployeesListFilterProps) {
     const formik = useFormikContext<EmployeesFiltersFormValues>();
 
     return (
@@ -50,7 +51,7 @@ export default function EmployeesListFilter({ isLoading }: EmployeesListFilterPr
                 formik={formik}
                 submitButtonText="Фильтр"
                 cancelButtonText="Сбросить фильтр"
-                onCancel={formik.resetForm}
+                onCancel={onFiltersReset}
             />
         </Segment>
     );

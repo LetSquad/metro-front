@@ -108,6 +108,12 @@ export default function PassengersList() {
         validateOnMount: true
     });
 
+    const onFiltersReset = useCallback(() => {
+        formik.resetForm();
+        setFilterValues(initialValues);
+        getPassengers(initialValues);
+    }, [formik, getPassengers]);
+
     useEffect(() => {
         getPassengers(initialValues);
         startSocket();
@@ -123,7 +129,7 @@ export default function PassengersList() {
             <div className={styles.container}>
                 {passengersList}
                 <div className={styles.filters}>
-                    <PassengersListFilter isLoading={isPassengersLoading} />
+                    <PassengersListFilter isLoading={isPassengersLoading} onFiltersReset={onFiltersReset} />
                 </div>
             </div>
         </FormikProvider>

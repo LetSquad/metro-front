@@ -25,9 +25,9 @@ interface OrderState {
     order?: Order;
     orderCalculation?: OrderCalculation;
     isOrderLoading: boolean;
+    isOrderLoadingFailed: boolean;
     isOrderCalculating: boolean;
     isOrderUpdating: boolean;
-    isOrdersLoadingFailed: boolean;
 }
 
 const initialState: OrderState = {
@@ -36,7 +36,7 @@ const initialState: OrderState = {
     isOrderLoading: true,
     isOrderCalculating: false,
     isOrderUpdating: false,
-    isOrdersLoadingFailed: false
+    isOrderLoadingFailed: false
 };
 
 export const getOrderRequest = createAsyncThunk("getOrderRequest", async ({ orderId }: { orderId: number }) => {
@@ -87,12 +87,12 @@ export const orderSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(getOrderRequest.pending, (state) => {
             state.isOrderLoading = true;
-            state.isOrdersLoadingFailed = false;
+            state.isOrderLoadingFailed = false;
             state.order = undefined;
         });
         builder.addCase(getOrderRequest.rejected, (state) => {
             state.isOrderLoading = false;
-            state.isOrdersLoadingFailed = true;
+            state.isOrderLoadingFailed = true;
         });
         builder.addCase(getOrderRequest.fulfilled, (state, action) => {
             state.isOrderLoading = false;

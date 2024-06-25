@@ -1,22 +1,15 @@
 @use 'src/styles/variables.module' as variables;
 
 .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
   column-gap: 20px;
   display: flex;
   justify-content: space-between;
   padding: 20px 30px;
-}
-
-.content-container {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-}
-
-.orders-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
 }
 
 .filters {

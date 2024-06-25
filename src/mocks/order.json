@@ -1,7 +1,7 @@
 {
   "id": 1,
-  "startDescription": "Встретить у первого входа",
-  "finishDescription": "Отвезти к эскалатору у второго выхода",
+  "startDescription": "Встретить у встретить у эскалатора",
+  "finishDescription": "Отвезти в центр зала",
   "orderApplication": {
     "code": "ELECTRONIC_SERVICES",
     "name": "Электронные сервисы"
@@ -10,8 +10,8 @@
   "passengerCount": 1,
   "maleEmployeeCount": 3,
   "femaleEmployeeCount": 0,
-  "additionalInfo": "Пассажир будет в красной футболке",
-  "orderTime": "2024-06-19T03:30:00Z",
+  "additionalInfo": "Пассажир будет в синей куртке",
+  "orderTime": "2024-06-25T03:30:00Z",
   "startTime": null,
   "finishTime": null,
   "absenceTime": null,
@@ -41,8 +41,8 @@
     ]
   },
   "baggage": {
-    "type": "Сумка",
-    "weight": 2,
+    "type": "Портфель",
+    "weight": 1,
     "isHelpNeeded": false
   },
   "transfers": [
@@ -57,21 +57,21 @@
         }
       },
       "finishStation": {
-        "id": 196,
-        "name": "Улица Старокачаловская",
+        "id": 194,
+        "name": "Битцевский парк",
         "line": {
           "id": 12,
           "name": "Л1",
           "color": "#A1B3D4"
         }
       },
-      "duration": 240,
+      "duration": 600,
       "isCrosswalking": false
     },
     {
       "startStation": {
-        "id": 196,
-        "name": "Улица Старокачаловская",
+        "id": 194,
+        "name": "Битцевский парк",
         "line": {
           "id": 12,
           "name": "Л1",
@@ -79,109 +79,21 @@
         }
       },
       "finishStation": {
-        "id": 173,
-        "name": "Бульвар Дмитрия Донского",
-        "line": {
-          "id": 9,
-          "name": "9",
-          "color": "#999999"
-        }
-      },
-      "duration": 60,
-      "isCrosswalking": true
-    },
-    {
-      "startStation": {
-        "id": 173,
-        "name": "Бульвар Дмитрия Донского",
-        "line": {
-          "id": 9,
-          "name": "9",
-          "color": "#999999"
-        }
-      },
-      "finishStation": {
-        "id": 162,
-        "name": "Серпуховская",
-        "line": {
-          "id": 9,
-          "name": "9",
-          "color": "#999999"
-        }
-      },
-      "duration": 1620,
-      "isCrosswalking": false
-    },
-    {
-      "startStation": {
-        "id": 162,
-        "name": "Серпуховская",
-        "line": {
-          "id": 9,
-          "name": "9",
-          "color": "#999999"
-        }
-      },
-      "finishStation": {
-        "id": 84,
-        "name": "Добрынинская",
-        "line": {
-          "id": 5,
-          "name": "5",
-          "color": "#8D5B2D"
-        }
-      },
-      "duration": 120,
-      "isCrosswalking": true
-    },
-    {
-      "startStation": {
-        "id": 84,
-        "name": "Добрынинская",
-        "line": {
-          "id": 5,
-          "name": "5",
-          "color": "#8D5B2D"
-        }
-      },
-      "finishStation": {
-        "id": 85,
-        "name": "Октябрьская КЛ",
-        "line": {
-          "id": 5,
-          "name": "5",
-          "color": "#8D5B2D"
-        }
-      },
-      "duration": 120,
-      "isCrosswalking": false
-    },
-    {
-      "startStation": {
-        "id": 85,
-        "name": "Октябрьская КЛ",
-        "line": {
-          "id": 5,
-          "name": "5",
-          "color": "#8D5B2D"
-        }
-      },
-      "finishStation": {
-        "id": 104,
-        "name": "Октябрьская КРЛ",
+        "id": 115,
+        "name": "Новоясеневская",
         "line": {
           "id": 6,
           "name": "6",
           "color": "#ED9121"
         }
       },
-      "duration": 120,
+      "duration": 240,
       "isCrosswalking": true
     },
     {
       "startStation": {
-        "id": 104,
-        "name": "Октябрьская КРЛ",
+        "id": 115,
+        "name": "Новоясеневская",
         "line": {
           "id": 6,
           "name": "6",
@@ -197,7 +109,7 @@
           "color": "#ED9121"
         }
       },
-      "duration": 1070,
+      "duration": 2650,
       "isCrosswalking": false
     }
   ],

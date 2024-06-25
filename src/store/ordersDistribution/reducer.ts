@@ -5,7 +5,7 @@ import { AxiosResponse } from "axios";
 
 import axios from "@api/api";
 import apiUrls from "@api/apiUrls";
-import { OrdersTimeList, OrdersTimeListResponse } from "@models/order/types";
+import { OrdersDistributionResponse, OrdersTimeList, OrdersTimeListResponse } from "@models/order/types";
 
 const ORDER_DISTRIBUTION_TOAST_NAME = "orders-distribution";
 
@@ -29,7 +29,9 @@ export const getOrdersTimeListRequest = createAsyncThunk("getOrdersTimeListReque
 });
 
 export const ordersDistributionRequest = createAsyncThunk("ordersDistributionRequest", async () => {
-    const response: AxiosResponse<OrdersTimeListResponse> = await axios.post<OrdersTimeListResponse>(apiUrls.ordersDistribution());
+    const response: AxiosResponse<OrdersDistributionResponse> = await axios.post<OrdersDistributionResponse>(
+        apiUrls.ordersDistribution()
+    );
     return response.data;
 });
 
@@ -63,7 +65,13 @@ export const ordersDistributionSlice = createSlice({
         builder.addCase(ordersDistributionRequest.fulfilled, (state, action) => {
             state.isOrdersDistributionLoading = false;
             state.ordersTimeList = action.payload.list;
-            toast.success("Заявки успешно распределены", { id: ORDER_DISTRIBUTION_TOAST_NAME });
+            const totalOrdersCount = action.payload.totalOrders;
+            const ordersNotInPlanCount = action.payload.ordersNotInPlan;
+
+            toast.success(
+                `Заявки успешно распределены.${totalOrdersCount && ordersNotInPlanCount ? `Всего заявок к распределению ${totalOrdersCount}, распределено ${totalOrdersCount - ordersNotInPlanCount}, не распределено ${ordersNotInPlanCount}` : ""}`,
+                { id: ORDER_DISTRIBUTION_TOAST_NAME }
+            );
         });
     }
 });

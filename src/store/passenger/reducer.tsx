@@ -6,6 +6,7 @@ import { AxiosResponse } from "axios";
 import axios from "@api/api";
 import apiUrls from "@api/apiUrls";
 import AddPassengerSuccessToast from "@components/Passenger/AddPassengerSuccessToast";
+import { parseParams } from "@coreUtils/utils";
 import {
     Passenger,
     PassengerFormValues,
@@ -40,7 +41,15 @@ const initialState: PassengerState = {
 };
 
 export const getPassengersRequest = createAsyncThunk("getPassengersRequest", async (values?: PassengersFiltersFormValues) => {
-    const response: AxiosResponse<PassengersResponse> = await axios.get<PassengersResponse>(apiUrls.passengers(), { params: values });
+    for (const key in values) {
+        if (values[key as keyof PassengersFiltersFormValues] === "") {
+            values[key as keyof PassengersFiltersFormValues] = undefined;
+        }
+    }
+    const response: AxiosResponse<PassengersResponse> = await axios.get<PassengersResponse>(apiUrls.passengers(), {
+        params: values,
+        paramsSerializer: parseParams
+    });
     return response.data;
 });
 
