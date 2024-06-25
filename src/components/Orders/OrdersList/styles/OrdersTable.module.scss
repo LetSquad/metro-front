@@ -1,0 +1,32 @@
+@use 'src/styles/variables.module' as variables;
+
+table {
+  border: 1px solid #000;
+  border-collapse: separate;
+}
+
+th, td {
+  border: 0.5px solid #000;
+  border-collapse: collapse;
+  padding: 5px 15px;
+}
+
+.link-row {
+  cursor: pointer;
+}
+
+.container {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.station-container {
+  > div {
+    > span {
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 15px;
+      text-wrap: nowrap;
+    }
+  }
+}

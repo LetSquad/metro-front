@@ -47,9 +47,10 @@ const fields: FormFieldProps[] = [
 
 interface PassengersListFilterProps {
     isLoading: boolean;
+    onFiltersReset: () => void;
 }
 
-export default function PassengersListFilter({ isLoading }: PassengersListFilterProps) {
+export default function PassengersListFilter({ isLoading, onFiltersReset }: PassengersListFilterProps) {
     const formik = useFormikContext<PassengersFiltersFormValues>();
 
     return (
@@ -60,7 +61,7 @@ export default function PassengersListFilter({ isLoading }: PassengersListFilter
                 formik={formik}
                 submitButtonText="Фильтр"
                 cancelButtonText="Сбросить фильтр"
-                onCancel={formik.resetForm}
+                onCancel={onFiltersReset}
             />
         </Segment>
     );

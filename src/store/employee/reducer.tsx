@@ -6,6 +6,7 @@ import { AxiosResponse } from "axios";
 import axios from "@api/api";
 import apiUrls from "@api/apiUrls";
 import AddEmployeeSuccessToast from "@components/Employee/AddEmployeeSuccessToast";
+import { parseParams } from "@coreUtils/utils";
 import {
     Employee,
     EmployeeCurrent,
@@ -54,7 +55,15 @@ export const getCurrentEmployeeRequest = createAsyncThunk("getCurrentEmployeeReq
 });
 
 export const getEmployeesRequest = createAsyncThunk("getEmployeesRequest", async (values?: EmployeesFiltersFormValues) => {
-    const response: AxiosResponse<EmployeesResponse> = await axios.get<EmployeesResponse>(apiUrls.employees(), { params: values });
+    for (const key in values) {
+        if (values[key as keyof EmployeesFiltersFormValues] === "") {
+            values[key as keyof EmployeesFiltersFormValues] = undefined;
+        }
+    }
+    const response: AxiosResponse<EmployeesResponse> = await axios.get<EmployeesResponse>(apiUrls.employees(), {
+        params: values,
+        paramsSerializer: parseParams
+    });
     return response.data;
 });
 

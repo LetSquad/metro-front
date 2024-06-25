@@ -39,3 +39,26 @@ export function getSexLabelBySexEnum(sex: Sex): string {
         // skip default
     }
 }
+
+export function parseParams(params: Record<string, any>) {
+    const keys = Object.keys(params);
+    let options = "";
+
+    for (const key of keys) {
+        const isParamTypeUndefined = params[key] === undefined || params[key] === null;
+        const isParamTypeObject = typeof params[key] === "object";
+        const isParamTypeArray = isParamTypeObject && params[key].length >= 0;
+
+        if (!isParamTypeObject && !isParamTypeUndefined) {
+            options += `${key}=${params[key]}&`;
+        }
+
+        if (isParamTypeObject && isParamTypeArray) {
+            for (const element of params[key]) {
+                options += `${key}=${element}&`;
+            }
+        }
+    }
+
+    return options ? options.slice(0, -1) : options;
+}

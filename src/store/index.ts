@@ -7,6 +7,7 @@ import infoReducer from "./info/reducer";
 import orderReducer from "./order/reducer";
 import ordersDistributionReducer from "./ordersDistribution/reducer";
 import passengerReducer from "./passenger/reducer";
+import specialistOrdersReducer from "./specialistOrders/reducer";
 
 export const store = configureStore({
     reducer: {
@@ -14,7 +15,8 @@ export const store = configureStore({
         employee: employeeReducer,
         passenger: passengerReducer,
         ordersDistribution: ordersDistributionReducer,
-        order: orderReducer
+        order: orderReducer,
+        specialistOrders: specialistOrdersReducer
     },
     devTools: process.env.NODE_ENV !== "production",
     // eslint-disable-next-line unicorn/prefer-spread

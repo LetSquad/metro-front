@@ -1,0 +1,34 @@
+@use 'src/styles/variables.module' as variables;
+@use 'sass:color';
+
+.confirmation {
+  background-color: variables.$background-color !important;
+  border-radius: 7px !important;
+
+  &-header {
+    background-color: variables.$background-color !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-top-left-radius: 7px !important;
+    border-top-right-radius: 7px !important;
+    color: variables.$primary-text-color !important;
+  }
+
+  &-content {
+    background-color: variables.$background-color !important;
+  }
+
+  &-actions {
+    background-color: color.adjust(variables.$background-color, $lightness: -2%) !important;
+    border-bottom-left-radius: 7px !important;
+    border-bottom-right-radius: 7px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    column-gap: 15px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px !important;
+  }
+
+  &-button {
+    margin: 0 !important;
+  }
+}

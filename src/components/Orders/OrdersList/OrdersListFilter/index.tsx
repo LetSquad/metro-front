@@ -1,9 +1,11 @@
+import classNames from "classnames";
 import { useFormikContext } from "formik";
 import { DateTime } from "luxon";
 import { Segment } from "semantic-ui-react";
 
 import { getOrderStatusNameByOrderStatusCodeEnum } from "@coreUtils/orderUtils";
 import { getPassengerCategoryShortNameByPassengerCategoryCodeEnum } from "@coreUtils/passengerUtils";
+import { useToggle } from "@hooks/useToogle";
 import { FormFieldType } from "@models/forms/enums";
 import { DropdownOption, FormFieldProps } from "@models/forms/types";
 import { OrdersFiltersFieldsName, OrderStatusCodeEnum } from "@models/order/enums";
@@ -100,21 +102,36 @@ const fields: (fromDate?: string) => FormFieldProps[] = (fromDate) => [
 
 interface OrdersListFilterProps {
     isLoading: boolean;
+    onFiltersReset: () => void;
 }
 
-export default function OrdersListFilter({ isLoading }: OrdersListFilterProps) {
+export default function OrdersListFilter({ isLoading, onFiltersReset }: OrdersListFilterProps) {
+    const [isSidebarOpen, toggleSidebar] = useToggle();
+
     const formik = useFormikContext<OrdersFiltersFormValues>();
 
     return (
-        <Segment className={styles.segment}>
-            <BaseAddEditForm
-                fields={fields(formik.values[OrdersFiltersFieldsName.DATE_FROM])}
-                isLoading={isLoading}
-                formik={formik}
-                submitButtonText="Фильтр"
-                cancelButtonText="Сбросить фильтр"
-                onCancel={formik.resetForm}
-            />
-        </Segment>
+        <div className={classNames({ [styles.sidebarClose]: !isSidebarOpen, [styles.sidebarOpen]: isSidebarOpen })}>
+            <div aria-hidden className={isSidebarOpen ? styles.sidebarButtonOpen : styles.sidebarButton} onClick={toggleSidebar}>
+                <p className={styles.sidebarButtonText}>Фильтр</p>
+            </div>
+            <div
+                className={classNames({
+                    [styles.filtersSidebarHide]: !isSidebarOpen,
+                    [styles.filtersSidebar]: isSidebarOpen
+                })}
+            >
+                <Segment className={styles.segment}>
+                    <BaseAddEditForm
+                        fields={fields(formik.values[OrdersFiltersFieldsName.DATE_FROM])}
+                        isLoading={isLoading}
+                        formik={formik}
+                        submitButtonText="Фильтр"
+                        cancelButtonText="Сбросить фильтр"
+                        onCancel={onFiltersReset}
+                    />
+                </Segment>
+            </div>
+        </div>
     );
 }

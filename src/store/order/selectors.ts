@@ -6,7 +6,7 @@ export const selectOrderCalculation = (state: RootState) => state.order.orderCal
 
 export const selectIsOrderLoading = (state: RootState) => state.order.isOrderLoading;
 
-export const selectIsOrderLoadingFailed = (state: RootState) => state.order.isOrdersLoadingFailed;
+export const selectIsOrderLoadingFailed = (state: RootState) => state.order.isOrderLoadingFailed;
 
 export const selectIsOrderCalculating = (state: RootState) => state.order.isOrderCalculating;
 

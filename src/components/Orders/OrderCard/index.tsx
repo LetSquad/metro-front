@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import { useMediaQuery } from "react-responsive";
 import { generatePath, Link } from "react-router-dom";
 
@@ -19,16 +19,17 @@ import { PageSlugs } from "@models/pages/enums";
 
 import styles from "./styles/OrderCard.module.scss";
 
-interface OrderCardProps {
+interface OrderCardProps extends PropsWithChildren {
     order: Order;
 }
 
-export default function OrderCard({ order }: OrderCardProps) {
+export default function OrderCard({ order, children }: OrderCardProps) {
     const isMobile = useMediaQuery({ maxWidth: MOBILE_MAX_WIDTH });
 
     return (
         <Link to={generatePath(PageSlugs.ORDER, { orderId: order.id.toString() })} className={styles.link}>
             <Segment className={styles.segment}>
+                {children && children}
                 <div className={styles.content}>
                     <div className={styles.firstBlock}>
                         <span>{order.orderStatus.name}</span>
